@@ -1,0 +1,743 @@
+[
+  {
+    "case_id": "gsa_model_and_quantity",
+    "source_kind": "real",
+    "source": "01_GSA_VA_Chiller_Maintenance_Solicitation.pdf",
+    "page_number": 14,
+    "evidence_id": "p14-b294",
+    "text": "Capacity is 177-ton, model # YCIV0177 with 2 compressors attached to this system.",
+    "expected": [
+      {
+        "label": "part_or_model",
+        "text": "YCIV0177",
+        "start": 29,
+        "end": 37
+      },
+      {
+        "label": "quantity",
+        "text": "2 compressors",
+        "start": 43,
+        "end": 56
+      }
+    ],
+    "latency_seconds": 6.712095,
+    "predictions_at_minimum_threshold": [
+      {
+        "text": "177-ton",
+        "label": "quantity",
+        "start": 12,
+        "end": 19,
+        "score": 0.9433832168579102
+      },
+      {
+        "text": "YCIV0177",
+        "label": "part_or_model",
+        "start": 29,
+        "end": 37,
+        "score": 0.8873834609985352
+      },
+      {
+        "text": "2",
+        "label": "quantity",
+        "start": 43,
+        "end": 44,
+        "score": 0.46798965334892273
+      }
+    ]
+  },
+  {
+    "case_id": "gsa_model_identifier",
+    "source_kind": "real",
+    "source": "01_GSA_VA_Chiller_Maintenance_Solicitation.pdf",
+    "page_number": 15,
+    "evidence_id": "p15-b300",
+    "text": "The fourth chiller is a model YKJHJBJ1DAE.",
+    "expected": [
+      {
+        "label": "part_or_model",
+        "text": "YKJHJBJ1DAE",
+        "start": 30,
+        "end": 41
+      }
+    ],
+    "latency_seconds": 0.14664,
+    "predictions_at_minimum_threshold": [
+      {
+        "text": "fourth chiller",
+        "label": "part_or_model",
+        "start": 4,
+        "end": 18,
+        "score": 0.27960681915283203
+      },
+      {
+        "text": "YKJHJBJ1DAE",
+        "label": "part_or_model",
+        "start": 30,
+        "end": 41,
+        "score": 0.8286862969398499
+      }
+    ]
+  },
+  {
+    "case_id": "gsa_emergency_repair_price",
+    "source_kind": "real",
+    "source": "01_GSA_VA_Chiller_Maintenance_Solicitation.pdf",
+    "page_number": 25,
+    "evidence_id": "p25-b401",
+    "text": "Emergency Repair $2,500- $15,0000 IAW SOW. CMC VAMC.",
+    "expected": [
+      {
+        "label": "price",
+        "text": "$2,500",
+        "start": 17,
+        "end": 23
+      },
+      {
+        "label": "price",
+        "text": "$15,0000",
+        "start": 25,
+        "end": 33
+      }
+    ],
+    "latency_seconds": 0.645727,
+    "predictions_at_minimum_threshold": [
+      {
+        "text": "$2,500- $15,0000",
+        "label": "price",
+        "start": 17,
+        "end": 33,
+        "score": 0.8059132695198059
+      },
+      {
+        "text": "IAW SOW",
+        "label": "part_or_model",
+        "start": 34,
+        "end": 41,
+        "score": 0.32029926776885986
+      }
+    ]
+  },
+  {
+    "case_id": "gsa_performance_period",
+    "source_kind": "real",
+    "source": "01_GSA_VA_Chiller_Maintenance_Solicitation.pdf",
+    "page_number": 4,
+    "evidence_id": "p4-b131",
+    "text": "The period of performance for this request is one year.",
+    "expected": [
+      {
+        "label": "deadline",
+        "text": "one year",
+        "start": 46,
+        "end": 54
+      }
+    ],
+    "latency_seconds": 0.154442,
+    "predictions_at_minimum_threshold": [
+      {
+        "text": "one year",
+        "label": "quantity",
+        "start": 46,
+        "end": 54,
+        "score": 0.5403997302055359
+      }
+    ]
+  },
+  {
+    "case_id": "doe_volume_page_limit",
+    "source_kind": "real",
+    "source": "02_DOE_NNSA_RFP_Section_L.pdf",
+    "page_number": 14,
+    "evidence_id": "p14-b166",
+    "text": "The Past Performance, Key Personnel and Small Business Information (Volume II) shall not exceed 35 pages",
+    "expected": [
+      {
+        "label": "quantity",
+        "text": "35 pages",
+        "start": 96,
+        "end": 104
+      }
+    ],
+    "latency_seconds": 0.156387,
+    "predictions_at_minimum_threshold": [
+      {
+        "text": "Past Performance",
+        "label": "deadline",
+        "start": 4,
+        "end": 20,
+        "score": 0.4741474986076355
+      },
+      {
+        "text": "Volume II",
+        "label": "part_or_model",
+        "start": 68,
+        "end": 77,
+        "score": 0.3102368116378784
+      },
+      {
+        "text": "35 pages",
+        "label": "quantity",
+        "start": 96,
+        "end": 104,
+        "score": 0.9002951383590698
+      }
+    ]
+  },
+  {
+    "case_id": "doe_resume_page_limits",
+    "source_kind": "real",
+    "source": "02_DOE_NNSA_RFP_Section_L.pdf",
+    "page_number": 21,
+    "evidence_id": "p21-b238",
+    "text": "Each resume shall be limited to three pages, except for the Laboratory Director's resume, which shall be limited to five pages",
+    "expected": [
+      {
+        "label": "quantity",
+        "text": "three pages",
+        "start": 32,
+        "end": 43
+      },
+      {
+        "label": "quantity",
+        "text": "five pages",
+        "start": 116,
+        "end": 126
+      }
+    ],
+    "latency_seconds": 0.212049,
+    "predictions_at_minimum_threshold": [
+      {
+        "text": "three pages",
+        "label": "quantity",
+        "start": 32,
+        "end": 43,
+        "score": 0.9668833017349243
+      },
+      {
+        "text": "five pages",
+        "label": "quantity",
+        "start": 116,
+        "end": 126,
+        "score": 0.9369722008705139
+      }
+    ]
+  },
+  {
+    "case_id": "doe_fee_caps",
+    "source_kind": "real",
+    "source": "02_DOE_NNSA_RFP_Section_L.pdf",
+    "page_number": 22,
+    "evidence_id": "p22-b248",
+    "text": "The proposed fixed fee shall not exceed 1.0 % of the estimated cost shown for each Contract Period and the proposed award fee shall not exceed 0.5% of the estimated cost shown for each Contract Period.",
+    "expected": [
+      {
+        "label": "price",
+        "text": "1.0 %",
+        "start": 40,
+        "end": 45
+      },
+      {
+        "label": "price",
+        "text": "0.5%",
+        "start": 143,
+        "end": 147
+      }
+    ],
+    "latency_seconds": 0.279848,
+    "predictions_at_minimum_threshold": [
+      {
+        "text": "fixed fee",
+        "label": "price",
+        "start": 13,
+        "end": 22,
+        "score": 0.6266367435455322
+      },
+      {
+        "text": "estimated cost",
+        "label": "price",
+        "start": 53,
+        "end": 67,
+        "score": 0.3570346534252167
+      },
+      {
+        "text": "Contract Period",
+        "label": "deadline",
+        "start": 83,
+        "end": 98,
+        "score": 0.9347254037857056
+      },
+      {
+        "text": "award fee",
+        "label": "price",
+        "start": 116,
+        "end": 125,
+        "score": 0.8567335605621338
+      },
+      {
+        "text": "estimated cost",
+        "label": "price",
+        "start": 155,
+        "end": 169,
+        "score": 0.3825812041759491
+      },
+      {
+        "text": "Contract Period",
+        "label": "deadline",
+        "start": 185,
+        "end": 200,
+        "score": 0.9515948295593262
+      }
+    ]
+  },
+  {
+    "case_id": "nasa_zero_failure_acceptance",
+    "source_kind": "real",
+    "source": "03_NASA_Fastener_Procurement_Standard.pdf",
+    "page_number": 14,
+    "evidence_id": "p14-b193",
+    "text": "Fastener lot acceptance criteria for inspections and tests shall be zero failures.",
+    "expected": [
+      {
+        "label": "tolerance",
+        "text": "zero failures",
+        "start": 68,
+        "end": 81
+      }
+    ],
+    "latency_seconds": 0.127335,
+    "predictions_at_minimum_threshold": [
+      {
+        "text": "Fastener lot",
+        "label": "part_or_model",
+        "start": 0,
+        "end": 12,
+        "score": 0.5654180645942688
+      },
+      {
+        "text": "acceptance criteria",
+        "label": "tolerance",
+        "start": 13,
+        "end": 32,
+        "score": 0.3722779154777527
+      },
+      {
+        "text": "zero failures",
+        "label": "quantity",
+        "start": 68,
+        "end": 81,
+        "score": 0.5667175650596619
+      }
+    ]
+  },
+  {
+    "case_id": "nasa_thread_gaging_criterion",
+    "source_kind": "real",
+    "source": "03_NASA_Fastener_Procurement_Standard.pdf",
+    "page_number": 14,
+    "evidence_id": "p14-b195",
+    "text": "All Level I threaded fasteners shall be inspected in accordance with the System 22 criteria of ASME B1.3 -2007",
+    "expected": [
+      {
+        "label": "tolerance",
+        "text": "System 22 criteria of ASME B1.3 -2007",
+        "start": 73,
+        "end": 110
+      }
+    ],
+    "latency_seconds": 0.250384,
+    "predictions_at_minimum_threshold": [
+      {
+        "text": "Level I threaded fasteners",
+        "label": "part_or_model",
+        "start": 4,
+        "end": 30,
+        "score": 0.8099315762519836
+      },
+      {
+        "text": "System 22 criteria",
+        "label": "tolerance",
+        "start": 73,
+        "end": 91,
+        "score": 0.8298658728599548
+      },
+      {
+        "text": "ASME B1.3 -2007",
+        "label": "tolerance",
+        "start": 95,
+        "end": 110,
+        "score": 0.47563353180885315
+      }
+    ]
+  },
+  {
+    "case_id": "nasa_fastener_size_constraint",
+    "source_kind": "real",
+    "source": "03_NASA_Fastener_Procurement_Standard.pdf",
+    "page_number": 15,
+    "evidence_id": "p15-b216",
+    "text": "Level II fasteners that are smaller than #10 or shorter than 2 times their diameter",
+    "expected": [
+      {
+        "label": "tolerance",
+        "text": "smaller than #10",
+        "start": 28,
+        "end": 44
+      },
+      {
+        "label": "tolerance",
+        "text": "shorter than 2 times their diameter",
+        "start": 48,
+        "end": 83
+      }
+    ],
+    "latency_seconds": 0.247226,
+    "predictions_at_minimum_threshold": [
+      {
+        "text": "Level II fasteners",
+        "label": "part_or_model",
+        "start": 0,
+        "end": 18,
+        "score": 0.7849053740501404
+      },
+      {
+        "text": "#10",
+        "label": "quantity",
+        "start": 41,
+        "end": 44,
+        "score": 0.6607012748718262
+      },
+      {
+        "text": "2 times",
+        "label": "quantity",
+        "start": 61,
+        "end": 68,
+        "score": 0.48049396276474
+      },
+      {
+        "text": "diameter",
+        "label": "quantity",
+        "start": 75,
+        "end": 83,
+        "score": 0.42800578474998474
+      }
+    ]
+  },
+  {
+    "case_id": "nasa_sampling_row",
+    "source_kind": "derived",
+    "source": "03_NASA_Fastener_Procurement_Standard.pdf",
+    "page_number": 16,
+    "evidence_id": "p16-t5-r4",
+    "text": "For lot size 16-25, sample size A is 4, sample size B is 3, sample size C is 2, and acceptance requires 0 failures.",
+    "expected": [
+      {
+        "label": "quantity",
+        "text": "16-25",
+        "start": 13,
+        "end": 18
+      },
+      {
+        "label": "quantity",
+        "text": "4",
+        "start": 37,
+        "end": 38
+      },
+      {
+        "label": "quantity",
+        "text": "3",
+        "start": 57,
+        "end": 58
+      },
+      {
+        "label": "quantity",
+        "text": "2",
+        "occurrence": 1,
+        "start": 77,
+        "end": 78
+      },
+      {
+        "label": "tolerance",
+        "text": "0 failures",
+        "start": 104,
+        "end": 114
+      }
+    ],
+    "latency_seconds": 0.2012,
+    "predictions_at_minimum_threshold": [
+      {
+        "text": "lot size",
+        "label": "tolerance",
+        "start": 4,
+        "end": 12,
+        "score": 0.23392356932163239
+      },
+      {
+        "text": "16-25",
+        "label": "part_or_model",
+        "start": 13,
+        "end": 18,
+        "score": 0.8088301420211792
+      },
+      {
+        "text": "sample size A",
+        "label": "tolerance",
+        "start": 20,
+        "end": 33,
+        "score": 0.678909420967102
+      },
+      {
+        "text": "4",
+        "label": "quantity",
+        "start": 37,
+        "end": 38,
+        "score": 0.8973989486694336
+      },
+      {
+        "text": "sample size B",
+        "label": "tolerance",
+        "start": 40,
+        "end": 53,
+        "score": 0.6996191143989563
+      },
+      {
+        "text": "3",
+        "label": "quantity",
+        "start": 57,
+        "end": 58,
+        "score": 0.8812256455421448
+      },
+      {
+        "text": "sample size C",
+        "label": "tolerance",
+        "start": 60,
+        "end": 73,
+        "score": 0.6918027400970459
+      },
+      {
+        "text": "2",
+        "label": "quantity",
+        "start": 77,
+        "end": 78,
+        "score": 0.9238242506980896
+      },
+      {
+        "text": "0",
+        "label": "quantity",
+        "start": 104,
+        "end": 105,
+        "score": 0.8265806436538696
+      },
+      {
+        "text": "failures",
+        "label": "tolerance",
+        "start": 106,
+        "end": 114,
+        "score": 0.3125729262828827
+      }
+    ]
+  },
+  {
+    "case_id": "synthetic_part_quantity_price",
+    "source_kind": "synthetic",
+    "source": null,
+    "page_number": null,
+    "evidence_id": "synthetic-001",
+    "text": "Part AX-441 requires 24 units at EUR 125.40 per unit.",
+    "expected": [
+      {
+        "label": "part_or_model",
+        "text": "AX-441",
+        "start": 5,
+        "end": 11
+      },
+      {
+        "label": "quantity",
+        "text": "24 units",
+        "start": 21,
+        "end": 29
+      },
+      {
+        "label": "price",
+        "text": "EUR 125.40",
+        "start": 33,
+        "end": 43
+      }
+    ],
+    "latency_seconds": 0.141284,
+    "predictions_at_minimum_threshold": [
+      {
+        "text": "Part AX-441",
+        "label": "part_or_model",
+        "start": 0,
+        "end": 11,
+        "score": 0.9071030616760254
+      },
+      {
+        "text": "24 units",
+        "label": "quantity",
+        "start": 21,
+        "end": 29,
+        "score": 0.9559583067893982
+      },
+      {
+        "text": "EUR 125.40",
+        "label": "price",
+        "start": 33,
+        "end": 43,
+        "score": 0.9067134261131287
+      },
+      {
+        "text": "unit",
+        "label": "quantity",
+        "start": 48,
+        "end": 52,
+        "score": 0.4330783486366272
+      }
+    ]
+  },
+  {
+    "case_id": "synthetic_deadline_and_tolerance",
+    "source_kind": "synthetic",
+    "source": null,
+    "page_number": null,
+    "evidence_id": "synthetic-002",
+    "text": "Shaft PN-8842 must be delivered by 15 September 2026 at 17:00 CET; diameter tolerance is 25.00 ± 0.02 mm.",
+    "expected": [
+      {
+        "label": "part_or_model",
+        "text": "PN-8842",
+        "start": 6,
+        "end": 13
+      },
+      {
+        "label": "deadline",
+        "text": "15 September 2026 at 17:00 CET",
+        "start": 35,
+        "end": 65
+      },
+      {
+        "label": "tolerance",
+        "text": "25.00 ± 0.02 mm",
+        "start": 89,
+        "end": 104
+      }
+    ],
+    "latency_seconds": 0.22302,
+    "predictions_at_minimum_threshold": [
+      {
+        "text": "Shaft PN-8842",
+        "label": "part_or_model",
+        "start": 0,
+        "end": 13,
+        "score": 0.902416467666626
+      },
+      {
+        "text": "15 September 2026",
+        "label": "deadline",
+        "start": 35,
+        "end": 52,
+        "score": 0.7290905714035034
+      },
+      {
+        "text": "17:00 CET",
+        "label": "deadline",
+        "start": 56,
+        "end": 65,
+        "score": 0.588575541973114
+      },
+      {
+        "text": "diameter tolerance",
+        "label": "tolerance",
+        "start": 67,
+        "end": 85,
+        "score": 0.7958914041519165
+      },
+      {
+        "text": "25.00 ± 0.02 mm",
+        "label": "quantity",
+        "start": 89,
+        "end": 104,
+        "score": 0.9564450979232788
+      }
+    ]
+  },
+  {
+    "case_id": "synthetic_bearing_order",
+    "source_kind": "synthetic",
+    "source": null,
+    "page_number": null,
+    "evidence_id": "synthetic-003",
+    "text": "Bearing SKF 6205-2RS: quantity 80, unit price $18.75, delivery deadline 2026-10-31.",
+    "expected": [
+      {
+        "label": "part_or_model",
+        "text": "SKF 6205-2RS",
+        "start": 8,
+        "end": 20
+      },
+      {
+        "label": "quantity",
+        "text": "80",
+        "start": 31,
+        "end": 33
+      },
+      {
+        "label": "price",
+        "text": "$18.75",
+        "start": 46,
+        "end": 52
+      },
+      {
+        "label": "deadline",
+        "text": "2026-10-31",
+        "start": 72,
+        "end": 82
+      }
+    ],
+    "latency_seconds": 0.175872,
+    "predictions_at_minimum_threshold": [
+      {
+        "text": "SKF 6205-2RS",
+        "label": "part_or_model",
+        "start": 8,
+        "end": 20,
+        "score": 0.905779242515564
+      },
+      {
+        "text": "80",
+        "label": "quantity",
+        "start": 31,
+        "end": 33,
+        "score": 0.8594031929969788
+      },
+      {
+        "text": "unit price",
+        "label": "price",
+        "start": 35,
+        "end": 45,
+        "score": 0.9288730621337891
+      },
+      {
+        "text": "$18.75",
+        "label": "price",
+        "start": 46,
+        "end": 52,
+        "score": 0.9612781405448914
+      },
+      {
+        "text": "delivery deadline",
+        "label": "deadline",
+        "start": 54,
+        "end": 71,
+        "score": 0.4746343493461609
+      },
+      {
+        "text": "2026-10-31",
+        "label": "deadline",
+        "start": 72,
+        "end": 82,
+        "score": 0.9360954761505127
+      }
+    ]
+  }
+]

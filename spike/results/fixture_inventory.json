@@ -1,0 +1,217 @@
+[
+  {
+    "file": "04_GSA_Table_Scan_Fixture.pdf",
+    "path": "D:\\pythonProjects\\PrimaTask9\\spike\\data\\inputs\\04_GSA_Table_Scan_Fixture.pdf",
+    "sha256": "d463b18b2966ad09e4b41a561aba3f54d252cec4fcd15e73919642307d873357",
+    "size_bytes": 4009255,
+    "pages": 7,
+    "tagged": false,
+    "form_fields": 0,
+    "summary": {
+      "total_characters": 0,
+      "median_characters_per_page": 0,
+      "low_text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "image_dominant_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "table_pages": []
+    },
+    "page_details": [
+      {
+        "page": 1,
+        "characters": 0,
+        "words": 0,
+        "images": 1,
+        "image_area_ratio": 1.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": ""
+      },
+      {
+        "page": 2,
+        "characters": 0,
+        "words": 0,
+        "images": 1,
+        "image_area_ratio": 1.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": ""
+      },
+      {
+        "page": 3,
+        "characters": 0,
+        "words": 0,
+        "images": 1,
+        "image_area_ratio": 1.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": ""
+      },
+      {
+        "page": 4,
+        "characters": 0,
+        "words": 0,
+        "images": 1,
+        "image_area_ratio": 1.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": ""
+      },
+      {
+        "page": 5,
+        "characters": 0,
+        "words": 0,
+        "images": 1,
+        "image_area_ratio": 1.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": ""
+      },
+      {
+        "page": 6,
+        "characters": 0,
+        "words": 0,
+        "images": 1,
+        "image_area_ratio": 1.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": ""
+      },
+      {
+        "page": 7,
+        "characters": 0,
+        "words": 0,
+        "images": 1,
+        "image_area_ratio": 1.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": ""
+      }
+    ]
+  },
+  {
+    "file": "05_GSA_Mixed_Table_Fixture.pdf",
+    "path": "D:\\pythonProjects\\PrimaTask9\\spike\\data\\inputs\\05_GSA_Mixed_Table_Fixture.pdf",
+    "sha256": "2668b6e5102717f0b02b5bbd46a87a4d4c2d465e03da74745d544f52251bbe60",
+    "size_bytes": 2141685,
+    "pages": 7,
+    "tagged": false,
+    "form_fields": 0,
+    "summary": {
+      "total_characters": 5982,
+      "median_characters_per_page": 468,
+      "low_text_pages": [
+        2,
+        5,
+        7
+      ],
+      "image_dominant_pages": [
+        2,
+        4,
+        5,
+        7
+      ],
+      "table_pages": []
+    },
+    "page_details": [
+      {
+        "page": 1,
+        "characters": 2785,
+        "words": 435,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 46,
+        "tables": [],
+        "text_preview": "36C24420Q0680 6.2.1 Chiller Maintenance. Services include to perform preventative work on the chillers, in the units themselves to repair any damage that might occur and flushing of the system when necessary. The contractor shall accomplish"
+      },
+      {
+        "page": 2,
+        "characters": 0,
+        "words": 0,
+        "images": 1,
+        "image_area_ratio": 1.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": ""
+      },
+      {
+        "page": 3,
+        "characters": 1672,
+        "words": 267,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 70,
+        "tables": [],
+        "text_preview": "36C24420Q0680 shall be performed by factory-trained mechanics. The fourth chiller is a model YKJHJBJ1DAE. The contractor shall provide preventative maintenance tasks noted as well as the unit mounted MVVSD. All visits as noted, Eddy current"
+      },
+      {
+        "page": 4,
+        "characters": 1057,
+        "words": 144,
+        "images": 1,
+        "image_area_ratio": 1.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 B.2 PRICE/COST SCHEDULE ITEM INFORMATION ITEM DESCRIPTIONOF NUMBER SUPPLIES/SERVICES QUANTITY UNIT UNIT PRICE AMOUNT 0001 0.00 XXXXX Do NotQuote Wilmington VAMC Preventive MaintenanceonFive(5) York / Carrier ChillersIAW SOW. C"
+      },
+      {
+        "page": 5,
+        "characters": 0,
+        "words": 0,
+        "images": 1,
+        "image_area_ratio": 1.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": ""
+      },
+      {
+        "page": 6,
+        "characters": 468,
+        "words": 76,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 2,
+        "rectangles": 49,
+        "tables": [],
+        "text_preview": "36C24420Q0680 0001AA SHIP TO: Department of Veterans Affairs 4.00 USA 0001AB SHIP TO: Department of Veterans Affairs 1.00 USA 0002 SHIP TO: Department of Veterans Affairs 0.00 USA 0002AA SHIP TO: Department of Veterans Affairs 1.00 USA 0002"
+      },
+      {
+        "page": 7,
+        "characters": 0,
+        "words": 0,
+        "images": 1,
+        "image_area_ratio": 1.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": ""
+      }
+    ]
+  }
+]

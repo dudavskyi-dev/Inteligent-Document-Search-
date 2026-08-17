@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0",
+  "evaluation_unit": "document page",
+  "notes": "Queries are evaluated only against pages from the named document. Relevant pages were manually checked against the rendered PDFs.",
+  "queries": [
+    {
+      "query_id": "gsa_equipment_inventory",
+      "document": "01_GSA_VA_Chiller_Maintenance_Solicitation.pdf",
+      "query": "Which chiller models, quantities, buildings, VSD status, and installation years are listed?",
+      "relevant_pages": [13, 14],
+      "target_fields": ["part_or_model", "quantity"]
+    },
+    {
+      "query_id": "gsa_maintenance_quantities",
+      "document": "01_GSA_VA_Chiller_Maintenance_Solicitation.pdf",
+      "query": "What comprehensive, operational, oil, and tube-cleaning service quantities are required for each chiller model?",
+      "relevant_pages": [15],
+      "target_fields": ["part_or_model", "quantity"]
+    },
+    {
+      "query_id": "gsa_price_schedule",
+      "document": "01_GSA_VA_Chiller_Maintenance_Solicitation.pdf",
+      "query": "Find the price and cost schedule line items with quantities, units, unit prices, and amounts for chiller maintenance.",
+      "relevant_pages": [24, 25],
+      "target_fields": ["part_or_service", "quantity", "price"]
+    },
+    {
+      "query_id": "gsa_period_of_performance",
+      "document": "01_GSA_VA_Chiller_Maintenance_Solicitation.pdf",
+      "query": "What is the period of performance for the chiller maintenance request?",
+      "relevant_pages": [4],
+      "target_fields": ["deadline_or_period"]
+    },
+    {
+      "query_id": "doe_submission_volumes",
+      "document": "02_DOE_NNSA_RFP_Section_L.pdf",
+      "query": "How must the proposal be submitted and which three proposal volumes are required?",
+      "relevant_pages": [13],
+      "target_fields": ["submission_requirement"]
+    },
+    {
+      "query_id": "doe_page_limits",
+      "document": "02_DOE_NNSA_RFP_Section_L.pdf",
+      "query": "What are the maximum page limits for Volume II, ordinary resumes, and the Laboratory Director resume?",
+      "relevant_pages": [14, 21],
+      "target_fields": ["limit"]
+    },
+    {
+      "query_id": "doe_resume_elements",
+      "document": "02_DOE_NNSA_RFP_Section_L.pdf",
+      "query": "What information, work history, clearance, and references must each proposed key person's resume include?",
+      "relevant_pages": [19, 20],
+      "target_fields": ["key_personnel_requirement"]
+    },
+    {
+      "query_id": "doe_cost_and_fee",
+      "document": "02_DOE_NNSA_RFP_Section_L.pdf",
+      "query": "What transition price and management or strategic partnership fees must the offeror propose?",
+      "relevant_pages": [21, 22],
+      "target_fields": ["price", "fee"]
+    },
+    {
+      "query_id": "doe_due_date_rules",
+      "document": "02_DOE_NNSA_RFP_Section_L.pdf",
+      "query": "Where is the proposal due date defined and how are password-protected or late submissions handled?",
+      "relevant_pages": [14, 22],
+      "target_fields": ["deadline", "submission_requirement"]
+    },
+    {
+      "query_id": "nasa_traceability",
+      "document": "03_NASA_Fastener_Procurement_Standard.pdf",
+      "query": "What documentation is required for complete fastener lot traceability and the Certificate of Conformance?",
+      "relevant_pages": [13],
+      "target_fields": ["part_requirement", "traceability"]
+    },
+    {
+      "query_id": "nasa_dimensional_inspection",
+      "document": "03_NASA_Fastener_Procurement_Standard.pdf",
+      "query": "What dimensional inspection and thread-gaging acceptance requirements apply to fasteners by quality level?",
+      "relevant_pages": [14, 16],
+      "target_fields": ["tolerance_or_acceptance"]
+    },
+    {
+      "query_id": "nasa_sampling_table",
+      "document": "03_NASA_Fastener_Procurement_Standard.pdf",
+      "query": "What sample size and zero-failure acceptance criteria apply to each fastener lot size?",
+      "relevant_pages": [16],
+      "target_fields": ["quantity", "acceptance_criteria"]
+    },
+    {
+      "query_id": "nasa_packaging",
+      "document": "03_NASA_Fastener_Procurement_Standard.pdf",
+      "query": "What packaging, storage, environmental control, and external marking requirements apply to fasteners?",
+      "relevant_pages": [15],
+      "target_fields": ["part_requirement"]
+    },
+    {
+      "query_id": "nasa_tensile_testing",
+      "document": "03_NASA_Fastener_Procurement_Standard.pdf",
+      "query": "What tensile testing is required for level II fasteners from nonqualified suppliers or with incomplete traceability?",
+      "relevant_pages": [15],
+      "target_fields": ["test_requirement", "tolerance_or_acceptance"]
+    }
+  ]
+}

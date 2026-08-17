@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "run_id": "20260816T183935Z",
+  "status": "success",
+  "started_at_utc": "2026-08-16T18:39:35.588091+00:00",
+  "finished_at_utc": "2026-08-16T18:39:35.605374+00:00",
+  "threshold": 0.72,
+  "input_parsing_summary": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\parsing\\20260816T183015Z\\summary.json",
+  "runtime_seconds": 0.008855,
+  "metrics": {
+    "confusion_matrix": {
+      "true_positive": 3,
+      "false_positive": 0,
+      "false_negative": 0,
+      "true_negative": 3
+    },
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "accuracy": 1.0,
+    "pairs": [
+      {
+        "left_page": 1,
+        "right_page": 2,
+        "expected_merge": true,
+        "predicted_merge": true,
+        "outcome": "TP",
+        "score": 0.916731,
+        "left_table_id": "p1-t0",
+        "right_table_id": "p2-t0",
+        "ground_truth_reason": "The five-column equipment table starts at the bottom of source page 13 and continues without a repeated header at the top of page 14."
+      },
+      {
+        "left_page": 2,
+        "right_page": 3,
+        "expected_merge": false,
+        "predicted_merge": false,
+        "outcome": "TN",
+        "score": 0.0,
+        "left_table_id": "p2-t0",
+        "right_table_id": "p3-t1",
+        "ground_truth_reason": "The equipment table ends at the top of source page 14; source page 15 contains a different maintenance-inspection table."
+      },
+      {
+        "left_page": 3,
+        "right_page": 4,
+        "expected_merge": false,
+        "predicted_merge": false,
+        "outcome": "TN",
+        "score": 0.0,
+        "left_table_id": "p3-t1",
+        "right_table_id": "p4-t2",
+        "ground_truth_reason": "The fixture jumps from source page 15 to source page 24 and the tables have different subjects and structures."
+      },
+      {
+        "left_page": 4,
+        "right_page": 5,
+        "expected_merge": true,
+        "predicted_merge": true,
+        "outcome": "TP",
+        "score": 0.848253,
+        "left_table_id": "p4-t2",
+        "right_table_id": "p5-t0",
+        "ground_truth_reason": "The price/cost schedule reaches the bottom of source page 24 and continues at the top of page 25."
+      },
+      {
+        "left_page": 5,
+        "right_page": 6,
+        "expected_merge": false,
+        "predicted_merge": false,
+        "outcome": "TN",
+        "score": 0.066882,
+        "left_table_id": "p5-t0",
+        "right_table_id": "p6-t3",
+        "ground_truth_reason": "The extracted fragment on source page 25 is the price schedule; the first extracted table on page 26 is the delivery schedule. The delivery table beginning lower on page 25 was not emitted as a separate fragment."
+      },
+      {
+        "left_page": 6,
+        "right_page": 7,
+        "expected_merge": true,
+        "predicted_merge": true,
+        "outcome": "TP",
+        "score": 0.908167,
+        "left_table_id": "p6-t3",
+        "right_table_id": "p7-t0",
+        "ground_truth_reason": "The delivery schedule reaches the bottom of source page 26 and continues at the top of page 27."
+      }
+    ],
+    "extra_unlabelled_candidates": []
+  },
+  "invariants": {
+    "passed": true,
+    "checks": {
+      "all_fragments_preserved_once": true,
+      "all_source_cells_preserved_once": true,
+      "no_synthetic_fragment_ids": true,
+      "no_synthetic_cell_ids": true
+    },
+    "input_fragments": 7,
+    "output_fragments": 7,
+    "input_cells": 189,
+    "output_cells": 189
+  },
+  "quality_gate": {
+    "required_precision": 1.0,
+    "required_recall": 1.0,
+    "required_f1": 1.0,
+    "require_no_unlabelled_candidates": true,
+    "require_all_invariants": true
+  },
+  "artifacts": {
+    "summary": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\stitching\\20260816T183935Z\\summary.json",
+    "decisions": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\stitching\\20260816T183935Z\\decisions.json",
+    "logical_tables": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\stitching\\20260816T183935Z\\logical_tables.json",
+    "log": "D:\\pythonProjects\\PrimaTask9\\spike\\logs\\stitching\\20260816T183935Z.log"
+  },
+  "error": null
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "fixture": "05_GSA_Mixed_Table_Fixture.pdf",
+  "fixture_sha256": "2668b6e5102717f0b02b5bbd46a87a4d4c2d465e03da74745d544f52251bbe60",
+  "fixture_page_to_source_page": {
+    "1": 13,
+    "2": 14,
+    "3": 15,
+    "4": 24,
+    "5": 25,
+    "6": 26,
+    "7": 27
+  },
+  "candidate_policy": "last table on page N to first table on page N+1",
+  "pairs": [
+    {
+      "left_page": 1,
+      "right_page": 2,
+      "should_merge": true,
+      "logical_table": "equipment_inventory",
+      "reason": "The five-column equipment table starts at the bottom of source page 13 and continues without a repeated header at the top of page 14."
+    },
+    {
+      "left_page": 2,
+      "right_page": 3,
+      "should_merge": false,
+      "logical_table": null,
+      "reason": "The equipment table ends at the top of source page 14; source page 15 contains a different maintenance-inspection table."
+    },
+    {
+      "left_page": 3,
+      "right_page": 4,
+      "should_merge": false,
+      "logical_table": null,
+      "reason": "The fixture jumps from source page 15 to source page 24 and the tables have different subjects and structures."
+    },
+    {
+      "left_page": 4,
+      "right_page": 5,
+      "should_merge": true,
+      "logical_table": "price_cost_schedule",
+      "reason": "The price/cost schedule reaches the bottom of source page 24 and continues at the top of page 25."
+    },
+    {
+      "left_page": 5,
+      "right_page": 6,
+      "should_merge": false,
+      "logical_table": null,
+      "reason": "The extracted fragment on source page 25 is the price schedule; the first extracted table on page 26 is the delivery schedule. The delivery table beginning lower on page 25 was not emitted as a separate fragment."
+    },
+    {
+      "left_page": 6,
+      "right_page": 7,
+      "should_merge": true,
+      "logical_table": "delivery_schedule",
+      "reason": "The delivery schedule reaches the bottom of source page 26 and continues at the top of page 27."
+    }
+  ]
+}

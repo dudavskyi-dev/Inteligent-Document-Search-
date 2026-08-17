@@ -1,0 +1,166 @@
+[
+  {
+    "left_page": 1,
+    "right_page": 2,
+    "left_table_id": "p1-t0",
+    "right_table_id": "p2-t0",
+    "score": 0.916731,
+    "threshold": 0.72,
+    "predicted_merge": true,
+    "features": {
+      "left_bottom_score": 1.0,
+      "right_top_score": 1.0,
+      "horizontal_overlap": 1.0,
+      "column_count_similarity": 0.8,
+      "column_alignment": 0.7673050490937146,
+      "column_offset": 1,
+      "header_similarity": 0.0,
+      "left_has_trailing_content": false,
+      "right_has_leading_content": false
+    },
+    "reasons": [
+      "left_bottom=1.000",
+      "right_top=1.000",
+      "horizontal_overlap=1.000",
+      "column_alignment=0.767 offset=+1"
+    ]
+  },
+  {
+    "left_page": 2,
+    "right_page": 3,
+    "left_table_id": "p2-t0",
+    "right_table_id": "p3-t1",
+    "score": 0.0,
+    "threshold": 0.72,
+    "predicted_merge": false,
+    "features": {
+      "left_bottom_score": 0.0,
+      "right_top_score": 0.0,
+      "horizontal_overlap": 1.0,
+      "column_count_similarity": 0.6666666666666666,
+      "column_alignment": 0.532428866776549,
+      "column_offset": -1,
+      "header_similarity": 0.0,
+      "left_has_trailing_content": true,
+      "right_has_leading_content": true
+    },
+    "reasons": [
+      "left_bottom=0.000",
+      "right_top=0.000",
+      "horizontal_overlap=1.000",
+      "column_alignment=0.532 offset=-1",
+      "guard: meaningful content follows the left table",
+      "penalty: meaningful content precedes the right table",
+      "guard: table fragments do not meet both page-boundary thresholds"
+    ]
+  },
+  {
+    "left_page": 3,
+    "right_page": 4,
+    "left_table_id": "p3-t1",
+    "right_table_id": "p4-t2",
+    "score": 0.0,
+    "threshold": 0.72,
+    "predicted_merge": false,
+    "features": {
+      "left_bottom_score": 0.0,
+      "right_top_score": 0.46482942112367165,
+      "horizontal_overlap": 0.9580428135616422,
+      "column_count_similarity": 1.0,
+      "column_alignment": 0.5732679436665739,
+      "column_offset": 0,
+      "header_similarity": 0.05,
+      "left_has_trailing_content": true,
+      "right_has_leading_content": true
+    },
+    "reasons": [
+      "left_bottom=0.000",
+      "right_top=0.465",
+      "horizontal_overlap=0.958",
+      "column_alignment=0.573 offset=+0",
+      "guard: meaningful content follows the left table",
+      "penalty: meaningful content precedes the right table",
+      "guard: table fragments do not meet both page-boundary thresholds"
+    ]
+  },
+  {
+    "left_page": 4,
+    "right_page": 5,
+    "left_table_id": "p4-t2",
+    "right_table_id": "p5-t0",
+    "score": 0.848253,
+    "threshold": 0.72,
+    "predicted_merge": true,
+    "features": {
+      "left_bottom_score": 1.0,
+      "right_top_score": 1.0,
+      "horizontal_overlap": 1.0,
+      "column_count_similarity": 0.3333333333333333,
+      "column_alignment": 0.31585863365210615,
+      "column_offset": 2,
+      "header_similarity": 0.0,
+      "left_has_trailing_content": false,
+      "right_has_leading_content": false
+    },
+    "reasons": [
+      "left_bottom=1.000",
+      "right_top=1.000",
+      "horizontal_overlap=1.000",
+      "column_alignment=0.316 offset=+2"
+    ]
+  },
+  {
+    "left_page": 5,
+    "right_page": 6,
+    "left_table_id": "p5-t0",
+    "right_table_id": "p6-t3",
+    "score": 0.066882,
+    "threshold": 0.72,
+    "predicted_merge": false,
+    "features": {
+      "left_bottom_score": 0.0,
+      "right_top_score": 1.0,
+      "horizontal_overlap": 0.9992014593551667,
+      "column_count_similarity": 0.5,
+      "column_alignment": 0.4200151295304243,
+      "column_offset": -1,
+      "header_similarity": 0.0,
+      "left_has_trailing_content": true,
+      "right_has_leading_content": false
+    },
+    "reasons": [
+      "left_bottom=0.000",
+      "right_top=1.000",
+      "horizontal_overlap=0.999",
+      "column_alignment=0.420 offset=-1",
+      "guard: meaningful content follows the left table",
+      "guard: table fragments do not meet both page-boundary thresholds"
+    ]
+  },
+  {
+    "left_page": 6,
+    "right_page": 7,
+    "left_table_id": "p6-t3",
+    "right_table_id": "p7-t0",
+    "score": 0.908167,
+    "threshold": 0.72,
+    "predicted_merge": true,
+    "features": {
+      "left_bottom_score": 1.0,
+      "right_top_score": 1.0,
+      "horizontal_overlap": 1.0,
+      "column_count_similarity": 0.75,
+      "column_alignment": 0.7066734220267994,
+      "column_offset": 1,
+      "header_similarity": 0.0,
+      "left_has_trailing_content": false,
+      "right_has_leading_content": false
+    },
+    "reasons": [
+      "left_bottom=1.000",
+      "right_top=1.000",
+      "horizontal_overlap=1.000",
+      "column_alignment=0.707 offset=+1"
+    ]
+  }
+]

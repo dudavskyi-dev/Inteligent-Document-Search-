@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-08-16T21:50:29.567671+00:00",
+  "documents": [
+    {
+      "source": "D:\\pythonProjects\\PrimaTask9\\spike\\data\\inputs\\01_GSA_VA_Chiller_Maintenance_Solicitation.pdf",
+      "sha256": "766e6f369abe50fcdb9541f18402a852685d08b8fbed3e6983908aff71fd90e2",
+      "canonical_output": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\retrieval\\corpus\\01_GSA_VA_Chiller_Maintenance_Solicitation.docling.json",
+      "cache_status": "created",
+      "wall_seconds": 150.519432,
+      "parser_elapsed_seconds": 139.41819210001267,
+      "pages": 60
+    },
+    {
+      "source": "D:\\pythonProjects\\PrimaTask9\\spike\\data\\inputs\\02_DOE_NNSA_RFP_Section_L.pdf",
+      "sha256": "c0fa7bef79bb8915a26e18024b7c5c14909661691b06a27f912ee6ce7231c6a9",
+      "canonical_output": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\retrieval\\corpus\\02_DOE_NNSA_RFP_Section_L.docling.json",
+      "cache_status": "created",
+      "wall_seconds": 68.307431,
+      "parser_elapsed_seconds": 59.88599919999251,
+      "pages": 28
+    },
+    {
+      "source": "D:\\pythonProjects\\PrimaTask9\\spike\\data\\inputs\\03_NASA_Fastener_Procurement_Standard.pdf",
+      "sha256": "16ca2509462c997669a580e3644620e23471ab2ec81f586bc40c7e53e9a5d9c0",
+      "canonical_output": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\retrieval\\corpus\\03_NASA_Fastener_Procurement_Standard.docling.json",
+      "cache_status": "created",
+      "wall_seconds": 62.537423,
+      "parser_elapsed_seconds": 53.93632290000096,
+      "pages": 16
+    }
+  ]
+}

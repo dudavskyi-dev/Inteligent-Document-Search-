@@ -1,0 +1,254 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.internal/schemas/industrial-document/1.0",
+  "title": "IndustrialDocument",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "document_id",
+    "source_sha256",
+    "document_type",
+    "document_number",
+    "parties",
+    "deadlines",
+    "line_items",
+    "evidence_catalog",
+    "validation_issues",
+    "review"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "industrial-document/1.0"
+    },
+    "document_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "document_type": {
+      "type": "string",
+      "enum": ["tender", "contract", "technical_specification", "other"]
+    },
+    "document_number": {
+      "oneOf": [
+        {"$ref": "#/$defs/reviewedString"},
+        {"type": "null"}
+      ]
+    },
+    "parties": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/party"}
+    },
+    "deadlines": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/deadline"}
+    },
+    "line_items": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/lineItem"}
+    },
+    "evidence_catalog": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/evidence"}
+    },
+    "validation_issues": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/validationIssue"}
+    },
+    "review": {
+      "$ref": "#/$defs/review"
+    }
+  },
+  "$defs": {
+    "method": {
+      "type": "string",
+      "enum": ["deterministic", "llm", "reviewer"]
+    },
+    "reviewState": {
+      "type": "string",
+      "enum": ["pending", "confirmed", "corrected"]
+    },
+    "evidenceIds": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    },
+    "reviewedString": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["raw", "value", "evidence_ids", "method", "quality_score", "review_state"],
+      "properties": {
+        "raw": {"type": "string"},
+        "value": {"type": ["string", "null"]},
+        "evidence_ids": {"$ref": "#/$defs/evidenceIds"},
+        "method": {"$ref": "#/$defs/method"},
+        "quality_score": {"type": "number", "minimum": 0, "maximum": 1},
+        "review_state": {"$ref": "#/$defs/reviewState"}
+      }
+    },
+    "quantity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["raw", "value", "unit", "evidence_ids", "method", "quality_score", "review_state"],
+      "properties": {
+        "raw": {"type": "string"},
+        "value": {"type": ["string", "null"], "pattern": "^-?[0-9]+(?:\\.[0-9]+)?$"},
+        "unit": {"type": ["string", "null"]},
+        "evidence_ids": {"$ref": "#/$defs/evidenceIds"},
+        "method": {"$ref": "#/$defs/method"},
+        "quality_score": {"type": "number", "minimum": 0, "maximum": 1},
+        "review_state": {"$ref": "#/$defs/reviewState"}
+      }
+    },
+    "money": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["raw", "amount", "currency", "price_basis", "evidence_ids", "method", "quality_score", "review_state"],
+      "properties": {
+        "raw": {"type": "string"},
+        "amount": {"type": ["string", "null"], "pattern": "^-?[0-9]+(?:\\.[0-9]+)?$"},
+        "currency": {"type": ["string", "null"], "pattern": "^[A-Z]{3}$"},
+        "price_basis": {"type": ["string", "null"]},
+        "evidence_ids": {"$ref": "#/$defs/evidenceIds"},
+        "method": {"$ref": "#/$defs/method"},
+        "quality_score": {"type": "number", "minimum": 0, "maximum": 1},
+        "review_state": {"$ref": "#/$defs/reviewState"}
+      }
+    },
+    "tolerance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "target",
+        "raw",
+        "nominal",
+        "lower_limit",
+        "upper_limit",
+        "unit",
+        "standard",
+        "evidence_ids",
+        "method",
+        "quality_score",
+        "review_state"
+      ],
+      "properties": {
+        "type": {"type": "string", "enum": ["dimensional", "acceptance", "other"]},
+        "target": {"type": ["string", "null"]},
+        "raw": {"type": "string"},
+        "nominal": {"type": ["string", "null"], "pattern": "^-?[0-9]+(?:\\.[0-9]+)?$"},
+        "lower_limit": {"type": ["string", "null"], "pattern": "^-?[0-9]+(?:\\.[0-9]+)?$"},
+        "upper_limit": {"type": ["string", "null"], "pattern": "^-?[0-9]+(?:\\.[0-9]+)?$"},
+        "unit": {"type": ["string", "null"]},
+        "standard": {"type": ["string", "null"]},
+        "evidence_ids": {"$ref": "#/$defs/evidenceIds"},
+        "method": {"$ref": "#/$defs/method"},
+        "quality_score": {"type": "number", "minimum": 0, "maximum": 1},
+        "review_state": {"$ref": "#/$defs/reviewState"}
+      }
+    },
+    "deadline": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "raw", "value", "timezone_source", "evidence_ids", "method", "quality_score", "review_state"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["bid_submission", "delivery", "performance_start", "performance_end", "other"]
+        },
+        "raw": {"type": "string"},
+        "value": {"type": ["string", "null"], "format": "date-time"},
+        "timezone_source": {"type": ["string", "null"], "enum": ["explicit", "document_locale", "reviewer", null]},
+        "evidence_ids": {"$ref": "#/$defs/evidenceIds"},
+        "method": {"$ref": "#/$defs/method"},
+        "quality_score": {"type": "number", "minimum": 0, "maximum": 1},
+        "review_state": {"$ref": "#/$defs/reviewState"}
+      }
+    },
+    "party": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["role", "name"],
+      "properties": {
+        "role": {"type": "string", "enum": ["buyer", "supplier", "contractor", "other"]},
+        "name": {"$ref": "#/$defs/reviewedString"}
+      }
+    },
+    "lineItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "line_id",
+        "source_row_ids",
+        "part_number",
+        "description",
+        "quantity",
+        "tolerances",
+        "unit_price",
+        "line_total",
+        "delivery_deadline"
+      ],
+      "properties": {
+        "line_id": {"type": "string", "minLength": 1},
+        "source_row_ids": {"$ref": "#/$defs/evidenceIds"},
+        "part_number": {"oneOf": [{"$ref": "#/$defs/reviewedString"}, {"type": "null"}]},
+        "description": {"oneOf": [{"$ref": "#/$defs/reviewedString"}, {"type": "null"}]},
+        "quantity": {"oneOf": [{"$ref": "#/$defs/quantity"}, {"type": "null"}]},
+        "tolerances": {"type": "array", "items": {"$ref": "#/$defs/tolerance"}},
+        "unit_price": {"oneOf": [{"$ref": "#/$defs/money"}, {"type": "null"}]},
+        "line_total": {"oneOf": [{"$ref": "#/$defs/money"}, {"type": "null"}]},
+        "delivery_deadline": {"oneOf": [{"$ref": "#/$defs/deadline"}, {"type": "null"}]}
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidence_id", "page_number", "bbox", "quote", "parser"],
+      "properties": {
+        "evidence_id": {"type": "string", "minLength": 1},
+        "page_number": {"type": "integer", "minimum": 1},
+        "bbox": {
+          "type": "array",
+          "prefixItems": [
+            {"type": "number", "minimum": 0, "maximum": 1},
+            {"type": "number", "minimum": 0, "maximum": 1},
+            {"type": "number", "minimum": 0, "maximum": 1},
+            {"type": "number", "minimum": 0, "maximum": 1}
+          ],
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "quote": {"type": "string"},
+        "parser": {"type": "string", "minLength": 1}
+      }
+    },
+    "validationIssue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "severity", "field_path", "message", "status"],
+      "properties": {
+        "code": {"type": "string", "minLength": 1},
+        "severity": {"type": "string", "enum": ["blocking", "warning"]},
+        "field_path": {"type": "string", "minLength": 1},
+        "message": {"type": "string", "minLength": 1},
+        "status": {"type": "string", "enum": ["open", "resolved", "overridden"]}
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state", "version", "approved_by", "approved_at", "snapshot_sha256"],
+      "properties": {
+        "state": {"type": "string", "enum": ["needs_review", "approved", "rejected"]},
+        "version": {"type": "integer", "minimum": 1},
+        "approved_by": {"type": ["string", "null"]},
+        "approved_at": {"type": ["string", "null"], "format": "date-time"},
+        "snapshot_sha256": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"}
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.venv/
+.cache/
+.pytest_cache/
+.ruff_cache/
+__pycache__/
+*.py[cod]
+
+# Local benchmark inputs may be confidential or redistributable only by source.
+spike/data/inputs/*
+!spike/data/inputs/.gitkeep
+
+# Generated runtime artifacts. Saved spike/results are intentionally versionable evidence.
+spike/outputs/
+spike/logs/
+tmp/
+
+# Local secrets and machine-specific settings.
+.env
+.env.*
+!.env.example

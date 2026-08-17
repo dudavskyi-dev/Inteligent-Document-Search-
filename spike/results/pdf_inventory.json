@@ -1,0 +1,1857 @@
+[
+  {
+    "file": "01_GSA_VA_Chiller_Maintenance_Solicitation.pdf",
+    "path": "D:\\pythonProjects\\PrimaTask9\\spike\\data\\inputs\\01_GSA_VA_Chiller_Maintenance_Solicitation.pdf",
+    "sha256": "766e6f369abe50fcdb9541f18402a852685d08b8fbed3e6983908aff71fd90e2",
+    "size_bytes": 2490114,
+    "pages": 60,
+    "tagged": false,
+    "form_fields": 0,
+    "summary": {
+      "total_characters": 127835,
+      "median_characters_per_page": 2318,
+      "low_text_pages": [],
+      "image_dominant_pages": [
+        1,
+        6,
+        9,
+        24,
+        25
+      ],
+      "table_pages": [
+        4,
+        13,
+        14,
+        15,
+        19,
+        20,
+        21,
+        22,
+        25,
+        26,
+        27,
+        40,
+        41
+      ]
+    },
+    "page_details": [
+      {
+        "page": 1,
+        "characters": 2952,
+        "words": 369,
+        "images": 1,
+        "image_area_ratio": 1.0,
+        "lines": 0,
+        "rectangles": 1,
+        "tables": [],
+        "text_preview": "SOLICITATION/CONTRACT/ORDERFOR COMMERCIALITEMS 1.REQUISITIONNO. PAGE1OF 60 OFFERORTOCOMPLETEBLOCKS12,17,23,24,&30 2.CONTRACTNO 3.AWARD/EFFECTIVEDATE 4 ORDERNO. 5.SOLICITATIONNUMBER 6.SOLICITATIONISSUEDATE 7.F IN O F R O S R O M L A IC TI I "
+      },
+      {
+        "page": 2,
+        "characters": 2137,
+        "words": 153,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 Table of Contents SECTION A .................................................................................... Page 2 of 60 A.1 SF 1449 SOLICITATION/CONTRACT/ORDER FOR COMMERCIAL ITEMS.. SECTION B - CONTINUATION OF SF 1449 B"
+      },
+      {
+        "page": 3,
+        "characters": 896,
+        "words": 130,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 1,
+        "tables": [],
+        "text_preview": "36C24420Q0680 SECTION B - CONTINUATION OF SF 1449 BLOCKS B.1 CONTRACT ADMINISTRATION DATA 1. Contract Administration: All contract administration matters will be handled by the following individuals: a. CONTRACTOR: b. GOVERNMENT: Contractin"
+      },
+      {
+        "page": 4,
+        "characters": 1979,
+        "words": 283,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 23,
+        "tables": [
+          {
+            "rows": 4,
+            "columns": 2,
+            "bbox": [
+              72.24,
+              93.36,
+              539.76,
+              145.92
+            ],
+            "preview": [
+              [
+                "AMENDMENT NO",
+                "DATE"
+              ],
+              [
+                "",
+                ""
+              ],
+              [
+                "",
+                ""
+              ]
+            ]
+          }
+        ],
+        "text_preview": "36C24420Q0680 ACKNOWLEDGMENT OF AMENDMENTS: The offeror acknowledges receipt of amendments to the Solicitation numbered and dated as follows: AMENDMENT NO DATE STATEMENT OF WORK Chiller Plant Preventive Maintenance Wilmington VAMC, Lebanon "
+      },
+      {
+        "page": 5,
+        "characters": 2892,
+        "words": 408,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 clearances and free operation. Check tightness of condenser fan motor mounting brackets. Check the set screws on the fan shafts. Visually inspect the condenser coil for cleanliness. Verify the performance of the fan control in"
+      },
+      {
+        "page": 6,
+        "characters": 2320,
+        "words": 253,
+        "images": 1,
+        "image_area_ratio": 1.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 conditionof allindicator/alarm lights, if applicable. Test the operation of thelow water temperature safety device. Calibrateandrecordsetting. Test the operationof thelow evaporator pressure safety device(s).Calibrateand recor"
+      },
+      {
+        "page": 7,
+        "characters": 1311,
+        "words": 197,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 4.3.3 Verify clean cooling tower and strainers. 4.3.4 Start the condenser water pump, chilled water pump, and cooling tower fan(s). 4.3.5 Check all flow-proving devices on the chilled water and condenser water circuits. 4.3.6 "
+      },
+      {
+        "page": 8,
+        "characters": 2318,
+        "words": 364,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 4.5 These coverages shall include emergency services between inspections, as required for the purpose of diagnosis of trouble, adjustment, minor repairs or resetting of controls. 4.6 The vendor shall immediately, but no later "
+      },
+      {
+        "page": 9,
+        "characters": 1188,
+        "words": 119,
+        "images": 1,
+        "image_area_ratio": 1.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 4.11.4Volume49oftheCodeofFederalRegulations,Part 397-Transportationof HazardousMaterials 4.11.5Title7 oftheDelawareCode-Conservation 4.11.6Title16oftheDelawareCode-HealthandSafety 5.0LebanonVAMCRequirements 5.1 Scope of Work:I"
+      },
+      {
+        "page": 10,
+        "characters": 936,
+        "words": 130,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 1,
+        "tables": [],
+        "text_preview": "36C24420Q0680 5.3.7 Check oil level 5.3.8 Temperature and pressure 5.3.9 Oil filter, Delta P 5.3.10 Compressor and oil pump currents 5.3.11 Check refrigerant charge 5.3.12 Leak check (without insulation removal) 5.3.13 Record software versi"
+      },
+      {
+        "page": 11,
+        "characters": 1518,
+        "words": 217,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 3,
+        "tables": [],
+        "text_preview": "36C24420Q0680 5.4.10 Check refrigerant charge 5.4.11 Inspect condenser coils 5.4.12 Leak check without insulation removal 5.4.13 Record software version 5.4.14 Check operation controls 5.4.15 Calibrate controls 5.4.16 Make equipment adjustm"
+      },
+      {
+        "page": 12,
+        "characters": 2651,
+        "words": 400,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 6,
+        "tables": [],
+        "text_preview": "36C24420Q0680 5.8 The period of performance for this request is one year. 6. Corporal Michael J. Crescenz Veterans Affairs Medical Center (CMC VAMC) Requirements: 6.1 General: This is a non-personal services contract to provide Chiller Main"
+      },
+      {
+        "page": 13,
+        "characters": 2785,
+        "words": 435,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 46,
+        "tables": [
+          {
+            "rows": 5,
+            "columns": 5,
+            "bbox": [
+              64.8,
+              657.96,
+              547.2,
+              733.2
+            ],
+            "preview": [
+              [
+                "Building",
+                "Quantity",
+                "Model",
+                "VSD",
+                "Installation Year"
+              ],
+              [
+                "2",
+                "2",
+                "York 276-ton air cooled 480 volt",
+                "Yes",
+                "2011"
+              ],
+              [
+                "2",
+                "1",
+                "York YCIVO177",
+                "Yes",
+                "2015"
+              ]
+            ]
+          }
+        ],
+        "text_preview": "36C24420Q0680 6.2.1 Chiller Maintenance. Services include to perform preventative work on the chillers, in the units themselves to repair any damage that might occur and flushing of the system when necessary. The contractor shall accomplish"
+      },
+      {
+        "page": 14,
+        "characters": 3270,
+        "words": 540,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 22,
+        "tables": [
+          {
+            "rows": 2,
+            "columns": 5,
+            "bbox": [
+              64.8,
+              54.24,
+              547.2,
+              84.36
+            ],
+            "preview": [
+              [
+                "31",
+                "3",
+                "York 1200-ton 4160 volt",
+                "Yes",
+                "2011"
+              ],
+              [
+                "31",
+                "1",
+                "York JHJB 1130-ton 480volt",
+                "Yes",
+                "2001"
+              ]
+            ]
+          }
+        ],
+        "text_preview": "36C24420Q0680 31 3 York 1200-ton 4160 volt Yes 2011 31 1 York JHJB 1130-ton 480volt Yes 2001 6.2.2.1 The Chiller building is located next to Building 2 of the CMC VAMC and is along the access road for easy access. 6.2.2.2 Building #2 has tw"
+      },
+      {
+        "page": 15,
+        "characters": 1672,
+        "words": 267,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 70,
+        "tables": [
+          {
+            "rows": 7,
+            "columns": 6,
+            "bbox": [
+              33.72,
+              287.88,
+              578.28,
+              521.4
+            ],
+            "preview": [
+              [
+                "Quantity",
+                "Model",
+                "Comprehensive\nService",
+                "Operational\nService",
+                "Oil\nTesting/Changing",
+                "Tube\nCleaning/coil\ncleaning"
+              ],
+              [
+                "1",
+                "YCIV0177",
+                "1",
+                "6",
+                "1",
+                "1"
+              ],
+              [
+                "2",
+                "YCIV0267",
+                "1",
+                "6",
+                "1",
+                "1"
+              ]
+            ]
+          }
+        ],
+        "text_preview": "36C24420Q0680 shall be performed by factory-trained mechanics. The fourth chiller is a model YKJHJBJ1DAE. The contractor shall provide preventative maintenance tasks noted as well as the unit mounted MVVSD. All visits as noted, Eddy current"
+      },
+      {
+        "page": 16,
+        "characters": 2428,
+        "words": 357,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 3,
+        "tables": [],
+        "text_preview": "36C24420Q0680 6.2.6 Response time requirements 6.2.6.1 Two-hour emergency response is required for the following services once they are contacted by the COR: 6.2.6.1.1 Refrigerant service 6.2.6.1.2 Dryer changing and leak checking of all eq"
+      },
+      {
+        "page": 17,
+        "characters": 3326,
+        "words": 512,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 8,
+        "tables": [],
+        "text_preview": "36C24420Q0680 6.4 Quality Control: The contractor shall develop and maintain an effective quality control program to ensure services are performed in accordance with this PWS. The COR and the Duty Engineers daily inspect the chillers during"
+      },
+      {
+        "page": 18,
+        "characters": 2830,
+        "words": 432,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 Contractor shall immediately report any occurrences of lost or duplicate keys/key cards to the Contracting Officer. 6.8.2.2.1 . In the event keys, other than master keys, are lost or duplicated, the Contractor shall, upon dire"
+      },
+      {
+        "page": 19,
+        "characters": 2872,
+        "words": 430,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 17,
+        "tables": [
+          {
+            "rows": 3,
+            "columns": 2,
+            "bbox": [
+              77.64,
+              598.8,
+              527.64,
+              706.2
+            ],
+            "preview": [
+              [
+                "Comprehensive",
+                ""
+              ],
+              [
+                "",
+                "Meg ohm test compressors motor (s)"
+              ],
+              [
+                "",
+                "Change oil filters (s)"
+              ]
+            ]
+          }
+        ],
+        "text_preview": "36C24420Q0680 6.8.4.2.2 The contract manager or alternate shall have full authority to act for the contractor on all contract matters relating to daily operation of this contract. 6.8.5 Identification of Contractor Employees: All contract p"
+      },
+      {
+        "page": 20,
+        "characters": 737,
+        "words": 95,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 102,
+        "tables": [
+          {
+            "rows": 20,
+            "columns": 2,
+            "bbox": [
+              77.64,
+              54.24,
+              527.64,
+              732.96
+            ],
+            "preview": [
+              [
+                "",
+                "Inspect starter"
+              ],
+              [
+                "",
+                "Check drive coupling"
+              ],
+              [
+                "",
+                "Lubricate motor bearings"
+              ]
+            ]
+          }
+        ],
+        "text_preview": "36C24420Q0680 Inspect starter Check drive coupling Lubricate motor bearings Check overall condition of unit Check capacity control and linkage Check safeties Verify drive alignment Complete any required maintenance checklists, report observ"
+      },
+      {
+        "page": 21,
+        "characters": 1163,
+        "words": 161,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 144,
+        "tables": [
+          {
+            "rows": 24,
+            "columns": 2,
+            "bbox": [
+              77.64,
+              54.24,
+              527.64,
+              545.88
+            ],
+            "preview": [
+              [
+                "",
+                "Complete any required maintenance checklists, report observations to\nappropriate"
+              ],
+              [
+                "",
+                "Check for proper water flow"
+              ],
+              [
+                "",
+                "Check system pressures and temperatures"
+              ]
+            ]
+          },
+          {
+            "rows": 4,
+            "columns": 2,
+            "bbox": [
+              73.2,
+              638.52,
+              527.64,
+              731.4
+            ],
+            "preview": [
+              [
+                "Operational",
+                ""
+              ],
+              [
+                "",
+                "Visually inspect starter"
+              ],
+              [
+                "",
+                "Check condenser fan motor (s) and blade (s)"
+              ]
+            ]
+          }
+        ],
+        "text_preview": "36C24420Q0680 Complete any required maintenance checklists, report observations to appropriate customer representative Check for proper water flow Check system pressures and temperatures Check oil heater Check operation of purge (if applica"
+      },
+      {
+        "page": 22,
+        "characters": 1434,
+        "words": 182,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 176,
+        "tables": [
+          {
+            "rows": 35,
+            "columns": 2,
+            "bbox": [
+              73.2,
+              54.24,
+              527.64,
+              717.12
+            ],
+            "preview": [
+              [
+                "",
+                "Check crankcase heater"
+              ],
+              [
+                "",
+                "Check for unusual noise and vibration"
+              ],
+              [
+                "",
+                "Check with appropriate customer representative for operational deficiencies"
+              ]
+            ]
+          }
+        ],
+        "text_preview": "36C24420Q0680 Check crankcase heater Check for unusual noise and vibration Check with appropriate customer representative for operational deficiencies Check for proper fan rotation Clean area around equipment Visually inspect for refrigeran"
+      },
+      {
+        "page": 23,
+        "characters": 987,
+        "words": 128,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 Chiller Starter, High Voltage Operational _____ Check with appropriate customer representative for operational deficiencies. _____ Check gauges. _____ Check for unusual heat around panel. _____ Review event log (if applicable)"
+      },
+      {
+        "page": 24,
+        "characters": 1057,
+        "words": 144,
+        "images": 1,
+        "image_area_ratio": 1.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 B.2 PRICE/COST SCHEDULE ITEM INFORMATION ITEM DESCRIPTIONOF NUMBER SUPPLIES/SERVICES QUANTITY UNIT UNIT PRICE AMOUNT 0001 0.00 XXXXX Do NotQuote Wilmington VAMC Preventive MaintenanceonFive(5) York / Carrier ChillersIAW SOW. C"
+      },
+      {
+        "page": 25,
+        "characters": 884,
+        "words": 125,
+        "images": 1,
+        "image_area_ratio": 1.0,
+        "lines": 0,
+        "rectangles": 3,
+        "tables": [
+          {
+            "rows": 3,
+            "columns": 1,
+            "bbox": [
+              199.03,
+              664.32,
+              336.51,
+              700.32
+            ],
+            "preview": [
+              [
+                ""
+              ],
+              [
+                ""
+              ],
+              [
+                ""
+              ]
+            ]
+          }
+        ],
+        "text_preview": "36C24420Q0680 Contract Period:Base POP Begin: POPEnd: xxxxx 0003 0.00 Do Not Quote CMC (Philadelphia) VAMC.Maintenance,Inspection, Repair and Testing on Ten(10) York Chillers IAW. Contract Period:Base POP Begin: POPEnd: 0003AA 12.00 MO Mont"
+      },
+      {
+        "page": 26,
+        "characters": 468,
+        "words": 76,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 2,
+        "rectangles": 49,
+        "tables": [
+          {
+            "rows": 8,
+            "columns": 1,
+            "bbox": [
+              72.48,
+              54.48,
+              539.52,
+              717.7
+            ],
+            "preview": [
+              [
+                "0001AA SHIP TO: Department of Veterans Affairs 4.00\nUSA"
+              ],
+              [
+                "0001AB SHIP TO: Department of Veterans Affairs 1.00\nUSA"
+              ],
+              [
+                "0002 SHIP TO: Department of Veterans Affairs 0.00\nUSA"
+              ]
+            ]
+          },
+          {
+            "rows": 3,
+            "columns": 1,
+            "bbox": [
+              198.26,
+              158.78,
+              338.92,
+              194.42
+            ],
+            "preview": [
+              [
+                ""
+              ],
+              [
+                ""
+              ],
+              [
+                ""
+              ]
+            ]
+          },
+          {
+            "rows": 2,
+            "columns": 1,
+            "bbox": [
+              198.26,
+              573.14,
+              338.92,
+              594.12
+            ],
+            "preview": [
+              [
+                ""
+              ],
+              [
+                ""
+              ]
+            ]
+          }
+        ],
+        "text_preview": "36C24420Q0680 0001AA SHIP TO: Department of Veterans Affairs 4.00 USA 0001AB SHIP TO: Department of Veterans Affairs 1.00 USA 0002 SHIP TO: Department of Veterans Affairs 0.00 USA 0002AA SHIP TO: Department of Veterans Affairs 1.00 USA 0002"
+      },
+      {
+        "page": 27,
+        "characters": 195,
+        "words": 32,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 31,
+        "tables": [
+          {
+            "rows": 4,
+            "columns": 1,
+            "bbox": [
+              72.48,
+              54.48,
+              539.52,
+              367.44
+            ],
+            "preview": [
+              [
+                "USA"
+              ],
+              [
+                "0003AB SHIP TO: Department of Veterans Affairs 0.00\nUSA"
+              ],
+              [
+                "0003AC SHIP TO: Department of Veterans Affairs 0.00"
+              ]
+            ]
+          },
+          {
+            "rows": 2,
+            "columns": 1,
+            "bbox": [
+              199.08,
+              102.14,
+              342.57,
+              123.0
+            ],
+            "preview": [
+              [
+                ""
+              ],
+              [
+                ""
+              ]
+            ]
+          },
+          {
+            "rows": 2,
+            "columns": 1,
+            "bbox": [
+              199.08,
+              197.66,
+              342.57,
+              218.52
+            ],
+            "preview": [
+              [
+                ""
+              ],
+              [
+                ""
+              ]
+            ]
+          },
+          {
+            "rows": 2,
+            "columns": 1,
+            "bbox": [
+              199.08,
+              235.68,
+              342.57,
+              256.56
+            ],
+            "preview": [
+              [
+                ""
+              ],
+              [
+                ""
+              ]
+            ]
+          },
+          {
+            "rows": 2,
+            "columns": 1,
+            "bbox": [
+              199.08,
+              293.18,
+              342.57,
+              314.16
+            ],
+            "preview": [
+              [
+                ""
+              ],
+              [
+                ""
+              ]
+            ]
+          }
+        ],
+        "text_preview": "36C24420Q0680 USA 0003AB SHIP TO: Department of Veterans Affairs 0.00 USA 0003AC SHIP TO: Department of Veterans Affairs 0.00 0003AD SHIP TO: Department of Veterans Affairs 0.00 USA Page 27 of 60"
+      },
+      {
+        "page": 28,
+        "characters": 1851,
+        "words": 261,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 8,
+        "tables": [],
+        "text_preview": "36C24420Q0680 SECTION C - CONTRACT CLAUSES FAR Title Date Number 52.212-4 CONTRACT TERMS AND CONDITIONS—COMMERCIAL OCT 2018 ITEMS ADDENDUM to FAR 52.212-4 CONTRACT TERMS AND CONDITIONS—COMMERCIAL ITEMS Clauses that are incorporated by refer"
+      },
+      {
+        "page": 29,
+        "characters": 1671,
+        "words": 206,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 [] 852.214–71, Restrictions on Alternate Item(s). [] 852.214–72, Alternate Item(s). [Note: this is a fillable clause.] [] 852.214–73, Alternate Packaging and Packing. [] 852.214–74, Marking of Bid Samples. [] 852.215–70, Servi"
+      },
+      {
+        "page": 30,
+        "characters": 2476,
+        "words": 341,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 [] 852.270–1, Representatives of Contracting Officers. [] 852.271–72, Time Spent by Counselee in Counseling Process. [] 852.271–73, Use and Publication of Counseling Results. [] 852.271–74, Inspection. [] 852.271–75, Extension"
+      },
+      {
+        "page": 31,
+        "characters": 2313,
+        "words": 333,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 protect proprietary information as required by FAR 9.505-4, Obtaining access to proprietary information, paragraph (b). The Contractor is required to cooperate fully and make available any records as may be required to enable "
+      },
+      {
+        "page": 32,
+        "characters": 1933,
+        "words": 293,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 [] (3) 52.203–15, Whistleblower Protections under the American Recovery and Reinvestment Act of 2009 (JUN 2010) (Section 1553 of Pub. L. 111-5). (Applies to contracts funded by the American Recovery and Reinvestment Act of 200"
+      },
+      {
+        "page": 33,
+        "characters": 1875,
+        "words": 272,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 [] (iv) Alternate III (JUN 2020) of 52.219–9. [] (v) Alternate IV (JUN 2020) of 52.219–9. [] (18) 52.219-13, Notice of Set-Aside of Orders (MAR 2020) (15 U.S.C. 644(r)). [] (19) 52.219-14, Limitations on Subcontracting (MAR 20"
+      },
+      {
+        "page": 34,
+        "characters": 2086,
+        "words": 296,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 [] (34) 52.222-40, Notification of Employee Rights Under the National Labor Relations Act (DEC 2010) (E.O. 13496). [X] (35)(i) 52.222-50, Combating Trafficking in Persons (JAN 2019) (22 U.S.C. chapter 78 and E.O. 13627). [] (i"
+      },
+      {
+        "page": 35,
+        "characters": 2039,
+        "words": 309,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 [] (48) 52.225-1, Buy American—Supplies (MAY 2014) (41 U.S.C. chapter 83). [] (49)(i) 52.225-3, Buy American—Free Trade Agreements—Israeli Trade Act (MAY 2014) (41 U.S.C. chapter 83, 19 U.S.C. 3301 note, 19 U.S.C. 2112 note, 1"
+      },
+      {
+        "page": 36,
+        "characters": 2518,
+        "words": 380,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 [] (63)(i) 52.247-64, Preference for Privately Owned U.S.-Flag Commercial Vessels (Feb 2006) (46 U.S.C. Appx. 1241(b) and 10 U.S.C. 2631). [] (ii) Alternate I (Apr 2003) of 52.247-64. [] (iii) Alternate II (FEB 2006) of 52.247"
+      },
+      {
+        "page": 37,
+        "characters": 3073,
+        "words": 454,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 (2) The Contractor shall make available at its offices at all reasonable times the records, materials, and other evidence for examination, audit, or reproduction, until 3 years after final payment under this contract or for an"
+      },
+      {
+        "page": 38,
+        "characters": 2000,
+        "words": 289,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 (xi) 52.222-40, Notification of Employee Rights Under the National Labor Relations Act (DEC 2010) (E.O. 13496). Flow down required in accordance with paragraph (f) of FAR clause 52.222-40. (xii) 52.222-41, Service Contract Lab"
+      },
+      {
+        "page": 39,
+        "characters": 350,
+        "words": 52,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 SECTION D - CONTRACT DOCUMENTS, EXHIBITS, OR ATTACHMENTS See attached document: Attachment 1. Wilmington DE WD 2015-4215 REV 11 DATED 04.21.2020. See attached document: Attachment 2. Lebanon PA WD 2015-4231 REV 10 dated 12.23."
+      },
+      {
+        "page": 40,
+        "characters": 1894,
+        "words": 292,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 12,
+        "tables": [
+          {
+            "rows": 2,
+            "columns": 1,
+            "bbox": [
+              72.0,
+              434.04,
+              521.16,
+              458.76
+            ],
+            "preview": [
+              [
+                "A. Failure to follow the instructions below may result in elimination from award"
+              ],
+              [
+                "responsive determination."
+              ]
+            ]
+          },
+          {
+            "rows": 2,
+            "columns": 1,
+            "bbox": [
+              72.0,
+              672.72,
+              509.4,
+              697.56
+            ],
+            "preview": [
+              [
+                "Quotes that address parts of the requirement for a location and not the full req"
+              ],
+              [
+                "considered and will be determined to be non-responsive."
+              ]
+            ]
+          }
+        ],
+        "text_preview": "36C24420Q0680 SECTION E - SOLICITATION PROVISIONS FAR Title Date Number 52.212-1 INSTRUCTIONS TO OFFERORS—COMMERCIAL ITEMS JUN 2020 ADDENDUM to FAR 52.212-1 INSTRUCTIONS TO OFFERORS—COMMERCIAL ITEMS Provisions that are incorporated by refer"
+      },
+      {
+        "page": 41,
+        "characters": 3139,
+        "words": 486,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 7,
+        "tables": [
+          {
+            "rows": 3,
+            "columns": 1,
+            "bbox": [
+              72.0,
+              54.0,
+              519.48,
+              91.92
+            ],
+            "preview": [
+              [
+                "Sections II-IV of the Offeror’s submitted quote shall clearly identify what type"
+              ],
+              [
+                "submitting (A, B or C) and what locations they are quoting on. Failure to provid"
+              ],
+              [
+                "result in a non-responsive determination."
+              ]
+            ]
+          }
+        ],
+        "text_preview": "36C24420Q0680 Sections II-IV of the Offeror’s submitted quote shall clearly identify what type of quote the offeror is submitting (A, B or C) and what locations they are quoting on. Failure to provide this information may result in a non-re"
+      },
+      {
+        "page": 42,
+        "characters": 2776,
+        "words": 388,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 5,
+        "tables": [],
+        "text_preview": "36C24420Q0680 their full text available. The offeror is cautioned that the listed provisions may include blocks that must be completed by the offeror and submitted with its quotation or offer. In lieu of submitting the full text of those pr"
+      },
+      {
+        "page": 43,
+        "characters": 2678,
+        "words": 381,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 1,
+        "tables": [],
+        "text_preview": "36C24420Q0680 (d) Representation. The Offeror represents that it [ ] will, [ ] will not provide covered telecommunications equipment or services to the Government in the performance of any contract, subcontract or other contractual instrume"
+      },
+      {
+        "page": 44,
+        "characters": 2307,
+        "words": 364,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 (1) Exacted from any person under the age of 18 under the menace of any penalty for its nonperformance and for which the worker does not offer himself voluntarily; or (2) Performed by any person under the age of 18 pursuant to"
+      },
+      {
+        "page": 45,
+        "characters": 2505,
+        "words": 385,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 military equipment, as those terms are defined in the Sudan Accountability and Divestment Act of 2007 (Pub. L. 110-174). Restricted business operations do not include business operations that the person (as that term is define"
+      },
+      {
+        "page": 46,
+        "characters": 2564,
+        "words": 432,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 contracts, and qualified as a small business under the criteria in 13 CFR Part 121 and size standards in this solicitation. Small disadvantaged business concern, consistent with 13 CFR 124.1002, means a small business concern "
+      },
+      {
+        "page": 47,
+        "characters": 3239,
+        "words": 505,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 1,
+        "tables": [],
+        "text_preview": "36C24420Q0680 (2) Whose management and daily business operations are controlled by one or more women. Women-owned small business (WOSB) concern eligible under the WOSB Program (in accordance with 13 CFR part 127), means a small business con"
+      },
+      {
+        "page": 48,
+        "characters": 3186,
+        "words": 515,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 (ii) It [ ] is, [ ] is not a joint venture that complies with the requirements of 13 CFR part 127, and the representation in paragraph (c)(6)(i) of this provision is accurate for each WOSB concern eligible under the WOSB Progr"
+      },
+      {
+        "page": 49,
+        "characters": 3253,
+        "words": 520,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 small business concern or concerns that are participating in the joint venture. [The offeror shall enter the name or names of the HUBZone small business concern or concerns that are participating in the joint venture:_________"
+      },
+      {
+        "page": 50,
+        "characters": 2402,
+        "words": 337,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 Line Item No Country of Origin ______________ _________________ ______________ _________________ ______________ _________________ [List as necessary] (3) The Government will evaluate offers in accordance with the policies and "
+      },
+      {
+        "page": 51,
+        "characters": 1617,
+        "words": 203,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 Other Foreign End Products: Line Item No. Country of Origin ______________ _________________ ______________ _________________ ______________ _________________ [List as necessary] (iv) The Government will evaluate offers in acc"
+      },
+      {
+        "page": 52,
+        "characters": 2169,
+        "words": 307,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 (4) Buy American—Free Trade Agreements—Israeli Trade Act Certificate, Alternate III. If Alternate III to the clause at FAR 52.225-3 is included in this solicitation, substitute the following paragraph (g)(1)(ii) for paragraph "
+      },
+      {
+        "page": 53,
+        "characters": 3293,
+        "words": 541,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 (h) Certification Regarding Responsibility Matters (Executive Order 12689). (Applies only if the contract value is expected to exceed the simplified acquisition threshold.) The offeror certifies, to the best of its knowledge a"
+      },
+      {
+        "page": 54,
+        "characters": 2573,
+        "words": 406,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 2,
+        "tables": [],
+        "text_preview": "36C24420Q0680 (C) The taxpayer has entered into an installment agreement pursuant to I.R.C. Sec. 6159. The taxpayer is making timely payments and is in full compliance with the agreement terms. The taxpayer is not delinquent because the tax"
+      },
+      {
+        "page": 55,
+        "characters": 3015,
+        "words": 488,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 [] (1) Maintenance, calibration, or repair of certain equipment as described in FAR 22.1003- 4(c)(1). The offeror [ ] does [ ] does not certify that— (i) The items of equipment to be serviced under this contract are used regul"
+      },
+      {
+        "page": 56,
+        "characters": 1576,
+        "words": 256,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 reporting requirements of 26 U.S.C. 6041, 6041A, and 6050M, and implementing regulations issued by the Internal Revenue Service (IRS). (2) The TIN may be used by the Government to collect and report on any delinquent amounts a"
+      },
+      {
+        "page": 57,
+        "characters": 2552,
+        "words": 389,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 3,
+        "tables": [],
+        "text_preview": "36C24420Q0680 (m) Restricted business operations in Sudan. By submission of its offer, the offeror certifies that the offeror does not conduct any restricted business operations in Sudan. (n) Prohibition on Contracting with Inverted Domesti"
+      },
+      {
+        "page": 58,
+        "characters": 2622,
+        "words": 431,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 (p) Ownership or Control of Offeror. (Applies in all solicitations when there is a requirement to be registered in SAM or a requirement to have a unique entity identifier in the solicitation). (1) The Offeror represents that i"
+      },
+      {
+        "page": 59,
+        "characters": 2677,
+        "words": 419,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "36C24420Q0680 lapsed, and that is not being paid in a timely manner pursuant to an agreement with the authority responsible for collecting the tax liability; and (ii) It is [ ] is not [ ] a corporation that was convicted of a felony crimina"
+      },
+      {
+        "page": 60,
+        "characters": 2407,
+        "words": 337,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 2,
+        "tables": [],
+        "text_preview": "36C24420Q0680 (u)(1) In accordance with section 743 of Division E, Title VII, of the Consolidated and Further Continuing Appropriations Act, 2015 (Pub. L. 113-235) and its successor provisions in subsequent appropriations acts (and as exten"
+      }
+    ]
+  },
+  {
+    "file": "02_DOE_NNSA_RFP_Section_L.pdf",
+    "path": "D:\\pythonProjects\\PrimaTask9\\spike\\data\\inputs\\02_DOE_NNSA_RFP_Section_L.pdf",
+    "sha256": "c0fa7bef79bb8915a26e18024b7c5c14909661691b06a27f912ee6ce7231c6a9",
+    "size_bytes": 304601,
+    "pages": 28,
+    "tagged": true,
+    "form_fields": 0,
+    "summary": {
+      "total_characters": 71981,
+      "median_characters_per_page": 2562,
+      "low_text_pages": [],
+      "image_dominant_pages": [],
+      "table_pages": [
+        20
+      ]
+    },
+    "page_details": [
+      {
+        "page": 1,
+        "characters": 4917,
+        "words": 391,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 2,
+        "tables": [],
+        "text_preview": "Request for Proposal No. DE-SOL-0011206 SECTION L – INSTRUCTIONS, CONDITIONS AND NOTICES TO OFFERORS OR RESPONDENTS SECTION L – INSTRUCTIONS, CONDITIONS AND NOTICES TO OFFERORS OR RESPONDENTS ..... 1 L-1 FAR 52.204-7 SYSTEMS FOR AWARD MANAG"
+      },
+      {
+        "page": 2,
+        "characters": 2292,
+        "words": 345,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 1,
+        "tables": [],
+        "text_preview": "Request for Proposal No. DE-SOL-0011206 L-1 FAR 52.204-7 SYSTEMS FOR AWARD MANAGEMENT (OCT 2016) (a) Definitions. As used in this provision— “Electronic Funds Transfer (EFT) indicator” means a four-character suffix to the unique entity iden"
+      },
+      {
+        "page": 3,
+        "characters": 1520,
+        "words": 226,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 2,
+        "tables": [],
+        "text_preview": "Request for Proposal No. DE-SOL-0011206 entity identifier will be used by the Contracting Officer to verify that the Offeror is registered in the SAM database. (c) If the Offeror does not have a unique entity identifier, it should contact t"
+      },
+      {
+        "page": 4,
+        "characters": 2199,
+        "words": 338,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "Request for Proposal No. DE-SOL-0011206 L-2 FAR 52.215-1 INSTRUCTIONS TO OFFERORS – COMPETITIVE ACQUISITION (JAN 2017) ALTERNATE I (OCT 1997) (a) Definitions. As used in this provision -- “Discussions” are negotiations that occur after esta"
+      },
+      {
+        "page": 5,
+        "characters": 2080,
+        "words": 324,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "Request for Proposal No. DE-SOL-0011206 (i) The solicitation number; (ii) The name, address, and telephone and facsimile numbers of the offeror (and electronic address if available); (iii) A statement specifying the extent of agreement with"
+      },
+      {
+        "page": 6,
+        "characters": 2364,
+        "words": 367,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "Request for Proposal No. DE-SOL-0011206 receipt of offers and was under the Government’s control prior to the time set for receipt of offers; or (3) It is the only proposal received. (B) However, a late modification of an otherwise successf"
+      },
+      {
+        "page": 7,
+        "characters": 2152,
+        "words": 352,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "Request for Proposal No. DE-SOL-0011206 (7) Offerors may submit revised proposals only if requested or allowed by the Contracting Officer. (8) Proposals may be withdrawn at any time before award. Withdrawals are effective upon receipt of no"
+      },
+      {
+        "page": 8,
+        "characters": 2531,
+        "words": 391,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "Request for Proposal No. DE-SOL-0011206 (4) The Government intends to evaluate proposals and award a contract after conducting discussions with offerors whose proposals have been determined to be within the competitive range. If the Contrac"
+      },
+      {
+        "page": 9,
+        "characters": 2008,
+        "words": 301,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "Request for Proposal No. DE-SOL-0011206 (iii) The overall ranking of all offerors, when any ranking was developed by the agency during source selection. (iv) A summary of the rationale for award. (v) For acquisitions of commercial items, th"
+      },
+      {
+        "page": 10,
+        "characters": 2562,
+        "words": 385,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 1,
+        "tables": [],
+        "text_preview": "Request for Proposal No. DE-SOL-0011206 Phone: (505) 845-5977 Facsimile: (505) 845-2520 E-mail: christopher.duran@nnsa.doe.gov (b) The copy of any protest shall be received in the office designated above within one day of filing a protest w"
+      },
+      {
+        "page": 11,
+        "characters": 2996,
+        "words": 471,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "Request for Proposal No. DE-SOL-0011206 L-9 DEAR 952.227-84 RIGHT TO REQUEST PATENT WAIVER (FEB 1998) Offerors have the right to request a waiver of all or any part of the rights of the United States in inventions conceived or first actuall"
+      },
+      {
+        "page": 12,
+        "characters": 2981,
+        "words": 419,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 3,
+        "tables": [],
+        "text_preview": "Request for Proposal No. DE-SOL-0011206 L-12 REQUIREMENT FOR GUARANTEE OF PERFORMANCE As stated in FAR 35.017, FFRDC’s are operated, managed, and/or administered by either a university or consortium of universities, other not-for-profit or "
+      },
+      {
+        "page": 13,
+        "characters": 2657,
+        "words": 387,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 4,
+        "tables": [],
+        "text_preview": "Request for Proposal No. DE-SOL-0011206 questions/comments by other means is not authorized. Questions and responses, if appropriate will be posted to FedConnect at (https://www.fedconnect.net/Fedconnect/ ) website. FedConnect will be the p"
+      },
+      {
+        "page": 14,
+        "characters": 2361,
+        "words": 360,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 1,
+        "tables": [],
+        "text_preview": "Request for Proposal No. DE-SOL-0011206 Subcontractor and/or team member submissions of proprietary information may provide a password protected document (file) to the prime Offeror. In such instances the subcontractor and/or team member sh"
+      },
+      {
+        "page": 15,
+        "characters": 3308,
+        "words": 552,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "Request for Proposal No. DE-SOL-0011206 (1) Page size shall be 8.5 x 11 inches, not including foldouts. Page margins shall be a minimum of one inch at the top, bottom, and each side. Pages shall be numerically numbered sequentially by Volum"
+      },
+      {
+        "page": 16,
+        "characters": 3122,
+        "words": 460,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "Request for Proposal No. DE-SOL-0011206 paragraph (c) (2), along with the information requested in Section G, G-2, Contractor Contact, and Section G, G-5, Responsible Corporate Official, as the first page of Volume I. (b) Section A of this "
+      },
+      {
+        "page": 17,
+        "characters": 3050,
+        "words": 441,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 2,
+        "tables": [],
+        "text_preview": "Request for Proposal No. DE-SOL-0011206 through FedConnect and on the flash drive. Offerors do not need to provide copies of annual reports in the hard copy submission. Annual reports may be submitted as an attachment to Volume I, so long a"
+      },
+      {
+        "page": 18,
+        "characters": 3510,
+        "words": 546,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 1,
+        "tables": [],
+        "text_preview": "Request for Proposal No. DE-SOL-0011206 be responsible for a section of the SOW, the Offeror shall identify the section or sections of the SOW (include task area from SOW) each team member is proposed to perform or for which it is responsib"
+      },
+      {
+        "page": 19,
+        "characters": 2670,
+        "words": 401,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "Request for Proposal No. DE-SOL-0011206 (c) of L- 2, FAR 52.215-1 Instructions to Offerors -- Competitive Acquisition (Jan 2017) Alt I. Prior to the submittal of the PPIFs, the Offeror shall also advise the technical and contracting points "
+      },
+      {
+        "page": 20,
+        "characters": 2518,
+        "words": 379,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 62,
+        "tables": [
+          {
+            "rows": 11,
+            "columns": 1,
+            "bbox": [
+              126.24,
+              99.48,
+              539.76,
+              463.8
+            ],
+            "preview": [
+              [
+                "1. Name of Offeror:"
+              ],
+              [
+                "2. Name of Key Person:"
+              ],
+              [
+                "3. Proposed Position:"
+              ]
+            ]
+          }
+        ],
+        "text_preview": "Request for Proposal No. DE-SOL-0011206 RESUME ELEMENTS 1. Name of Offeror: 2. Name of Key Person: 3. Proposed Position: 4. Duties and Responsibilities in Proposed Position including elements of the Statement of Work assigned: 5. Chronologi"
+      },
+      {
+        "page": 21,
+        "characters": 2999,
+        "words": 452,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "Request for Proposal No. DE-SOL-0011206 granted access to nuclear weapons data following the procedures in DOE O 452.8, Control of Nuclear Weapon Data. The Offeror shall also complete and submit Section L, Attachment B, Listing of Key Perso"
+      },
+      {
+        "page": 22,
+        "characters": 2971,
+        "words": 467,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 3,
+        "tables": [],
+        "text_preview": "Request for Proposal No. DE-SOL-0011206 (NMGRT) associated with transition. The firm-fixed Transition price shall be the lessor of the Government determined ceiling or the proposed price. (b) Fee for Management and Operation of LANL (CLIN 0"
+      },
+      {
+        "page": 23,
+        "characters": 2807,
+        "words": 413,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "Request for Proposal No. DE-SOL-0011206 Offerors – Competitive Acquisition (Jan 2017), Alt I, describing treatment of late submissions, modifications, and withdrawals of proposals.). L-18 COMPETITIVE RANGE In order to ensure an efficient co"
+      },
+      {
+        "page": 24,
+        "characters": 2071,
+        "words": 310,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 2,
+        "tables": [],
+        "text_preview": "Request for Proposal No. DE-SOL-0011206 L-20 OFFER ACCEPTANCE PERIOD The minimum offer acceptance period is 240 calendar days after the required date for receipt of Offers. Block 12 of the Standard Form 33, Solicitation, Offer, and Award, ("
+      },
+      {
+        "page": 25,
+        "characters": 2470,
+        "words": 338,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 2,
+        "tables": [],
+        "text_preview": "Request for Proposal No. DE-SOL-0011206 https://nnsa.energy.gov/aboutus/ouroperations/apm/majcontrsolicitation/los-alamos- national-laboratory-management-and. If there is a discrepancy between the documents posted on FedConnect and the agen"
+      },
+      {
+        "page": 26,
+        "characters": 2857,
+        "words": 420,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 1,
+        "tables": [],
+        "text_preview": "Request for Proposal No. DE-SOL-0011206 site locations. No on-site contacts of any kind with employees of the current incumbent Contractor are permitted related to this solicitation until contract award. L-32 INSTRUCTIONS FOR SUBMITTING FOR"
+      },
+      {
+        "page": 27,
+        "characters": 1577,
+        "words": 238,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 4,
+        "tables": [],
+        "text_preview": "Request for Proposal No. DE-SOL-0011206 unauthorized use or disclosure for as long as it remains proprietary and refrain from using the information for any purpose other than for which it was furnished. L-34 OFFEROR INTENTION TO SUBMIT AN O"
+      },
+      {
+        "page": 28,
+        "characters": 431,
+        "words": 67,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 2,
+        "tables": [],
+        "text_preview": "Request for Proposal No. DE-SOL-0011206 L-36 LIST OF ATTACHMENTS TO SECTION L (TO BE ADDED IN FINAL RFP) Attachment Title A Performance Guarantee Agreement B Listing of Key Personnel C Instructions for Small Business Subcontracting Plan D C"
+      }
+    ]
+  },
+  {
+    "file": "03_NASA_Fastener_Procurement_Standard.pdf",
+    "path": "D:\\pythonProjects\\PrimaTask9\\spike\\data\\inputs\\03_NASA_Fastener_Procurement_Standard.pdf",
+    "sha256": "16ca2509462c997669a580e3644620e23471ab2ec81f586bc40c7e53e9a5d9c0",
+    "size_bytes": 1066771,
+    "pages": 16,
+    "tagged": true,
+    "form_fields": 0,
+    "summary": {
+      "total_characters": 28667,
+      "median_characters_per_page": 2229,
+      "low_text_pages": [],
+      "image_dominant_pages": [],
+      "table_pages": [
+        1,
+        2,
+        16
+      ]
+    },
+    "page_details": [
+      {
+        "page": 1,
+        "characters": 397,
+        "words": 43,
+        "images": 1,
+        "image_area_ratio": 0.011,
+        "lines": 0,
+        "rectangles": 50,
+        "tables": [
+          {
+            "rows": 3,
+            "columns": 2,
+            "bbox": [
+              36.84,
+              92.78,
+              590.62,
+              638.5
+            ],
+            "preview": [
+              [
+                "NASA TECHNICAL STANDARD\nNational Aeronautics and Space Administration",
+                "NASA-STD-8739.14"
+              ],
+              [
+                "",
+                "Approved: 2020-06-02\nSuperseding NASA-STD-6008"
+              ],
+              [
+                "NASA FASTENER PROCUREMENT, RECEIVING INSPECTION,\nAND STORAGE PRACTICES FOR NASA ",
+                ""
+              ]
+            ]
+          }
+        ],
+        "text_preview": "Approved: 2020-06-02 Measurement System Identification: NASA TECHNICAL STANDARD NASA-STD-8739.14 National Aeronautics and Space Administration Approved: 2020-06-02 Superseding NASA-STD-6008 NASA FASTENER PROCUREMENT, RECEIVING INSPECTION, A"
+      },
+      {
+        "page": 2,
+        "characters": 196,
+        "words": 24,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 41,
+        "tables": [
+          {
+            "rows": 2,
+            "columns": 4,
+            "bbox": [
+              72.44,
+              127.64,
+              554.08,
+              203.84
+            ],
+            "preview": [
+              [
+                "Status",
+                "Document\nRevision",
+                "Approval\nDate",
+                "Description"
+              ],
+              [
+                "Baseline",
+                "",
+                "2020-06-02",
+                "Initial Release\n(Supersedes NASA Fastener Standard NASA-STD-6008)."
+              ]
+            ]
+          }
+        ],
+        "text_preview": "NASA-STD-8739.14 – 2020-06-02 DOCUMENT HISTORY LOG Document Approval Status Description Revision Date Baseline 2020-06-02 Initial Release (Supersedes NASA Fastener Standard NASA-STD-6008). 2 of 16"
+      },
+      {
+        "page": 3,
+        "characters": 1223,
+        "words": 166,
+        "images": 1,
+        "image_area_ratio": 0.0342,
+        "lines": 0,
+        "rectangles": 1,
+        "tables": [],
+        "text_preview": "NASA-STD-8739.14 – 2020-06-02 FOREWORD This standard is published by the National Aeronautics and Space Administration (NASA) to provide uniform technical requirements for processes, procedures, practices, and methods that have been endorse"
+      },
+      {
+        "page": 4,
+        "characters": 2726,
+        "words": 129,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "NASA-STD-8739.14 – 2020-06-02 TABLE OF CONTENTS FOREWORD................................................................................................................................. 3 1. SCOPE ..........................................."
+      },
+      {
+        "page": 5,
+        "characters": 2305,
+        "words": 318,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "NASA-STD-8739.14 – 2020-06-02 NASA FASTENER PROCUREMENT, RECEIVING INSPECTION, AND STORAGE PRACTICES FOR MISSION HARDWARE 1. SCOPE 1.1 Purpose 1.1.1 This document establishes minimum requirements for supply chain risk management, procuremen"
+      },
+      {
+        "page": 6,
+        "characters": 2327,
+        "words": 343,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "NASA-STD-8739.14 – 2020-06-02 1.2.4 Alternative means shall be used by programs and projects for establishing the quality of fasteners used in mission-critical applications when the requirements herein cannot be flowed to the supplier inclu"
+      },
+      {
+        "page": 7,
+        "characters": 1445,
+        "words": 191,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 1,
+        "tables": [],
+        "text_preview": "NASA-STD-8739.14 – 2020-06-02 2. APPLICABLE AND REFERENCE DOCUMENTS 2.1 Applicable Documents The applicable documents are accessible via the NASA Technical Standards System at https://standards.nasa.gov or may be obtained directly from the "
+      },
+      {
+        "page": 8,
+        "characters": 1362,
+        "words": 178,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "NASA-STD-8739.14 – 2020-06-02 2.2 Reference Documents The reference documents listed in this section are not incorporated by reference within this standard, but may provide further clarification and guidance. 2.2.1 Government Documents NPD "
+      },
+      {
+        "page": 9,
+        "characters": 929,
+        "words": 118,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "NASA-STD-8739.14 – 2020-06-02 CoC Certificate of Conformance CoA Certificate of Analysis COTS Commercial Off-the-Shelf DLA Defense Logistics Agency EDS Energy Dispersive Spectroscopy GIDEP Government-Industry Data Exchange Program GSE Groun"
+      },
+      {
+        "page": 10,
+        "characters": 2553,
+        "words": 368,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 13,
+        "tables": [],
+        "text_preview": "NASA-STD-8739.14 – 2020-06-02 Catastrophic Hazard: A hazard, condition or event that could result in a mishap causing fatal injury to personnel and/or loss of spacecraft (payload), launch vehicle, or ground facility. Certificate of Conforma"
+      },
+      {
+        "page": 11,
+        "characters": 2102,
+        "words": 278,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 4,
+        "tables": [],
+        "text_preview": "NASA-STD-8739.14 – 2020-06-02 Third-Party Audit: An external audit performed by an audit organization independent of the customer-supplier relationship; typically associated with independent certification or accreditation bodies. 4. REQUIRE"
+      },
+      {
+        "page": 12,
+        "characters": 2229,
+        "words": 303,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 2,
+        "tables": [],
+        "text_preview": "NASA-STD-8739.14 – 2020-06-02 4.3 Counterfeit Avoidance 4.3.1 Fasteners shall be addressed in the hardware developer’s counterfeit control program. See NPD 8730.2, NASA Parts Policy and NPR 8735.2 for programs’ and projects’ responsibilitie"
+      },
+      {
+        "page": 13,
+        "characters": 2318,
+        "words": 341,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "NASA-STD-8739.14 – 2020-06-02 4.4.2.2 Fasteners shall be procured in homogeneous lots. 4.4.2.3 Commingling of lots shall not occur in order to ensure lot traceability. 4.4.2.4 The criteria for complete traceability of each fastener lot shal"
+      },
+      {
+        "page": 14,
+        "characters": 2303,
+        "words": 333,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "NASA-STD-8739.14 – 2020-06-02 4.5.3 Fastener lot acceptance criteria for inspections and tests shall be zero failures. 4.5.4 Dimensional Inspection 4.5.4.1 All Level I threaded fasteners shall be inspected in accordance with the System 22 c"
+      },
+      {
+        "page": 15,
+        "characters": 1889,
+        "words": 282,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 0,
+        "tables": [],
+        "text_preview": "NASA-STD-8739.14 – 2020-06-02 Energy Dispersive Spectroscopy (EDS), and may be used to verify the correct alloy but do not provide a sufficient level of accuracy to satisfy this requirement. 4.5.8 Tensile Testing 4.5.8.1 Tensile testing sha"
+      },
+      {
+        "page": 16,
+        "characters": 2363,
+        "words": 567,
+        "images": 0,
+        "image_area_ratio": 0.0,
+        "lines": 0,
+        "rectangles": 592,
+        "tables": [
+          {
+            "rows": 12,
+            "columns": 8,
+            "bbox": [
+              72.64,
+              104.18,
+              539.33,
+              340.97
+            ],
+            "preview": [
+              [
+                "Quality Controls",
+                "",
+                "Quality Control Level",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "Level I",
+                "Level II",
+                "",
+                "",
+                "",
+                "Level III"
+              ],
+              [
+                "t\nn\nm e n s\neo\nr si\nu vi\nc\noo\nrr\nPP",
+                "Supplier Qualification",
+                "Qualified",
+                "Qualified",
+                "",
+                "Nonqualified",
+                "",
+                "Qualified or\nNonqualified"
+              ]
+            ]
+          },
+          {
+            "rows": 17,
+            "columns": 5,
+            "bbox": [
+              72.64,
+              383.81,
+              324.05,
+              598.03
+            ],
+            "preview": [
+              [
+                "Lot Size",
+                "Sample Size",
+                "",
+                "",
+                "Acceptance Criteria"
+              ],
+              [
+                "",
+                "A",
+                "B",
+                "C",
+                ""
+              ],
+              [
+                "1-2",
+                "2",
+                "1",
+                "1",
+                "0 failures"
+              ]
+            ]
+          }
+        ],
+        "text_preview": "NASA-STD-8739.14 – 2020-06-02 Table 1: Fastener Quality Control Requirements and Sampling Level Quality Control Level Level I Level II Level III Quality Controls Supplier Qualification Qualified Qualified Nonqualified Qualified or t Nonqual"
+      }
+    ]
+  }
+]

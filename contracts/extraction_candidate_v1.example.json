@@ -1,0 +1,88 @@
+{
+  "schema_version": "industrial-document-candidate/1.0",
+  "document_number": {
+    "status": "supported",
+    "raw": "RFQ No. 2026-184/B",
+    "value": "2026-184/B",
+    "evidence_ids": ["ev_p1_b3"],
+    "conflict_evidence_ids": []
+  },
+  "parties": [
+    {
+      "role": "buyer",
+      "name": {
+        "status": "supported",
+        "raw": "Example Manufacturing s.r.o.",
+        "value": "Example Manufacturing s.r.o.",
+        "evidence_ids": ["ev_p1_b7"],
+        "conflict_evidence_ids": []
+      }
+    }
+  ],
+  "deadlines": [
+    {
+      "status": "supported",
+      "type": "bid_submission",
+      "raw": "30.09.2026 14:00 CET",
+      "value": "2026-09-30T14:00:00+01:00",
+      "timezone_source": "explicit",
+      "evidence_ids": ["ev_p3_b9"],
+      "conflict_evidence_ids": []
+    }
+  ],
+  "line_items": [
+    {
+      "source_row_ids": ["ev_p7_t2_r4"],
+      "part_number": {
+        "status": "supported",
+        "raw": "AX-1042",
+        "value": "AX-1042",
+        "evidence_ids": ["ev_p7_t2_r4_c1"],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "Stainless steel shaft",
+        "value": "Stainless steel shaft",
+        "evidence_ids": ["ev_p7_t2_r4_c2"],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "250 pcs",
+        "value": "250",
+        "unit": "piece",
+        "evidence_ids": ["ev_p7_t2_r4_c3"],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [
+        {
+          "status": "supported",
+          "type": "dimensional",
+          "target": "diameter",
+          "raw": "20 +0.02/-0.01 mm",
+          "nominal": "20.00",
+          "lower_limit": "19.99",
+          "upper_limit": "20.02",
+          "unit": "millimetre",
+          "standard": null,
+          "evidence_ids": ["ev_p7_t2_r4_c4"],
+          "conflict_evidence_ids": []
+        }
+      ],
+      "unit_price": {
+        "status": "supported",
+        "raw": "EUR 14,75",
+        "amount": "14.75",
+        "currency": "EUR",
+        "price_basis": "per_piece",
+        "evidence_ids": ["ev_p7_t2_r4_c5"],
+        "conflict_evidence_ids": []
+      },
+      "line_total": null,
+      "delivery_deadline": null
+    }
+  ],
+  "abstained_field_paths": ["/line_items/0/line_total"]
+}
+

@@ -1,0 +1,188 @@
+{
+  "schema_version": "1.0",
+  "task": "zero-shot entity candidate extraction",
+  "labels": {
+    "part_or_model": "part number or model",
+    "quantity": "quantity",
+    "tolerance": "technical tolerance or acceptance criterion",
+    "deadline": "deadline, due date, or performance period",
+    "price": "price or fee"
+  },
+  "notes": [
+    "Real excerpts are exact substrings of canonical evidence blocks produced by Docling.",
+    "Derived and synthetic cases are explicitly separated from the real-document metrics.",
+    "This benchmark evaluates entity spans, not relationships or final schema assembly."
+  ],
+  "cases": [
+    {
+      "case_id": "gsa_model_and_quantity",
+      "source_kind": "real",
+      "source": "01_GSA_VA_Chiller_Maintenance_Solicitation.pdf",
+      "page_number": 14,
+      "evidence_id": "p14-b294",
+      "text": "Capacity is 177-ton, model # YCIV0177 with 2 compressors attached to this system.",
+      "expected": [
+        {"label": "part_or_model", "text": "YCIV0177"},
+        {"label": "quantity", "text": "2 compressors"}
+      ]
+    },
+    {
+      "case_id": "gsa_model_identifier",
+      "source_kind": "real",
+      "source": "01_GSA_VA_Chiller_Maintenance_Solicitation.pdf",
+      "page_number": 15,
+      "evidence_id": "p15-b300",
+      "text": "The fourth chiller is a model YKJHJBJ1DAE.",
+      "expected": [
+        {"label": "part_or_model", "text": "YKJHJBJ1DAE"}
+      ]
+    },
+    {
+      "case_id": "gsa_emergency_repair_price",
+      "source_kind": "real",
+      "source": "01_GSA_VA_Chiller_Maintenance_Solicitation.pdf",
+      "page_number": 25,
+      "evidence_id": "p25-b401",
+      "text": "Emergency Repair $2,500- $15,0000 IAW SOW. CMC VAMC.",
+      "expected": [
+        {"label": "price", "text": "$2,500"},
+        {"label": "price", "text": "$15,0000"}
+      ]
+    },
+    {
+      "case_id": "gsa_performance_period",
+      "source_kind": "real",
+      "source": "01_GSA_VA_Chiller_Maintenance_Solicitation.pdf",
+      "page_number": 4,
+      "evidence_id": "p4-b131",
+      "text": "The period of performance for this request is one year.",
+      "expected": [
+        {"label": "deadline", "text": "one year"}
+      ]
+    },
+    {
+      "case_id": "doe_volume_page_limit",
+      "source_kind": "real",
+      "source": "02_DOE_NNSA_RFP_Section_L.pdf",
+      "page_number": 14,
+      "evidence_id": "p14-b166",
+      "text": "The Past Performance, Key Personnel and Small Business Information (Volume II) shall not exceed 35 pages",
+      "expected": [
+        {"label": "quantity", "text": "35 pages"}
+      ]
+    },
+    {
+      "case_id": "doe_resume_page_limits",
+      "source_kind": "real",
+      "source": "02_DOE_NNSA_RFP_Section_L.pdf",
+      "page_number": 21,
+      "evidence_id": "p21-b238",
+      "text": "Each resume shall be limited to three pages, except for the Laboratory Director's resume, which shall be limited to five pages",
+      "expected": [
+        {"label": "quantity", "text": "three pages"},
+        {"label": "quantity", "text": "five pages"}
+      ]
+    },
+    {
+      "case_id": "doe_fee_caps",
+      "source_kind": "real",
+      "source": "02_DOE_NNSA_RFP_Section_L.pdf",
+      "page_number": 22,
+      "evidence_id": "p22-b248",
+      "text": "The proposed fixed fee shall not exceed 1.0 % of the estimated cost shown for each Contract Period and the proposed award fee shall not exceed 0.5% of the estimated cost shown for each Contract Period.",
+      "expected": [
+        {"label": "price", "text": "1.0 %"},
+        {"label": "price", "text": "0.5%"}
+      ]
+    },
+    {
+      "case_id": "nasa_zero_failure_acceptance",
+      "source_kind": "real",
+      "source": "03_NASA_Fastener_Procurement_Standard.pdf",
+      "page_number": 14,
+      "evidence_id": "p14-b193",
+      "text": "Fastener lot acceptance criteria for inspections and tests shall be zero failures.",
+      "expected": [
+        {"label": "tolerance", "text": "zero failures"}
+      ]
+    },
+    {
+      "case_id": "nasa_thread_gaging_criterion",
+      "source_kind": "real",
+      "source": "03_NASA_Fastener_Procurement_Standard.pdf",
+      "page_number": 14,
+      "evidence_id": "p14-b195",
+      "text": "All Level I threaded fasteners shall be inspected in accordance with the System 22 criteria of ASME B1.3 -2007",
+      "expected": [
+        {"label": "tolerance", "text": "System 22 criteria of ASME B1.3 -2007"}
+      ]
+    },
+    {
+      "case_id": "nasa_fastener_size_constraint",
+      "source_kind": "real",
+      "source": "03_NASA_Fastener_Procurement_Standard.pdf",
+      "page_number": 15,
+      "evidence_id": "p15-b216",
+      "text": "Level II fasteners that are smaller than #10 or shorter than 2 times their diameter",
+      "expected": [
+        {"label": "tolerance", "text": "smaller than #10"},
+        {"label": "tolerance", "text": "shorter than 2 times their diameter"}
+      ]
+    },
+    {
+      "case_id": "nasa_sampling_row",
+      "source_kind": "derived",
+      "source": "03_NASA_Fastener_Procurement_Standard.pdf",
+      "page_number": 16,
+      "evidence_id": "p16-t5-r4",
+      "text": "For lot size 16-25, sample size A is 4, sample size B is 3, sample size C is 2, and acceptance requires 0 failures.",
+      "expected": [
+        {"label": "quantity", "text": "16-25"},
+        {"label": "quantity", "text": "4"},
+        {"label": "quantity", "text": "3"},
+        {"label": "quantity", "text": "2", "occurrence": 1},
+        {"label": "tolerance", "text": "0 failures"}
+      ]
+    },
+    {
+      "case_id": "synthetic_part_quantity_price",
+      "source_kind": "synthetic",
+      "source": null,
+      "page_number": null,
+      "evidence_id": "synthetic-001",
+      "text": "Part AX-441 requires 24 units at EUR 125.40 per unit.",
+      "expected": [
+        {"label": "part_or_model", "text": "AX-441"},
+        {"label": "quantity", "text": "24 units"},
+        {"label": "price", "text": "EUR 125.40"}
+      ]
+    },
+    {
+      "case_id": "synthetic_deadline_and_tolerance",
+      "source_kind": "synthetic",
+      "source": null,
+      "page_number": null,
+      "evidence_id": "synthetic-002",
+      "text": "Shaft PN-8842 must be delivered by 15 September 2026 at 17:00 CET; diameter tolerance is 25.00 ± 0.02 mm.",
+      "expected": [
+        {"label": "part_or_model", "text": "PN-8842"},
+        {"label": "deadline", "text": "15 September 2026 at 17:00 CET"},
+        {"label": "tolerance", "text": "25.00 ± 0.02 mm"}
+      ]
+    },
+    {
+      "case_id": "synthetic_bearing_order",
+      "source_kind": "synthetic",
+      "source": null,
+      "page_number": null,
+      "evidence_id": "synthetic-003",
+      "text": "Bearing SKF 6205-2RS: quantity 80, unit price $18.75, delivery deadline 2026-10-31.",
+      "expected": [
+        {"label": "part_or_model", "text": "SKF 6205-2RS"},
+        {"label": "quantity", "text": "80"},
+        {"label": "price", "text": "$18.75"},
+        {"label": "deadline", "text": "2026-10-31"}
+      ]
+    }
+  ]
+}

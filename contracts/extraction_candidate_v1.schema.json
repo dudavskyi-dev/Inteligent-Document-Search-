@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.internal/schemas/industrial-document-candidate/1.0",
+  "title": "ExtractionCandidateResponse",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "document_number", "parties", "deadlines", "line_items", "abstained_field_paths"],
+  "properties": {
+    "schema_version": {"const": "industrial-document-candidate/1.0"},
+    "document_number": {"oneOf": [{"$ref": "#/$defs/candidateString"}, {"type": "null"}]},
+    "parties": {"type": "array", "items": {"$ref": "#/$defs/candidateParty"}},
+    "deadlines": {"type": "array", "items": {"$ref": "#/$defs/candidateDeadline"}},
+    "line_items": {"type": "array", "items": {"$ref": "#/$defs/candidateLineItem"}},
+    "abstained_field_paths": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    }
+  },
+  "$defs": {
+    "status": {"type": "string", "enum": ["supported", "ambiguous", "not_found"]},
+    "evidenceIds": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    },
+    "candidateString": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "raw", "value", "evidence_ids", "conflict_evidence_ids"],
+      "properties": {
+        "status": {"$ref": "#/$defs/status"},
+        "raw": {"type": ["string", "null"]},
+        "value": {"type": ["string", "null"]},
+        "evidence_ids": {"$ref": "#/$defs/evidenceIds"},
+        "conflict_evidence_ids": {"$ref": "#/$defs/evidenceIds"}
+      }
+    },
+    "candidateQuantity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "raw", "value", "unit", "evidence_ids", "conflict_evidence_ids"],
+      "properties": {
+        "status": {"$ref": "#/$defs/status"},
+        "raw": {"type": ["string", "null"]},
+        "value": {"type": ["string", "null"], "pattern": "^-?[0-9]+(?:\\.[0-9]+)?$"},
+        "unit": {"type": ["string", "null"]},
+        "evidence_ids": {"$ref": "#/$defs/evidenceIds"},
+        "conflict_evidence_ids": {"$ref": "#/$defs/evidenceIds"}
+      }
+    },
+    "candidateMoney": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "raw", "amount", "currency", "price_basis", "evidence_ids", "conflict_evidence_ids"],
+      "properties": {
+        "status": {"$ref": "#/$defs/status"},
+        "raw": {"type": ["string", "null"]},
+        "amount": {"type": ["string", "null"], "pattern": "^-?[0-9]+(?:\\.[0-9]+)?$"},
+        "currency": {"type": ["string", "null"], "pattern": "^[A-Z]{3}$"},
+        "price_basis": {"type": ["string", "null"]},
+        "evidence_ids": {"$ref": "#/$defs/evidenceIds"},
+        "conflict_evidence_ids": {"$ref": "#/$defs/evidenceIds"}
+      }
+    },
+    "candidateTolerance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "type", "target", "raw", "nominal", "lower_limit", "upper_limit", "unit", "standard", "evidence_ids", "conflict_evidence_ids"],
+      "properties": {
+        "status": {"$ref": "#/$defs/status"},
+        "type": {"type": "string", "enum": ["dimensional", "acceptance", "other"]},
+        "target": {"type": ["string", "null"]},
+        "raw": {"type": ["string", "null"]},
+        "nominal": {"type": ["string", "null"], "pattern": "^-?[0-9]+(?:\\.[0-9]+)?$"},
+        "lower_limit": {"type": ["string", "null"], "pattern": "^-?[0-9]+(?:\\.[0-9]+)?$"},
+        "upper_limit": {"type": ["string", "null"], "pattern": "^-?[0-9]+(?:\\.[0-9]+)?$"},
+        "unit": {"type": ["string", "null"]},
+        "standard": {"type": ["string", "null"]},
+        "evidence_ids": {"$ref": "#/$defs/evidenceIds"},
+        "conflict_evidence_ids": {"$ref": "#/$defs/evidenceIds"}
+      }
+    },
+    "candidateDeadline": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "type", "raw", "value", "timezone_source", "evidence_ids", "conflict_evidence_ids"],
+      "properties": {
+        "status": {"$ref": "#/$defs/status"},
+        "type": {"type": "string", "enum": ["bid_submission", "delivery", "performance_start", "performance_end", "other"]},
+        "raw": {"type": ["string", "null"]},
+        "value": {"type": ["string", "null"], "format": "date-time"},
+        "timezone_source": {"type": ["string", "null"], "enum": ["explicit", "document_locale", null]},
+        "evidence_ids": {"$ref": "#/$defs/evidenceIds"},
+        "conflict_evidence_ids": {"$ref": "#/$defs/evidenceIds"}
+      }
+    },
+    "candidateParty": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["role", "name"],
+      "properties": {
+        "role": {"type": "string", "enum": ["buyer", "supplier", "contractor", "other"]},
+        "name": {"$ref": "#/$defs/candidateString"}
+      }
+    },
+    "candidateLineItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_row_ids", "part_number", "description", "quantity", "tolerances", "unit_price", "line_total", "delivery_deadline"],
+      "properties": {
+        "source_row_ids": {"$ref": "#/$defs/evidenceIds"},
+        "part_number": {"oneOf": [{"$ref": "#/$defs/candidateString"}, {"type": "null"}]},
+        "description": {"oneOf": [{"$ref": "#/$defs/candidateString"}, {"type": "null"}]},
+        "quantity": {"oneOf": [{"$ref": "#/$defs/candidateQuantity"}, {"type": "null"}]},
+        "tolerances": {"type": "array", "items": {"$ref": "#/$defs/candidateTolerance"}},
+        "unit_price": {"oneOf": [{"$ref": "#/$defs/candidateMoney"}, {"type": "null"}]},
+        "line_total": {"oneOf": [{"$ref": "#/$defs/candidateMoney"}, {"type": "null"}]},
+        "delivery_deadline": {"oneOf": [{"$ref": "#/$defs/candidateDeadline"}, {"type": "null"}]}
+      }
+    }
+  }
+}

@@ -1,0 +1,1641 @@
+{
+  "schema_version": "1.0",
+  "run_id": "20260816T222224Z",
+  "status": "success",
+  "started_at_utc": "2026-08-16T22:22:24.517986+00:00",
+  "finished_at_utc": "2026-08-16T22:23:34.118069+00:00",
+  "model": "gliner-community/gliner_small-v2.5",
+  "device": "cpu",
+  "dataset": {
+    "path": "D:\\pythonProjects\\PrimaTask9\\spike\\data\\ground_truth\\gliner_extraction_cases.json",
+    "case_count": 14,
+    "source_counts": {
+      "real": 10,
+      "derived": 1,
+      "synthetic": 3
+    },
+    "expected_entity_count": 30,
+    "real_provenance_cases_validated": 10,
+    "labels": {
+      "part_or_model": "part number or model",
+      "quantity": "quantity",
+      "tolerance": "technical tolerance or acceptance criterion",
+      "deadline": "deadline, due date, or performance period",
+      "price": "price or fee"
+    },
+    "thresholds": [
+      0.2,
+      0.3,
+      0.4,
+      0.5
+    ]
+  },
+  "runtime": {
+    "model_loading_seconds": 49.473828,
+    "peak_memory_mb": 1852.137,
+    "package_versions": {
+      "gliner": "0.2.28",
+      "torch": "2.13.0"
+    },
+    "inference": {
+      "mean_case_seconds": 0.690965,
+      "max_case_seconds": 6.712095,
+      "total_inference_seconds": 9.673509
+    }
+  },
+  "metrics": {
+    "thresholds": {
+      "0.2": {
+        "all": {
+          "case_count": 14,
+          "exact": {
+            "tp": 14,
+            "fp": 40,
+            "fn": 16,
+            "precision": 0.259259,
+            "recall": 0.466667,
+            "f1": 0.333333,
+            "mean_case_f1": 0.309864,
+            "by_label": {
+              "deadline": {
+                "tp": 1,
+                "fp": 6,
+                "fn": 2,
+                "precision": 0.142857,
+                "recall": 0.333333,
+                "f1": 0.2
+              },
+              "part_or_model": {
+                "tp": 3,
+                "fp": 9,
+                "fn": 2,
+                "precision": 0.25,
+                "recall": 0.6,
+                "f1": 0.352941
+              },
+              "price": {
+                "tp": 2,
+                "fp": 6,
+                "fn": 4,
+                "precision": 0.25,
+                "recall": 0.333333,
+                "f1": 0.285714
+              },
+              "quantity": {
+                "tp": 8,
+                "fp": 10,
+                "fn": 2,
+                "precision": 0.444444,
+                "recall": 0.8,
+                "f1": 0.571429
+              },
+              "tolerance": {
+                "tp": 0,
+                "fp": 9,
+                "fn": 6,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              }
+            }
+          },
+          "relaxed": {
+            "tp": 21,
+            "fp": 33,
+            "fn": 9,
+            "precision": 0.388889,
+            "recall": 0.7,
+            "f1": 0.5,
+            "mean_case_f1": 0.47551,
+            "by_label": {
+              "deadline": {
+                "tp": 2,
+                "fp": 5,
+                "fn": 1,
+                "precision": 0.285714,
+                "recall": 0.666667,
+                "f1": 0.4
+              },
+              "part_or_model": {
+                "tp": 5,
+                "fp": 7,
+                "fn": 0,
+                "precision": 0.416667,
+                "recall": 1.0,
+                "f1": 0.588235
+              },
+              "price": {
+                "tp": 3,
+                "fp": 5,
+                "fn": 3,
+                "precision": 0.375,
+                "recall": 0.5,
+                "f1": 0.428571
+              },
+              "quantity": {
+                "tp": 9,
+                "fp": 9,
+                "fn": 1,
+                "precision": 0.5,
+                "recall": 0.9,
+                "f1": 0.642857
+              },
+              "tolerance": {
+                "tp": 2,
+                "fp": 7,
+                "fn": 4,
+                "precision": 0.222222,
+                "recall": 0.333333,
+                "f1": 0.266667
+              }
+            }
+          }
+        },
+        "real": {
+          "case_count": 10,
+          "exact": {
+            "tp": 5,
+            "fp": 24,
+            "fn": 10,
+            "precision": 0.172414,
+            "recall": 0.333333,
+            "f1": 0.227273,
+            "mean_case_f1": 0.256667,
+            "by_label": {
+              "deadline": {
+                "tp": 0,
+                "fp": 3,
+                "fn": 1,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "part_or_model": {
+                "tp": 2,
+                "fp": 6,
+                "fn": 0,
+                "precision": 0.25,
+                "recall": 1.0,
+                "f1": 0.4
+              },
+              "price": {
+                "tp": 0,
+                "fp": 5,
+                "fn": 4,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "quantity": {
+                "tp": 3,
+                "fp": 7,
+                "fn": 1,
+                "precision": 0.3,
+                "recall": 0.75,
+                "f1": 0.428571
+              },
+              "tolerance": {
+                "tp": 0,
+                "fp": 3,
+                "fn": 4,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              }
+            }
+          },
+          "relaxed": {
+            "tp": 8,
+            "fp": 21,
+            "fn": 7,
+            "precision": 0.275862,
+            "recall": 0.533333,
+            "f1": 0.363636,
+            "mean_case_f1": 0.396667,
+            "by_label": {
+              "deadline": {
+                "tp": 0,
+                "fp": 3,
+                "fn": 1,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "part_or_model": {
+                "tp": 2,
+                "fp": 6,
+                "fn": 0,
+                "precision": 0.25,
+                "recall": 1.0,
+                "f1": 0.4
+              },
+              "price": {
+                "tp": 1,
+                "fp": 4,
+                "fn": 3,
+                "precision": 0.2,
+                "recall": 0.25,
+                "f1": 0.222222
+              },
+              "quantity": {
+                "tp": 4,
+                "fp": 6,
+                "fn": 0,
+                "precision": 0.4,
+                "recall": 1.0,
+                "f1": 0.571429
+              },
+              "tolerance": {
+                "tp": 1,
+                "fp": 2,
+                "fn": 3,
+                "precision": 0.333333,
+                "recall": 0.25,
+                "f1": 0.285714
+              }
+            }
+          }
+        },
+        "derived": {
+          "case_count": 1,
+          "exact": {
+            "tp": 3,
+            "fp": 7,
+            "fn": 2,
+            "precision": 0.3,
+            "recall": 0.6,
+            "f1": 0.4,
+            "mean_case_f1": 0.4,
+            "by_label": {
+              "part_or_model": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "quantity": {
+                "tp": 3,
+                "fp": 1,
+                "fn": 1,
+                "precision": 0.75,
+                "recall": 0.75,
+                "f1": 0.75
+              },
+              "tolerance": {
+                "tp": 0,
+                "fp": 5,
+                "fn": 1,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              }
+            }
+          },
+          "relaxed": {
+            "tp": 4,
+            "fp": 6,
+            "fn": 1,
+            "precision": 0.4,
+            "recall": 0.8,
+            "f1": 0.533333,
+            "mean_case_f1": 0.533333,
+            "by_label": {
+              "part_or_model": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "quantity": {
+                "tp": 3,
+                "fp": 1,
+                "fn": 1,
+                "precision": 0.75,
+                "recall": 0.75,
+                "f1": 0.75
+              },
+              "tolerance": {
+                "tp": 1,
+                "fp": 4,
+                "fn": 0,
+                "precision": 0.2,
+                "recall": 1.0,
+                "f1": 0.333333
+              }
+            }
+          }
+        },
+        "synthetic": {
+          "case_count": 3,
+          "exact": {
+            "tp": 6,
+            "fp": 9,
+            "fn": 4,
+            "precision": 0.4,
+            "recall": 0.6,
+            "f1": 0.48,
+            "mean_case_f1": 0.457143,
+            "by_label": {
+              "deadline": {
+                "tp": 1,
+                "fp": 3,
+                "fn": 1,
+                "precision": 0.25,
+                "recall": 0.5,
+                "f1": 0.333333
+              },
+              "part_or_model": {
+                "tp": 1,
+                "fp": 2,
+                "fn": 2,
+                "precision": 0.333333,
+                "recall": 0.333333,
+                "f1": 0.333333
+              },
+              "price": {
+                "tp": 2,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.666667,
+                "recall": 1.0,
+                "f1": 0.8
+              },
+              "quantity": {
+                "tp": 2,
+                "fp": 2,
+                "fn": 0,
+                "precision": 0.5,
+                "recall": 1.0,
+                "f1": 0.666667
+              },
+              "tolerance": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 1,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              }
+            }
+          },
+          "relaxed": {
+            "tp": 9,
+            "fp": 6,
+            "fn": 1,
+            "precision": 0.6,
+            "recall": 0.9,
+            "f1": 0.72,
+            "mean_case_f1": 0.719048,
+            "by_label": {
+              "deadline": {
+                "tp": 2,
+                "fp": 2,
+                "fn": 0,
+                "precision": 0.5,
+                "recall": 1.0,
+                "f1": 0.666667
+              },
+              "part_or_model": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "price": {
+                "tp": 2,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.666667,
+                "recall": 1.0,
+                "f1": 0.8
+              },
+              "quantity": {
+                "tp": 2,
+                "fp": 2,
+                "fn": 0,
+                "precision": 0.5,
+                "recall": 1.0,
+                "f1": 0.666667
+              },
+              "tolerance": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 1,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              }
+            }
+          }
+        }
+      },
+      "0.3": {
+        "all": {
+          "case_count": 14,
+          "exact": {
+            "tp": 14,
+            "fp": 38,
+            "fn": 16,
+            "precision": 0.269231,
+            "recall": 0.466667,
+            "f1": 0.341463,
+            "mean_case_f1": 0.335714,
+            "by_label": {
+              "deadline": {
+                "tp": 1,
+                "fp": 6,
+                "fn": 2,
+                "precision": 0.142857,
+                "recall": 0.333333,
+                "f1": 0.2
+              },
+              "part_or_model": {
+                "tp": 3,
+                "fp": 8,
+                "fn": 2,
+                "precision": 0.272727,
+                "recall": 0.6,
+                "f1": 0.375
+              },
+              "price": {
+                "tp": 2,
+                "fp": 6,
+                "fn": 4,
+                "precision": 0.25,
+                "recall": 0.333333,
+                "f1": 0.285714
+              },
+              "quantity": {
+                "tp": 8,
+                "fp": 10,
+                "fn": 2,
+                "precision": 0.444444,
+                "recall": 0.8,
+                "f1": 0.571429
+              },
+              "tolerance": {
+                "tp": 0,
+                "fp": 8,
+                "fn": 6,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              }
+            }
+          },
+          "relaxed": {
+            "tp": 21,
+            "fp": 31,
+            "fn": 9,
+            "precision": 0.403846,
+            "recall": 0.7,
+            "f1": 0.512195,
+            "mean_case_f1": 0.502041,
+            "by_label": {
+              "deadline": {
+                "tp": 2,
+                "fp": 5,
+                "fn": 1,
+                "precision": 0.285714,
+                "recall": 0.666667,
+                "f1": 0.4
+              },
+              "part_or_model": {
+                "tp": 5,
+                "fp": 6,
+                "fn": 0,
+                "precision": 0.454545,
+                "recall": 1.0,
+                "f1": 0.625
+              },
+              "price": {
+                "tp": 3,
+                "fp": 5,
+                "fn": 3,
+                "precision": 0.375,
+                "recall": 0.5,
+                "f1": 0.428571
+              },
+              "quantity": {
+                "tp": 9,
+                "fp": 9,
+                "fn": 1,
+                "precision": 0.5,
+                "recall": 0.9,
+                "f1": 0.642857
+              },
+              "tolerance": {
+                "tp": 2,
+                "fp": 6,
+                "fn": 4,
+                "precision": 0.25,
+                "recall": 0.333333,
+                "f1": 0.285714
+              }
+            }
+          }
+        },
+        "real": {
+          "case_count": 10,
+          "exact": {
+            "tp": 5,
+            "fp": 23,
+            "fn": 10,
+            "precision": 0.178571,
+            "recall": 0.333333,
+            "f1": 0.232558,
+            "mean_case_f1": 0.29,
+            "by_label": {
+              "deadline": {
+                "tp": 0,
+                "fp": 3,
+                "fn": 1,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "part_or_model": {
+                "tp": 2,
+                "fp": 5,
+                "fn": 0,
+                "precision": 0.285714,
+                "recall": 1.0,
+                "f1": 0.444444
+              },
+              "price": {
+                "tp": 0,
+                "fp": 5,
+                "fn": 4,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "quantity": {
+                "tp": 3,
+                "fp": 7,
+                "fn": 1,
+                "precision": 0.3,
+                "recall": 0.75,
+                "f1": 0.428571
+              },
+              "tolerance": {
+                "tp": 0,
+                "fp": 3,
+                "fn": 4,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              }
+            }
+          },
+          "relaxed": {
+            "tp": 8,
+            "fp": 20,
+            "fn": 7,
+            "precision": 0.285714,
+            "recall": 0.533333,
+            "f1": 0.372093,
+            "mean_case_f1": 0.43,
+            "by_label": {
+              "deadline": {
+                "tp": 0,
+                "fp": 3,
+                "fn": 1,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "part_or_model": {
+                "tp": 2,
+                "fp": 5,
+                "fn": 0,
+                "precision": 0.285714,
+                "recall": 1.0,
+                "f1": 0.444444
+              },
+              "price": {
+                "tp": 1,
+                "fp": 4,
+                "fn": 3,
+                "precision": 0.2,
+                "recall": 0.25,
+                "f1": 0.222222
+              },
+              "quantity": {
+                "tp": 4,
+                "fp": 6,
+                "fn": 0,
+                "precision": 0.4,
+                "recall": 1.0,
+                "f1": 0.571429
+              },
+              "tolerance": {
+                "tp": 1,
+                "fp": 2,
+                "fn": 3,
+                "precision": 0.333333,
+                "recall": 0.25,
+                "f1": 0.285714
+              }
+            }
+          }
+        },
+        "derived": {
+          "case_count": 1,
+          "exact": {
+            "tp": 3,
+            "fp": 6,
+            "fn": 2,
+            "precision": 0.333333,
+            "recall": 0.6,
+            "f1": 0.428571,
+            "mean_case_f1": 0.428571,
+            "by_label": {
+              "part_or_model": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "quantity": {
+                "tp": 3,
+                "fp": 1,
+                "fn": 1,
+                "precision": 0.75,
+                "recall": 0.75,
+                "f1": 0.75
+              },
+              "tolerance": {
+                "tp": 0,
+                "fp": 4,
+                "fn": 1,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              }
+            }
+          },
+          "relaxed": {
+            "tp": 4,
+            "fp": 5,
+            "fn": 1,
+            "precision": 0.444444,
+            "recall": 0.8,
+            "f1": 0.571429,
+            "mean_case_f1": 0.571429,
+            "by_label": {
+              "part_or_model": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "quantity": {
+                "tp": 3,
+                "fp": 1,
+                "fn": 1,
+                "precision": 0.75,
+                "recall": 0.75,
+                "f1": 0.75
+              },
+              "tolerance": {
+                "tp": 1,
+                "fp": 3,
+                "fn": 0,
+                "precision": 0.25,
+                "recall": 1.0,
+                "f1": 0.4
+              }
+            }
+          }
+        },
+        "synthetic": {
+          "case_count": 3,
+          "exact": {
+            "tp": 6,
+            "fp": 9,
+            "fn": 4,
+            "precision": 0.4,
+            "recall": 0.6,
+            "f1": 0.48,
+            "mean_case_f1": 0.457143,
+            "by_label": {
+              "deadline": {
+                "tp": 1,
+                "fp": 3,
+                "fn": 1,
+                "precision": 0.25,
+                "recall": 0.5,
+                "f1": 0.333333
+              },
+              "part_or_model": {
+                "tp": 1,
+                "fp": 2,
+                "fn": 2,
+                "precision": 0.333333,
+                "recall": 0.333333,
+                "f1": 0.333333
+              },
+              "price": {
+                "tp": 2,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.666667,
+                "recall": 1.0,
+                "f1": 0.8
+              },
+              "quantity": {
+                "tp": 2,
+                "fp": 2,
+                "fn": 0,
+                "precision": 0.5,
+                "recall": 1.0,
+                "f1": 0.666667
+              },
+              "tolerance": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 1,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              }
+            }
+          },
+          "relaxed": {
+            "tp": 9,
+            "fp": 6,
+            "fn": 1,
+            "precision": 0.6,
+            "recall": 0.9,
+            "f1": 0.72,
+            "mean_case_f1": 0.719048,
+            "by_label": {
+              "deadline": {
+                "tp": 2,
+                "fp": 2,
+                "fn": 0,
+                "precision": 0.5,
+                "recall": 1.0,
+                "f1": 0.666667
+              },
+              "part_or_model": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "price": {
+                "tp": 2,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.666667,
+                "recall": 1.0,
+                "f1": 0.8
+              },
+              "quantity": {
+                "tp": 2,
+                "fp": 2,
+                "fn": 0,
+                "precision": 0.5,
+                "recall": 1.0,
+                "f1": 0.666667
+              },
+              "tolerance": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 1,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              }
+            }
+          }
+        }
+      },
+      "0.4": {
+        "all": {
+          "case_count": 14,
+          "exact": {
+            "tp": 14,
+            "fp": 32,
+            "fn": 16,
+            "precision": 0.304348,
+            "recall": 0.466667,
+            "f1": 0.368421,
+            "mean_case_f1": 0.349974,
+            "by_label": {
+              "deadline": {
+                "tp": 1,
+                "fp": 6,
+                "fn": 2,
+                "precision": 0.142857,
+                "recall": 0.333333,
+                "f1": 0.2
+              },
+              "part_or_model": {
+                "tp": 3,
+                "fp": 6,
+                "fn": 2,
+                "precision": 0.333333,
+                "recall": 0.6,
+                "f1": 0.428571
+              },
+              "price": {
+                "tp": 2,
+                "fp": 4,
+                "fn": 4,
+                "precision": 0.333333,
+                "recall": 0.333333,
+                "f1": 0.333333
+              },
+              "quantity": {
+                "tp": 8,
+                "fp": 10,
+                "fn": 2,
+                "precision": 0.444444,
+                "recall": 0.8,
+                "f1": 0.571429
+              },
+              "tolerance": {
+                "tp": 0,
+                "fp": 6,
+                "fn": 6,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              }
+            }
+          },
+          "relaxed": {
+            "tp": 20,
+            "fp": 26,
+            "fn": 10,
+            "precision": 0.434783,
+            "recall": 0.666667,
+            "f1": 0.526316,
+            "mean_case_f1": 0.518001,
+            "by_label": {
+              "deadline": {
+                "tp": 2,
+                "fp": 5,
+                "fn": 1,
+                "precision": 0.285714,
+                "recall": 0.666667,
+                "f1": 0.4
+              },
+              "part_or_model": {
+                "tp": 5,
+                "fp": 4,
+                "fn": 0,
+                "precision": 0.555556,
+                "recall": 1.0,
+                "f1": 0.714286
+              },
+              "price": {
+                "tp": 3,
+                "fp": 3,
+                "fn": 3,
+                "precision": 0.5,
+                "recall": 0.5,
+                "f1": 0.5
+              },
+              "quantity": {
+                "tp": 9,
+                "fp": 9,
+                "fn": 1,
+                "precision": 0.5,
+                "recall": 0.9,
+                "f1": 0.642857
+              },
+              "tolerance": {
+                "tp": 1,
+                "fp": 5,
+                "fn": 5,
+                "precision": 0.166667,
+                "recall": 0.166667,
+                "f1": 0.166667
+              }
+            }
+          }
+        },
+        "real": {
+          "case_count": 10,
+          "exact": {
+            "tp": 5,
+            "fp": 18,
+            "fn": 10,
+            "precision": 0.217391,
+            "recall": 0.333333,
+            "f1": 0.263158,
+            "mean_case_f1": 0.306667,
+            "by_label": {
+              "deadline": {
+                "tp": 0,
+                "fp": 3,
+                "fn": 1,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "part_or_model": {
+                "tp": 2,
+                "fp": 3,
+                "fn": 0,
+                "precision": 0.4,
+                "recall": 1.0,
+                "f1": 0.571429
+              },
+              "price": {
+                "tp": 0,
+                "fp": 3,
+                "fn": 4,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "quantity": {
+                "tp": 3,
+                "fp": 7,
+                "fn": 1,
+                "precision": 0.3,
+                "recall": 0.75,
+                "f1": 0.428571
+              },
+              "tolerance": {
+                "tp": 0,
+                "fp": 2,
+                "fn": 4,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              }
+            }
+          },
+          "relaxed": {
+            "tp": 8,
+            "fp": 15,
+            "fn": 7,
+            "precision": 0.347826,
+            "recall": 0.533333,
+            "f1": 0.421053,
+            "mean_case_f1": 0.463333,
+            "by_label": {
+              "deadline": {
+                "tp": 0,
+                "fp": 3,
+                "fn": 1,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "part_or_model": {
+                "tp": 2,
+                "fp": 3,
+                "fn": 0,
+                "precision": 0.4,
+                "recall": 1.0,
+                "f1": 0.571429
+              },
+              "price": {
+                "tp": 1,
+                "fp": 2,
+                "fn": 3,
+                "precision": 0.333333,
+                "recall": 0.25,
+                "f1": 0.285714
+              },
+              "quantity": {
+                "tp": 4,
+                "fp": 6,
+                "fn": 0,
+                "precision": 0.4,
+                "recall": 1.0,
+                "f1": 0.571429
+              },
+              "tolerance": {
+                "tp": 1,
+                "fp": 1,
+                "fn": 3,
+                "precision": 0.5,
+                "recall": 0.25,
+                "f1": 0.333333
+              }
+            }
+          }
+        },
+        "derived": {
+          "case_count": 1,
+          "exact": {
+            "tp": 3,
+            "fp": 5,
+            "fn": 2,
+            "precision": 0.375,
+            "recall": 0.6,
+            "f1": 0.461538,
+            "mean_case_f1": 0.461538,
+            "by_label": {
+              "part_or_model": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "quantity": {
+                "tp": 3,
+                "fp": 1,
+                "fn": 1,
+                "precision": 0.75,
+                "recall": 0.75,
+                "f1": 0.75
+              },
+              "tolerance": {
+                "tp": 0,
+                "fp": 3,
+                "fn": 1,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              }
+            }
+          },
+          "relaxed": {
+            "tp": 3,
+            "fp": 5,
+            "fn": 2,
+            "precision": 0.375,
+            "recall": 0.6,
+            "f1": 0.461538,
+            "mean_case_f1": 0.461538,
+            "by_label": {
+              "part_or_model": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "quantity": {
+                "tp": 3,
+                "fp": 1,
+                "fn": 1,
+                "precision": 0.75,
+                "recall": 0.75,
+                "f1": 0.75
+              },
+              "tolerance": {
+                "tp": 0,
+                "fp": 3,
+                "fn": 1,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              }
+            }
+          }
+        },
+        "synthetic": {
+          "case_count": 3,
+          "exact": {
+            "tp": 6,
+            "fp": 9,
+            "fn": 4,
+            "precision": 0.4,
+            "recall": 0.6,
+            "f1": 0.48,
+            "mean_case_f1": 0.457143,
+            "by_label": {
+              "deadline": {
+                "tp": 1,
+                "fp": 3,
+                "fn": 1,
+                "precision": 0.25,
+                "recall": 0.5,
+                "f1": 0.333333
+              },
+              "part_or_model": {
+                "tp": 1,
+                "fp": 2,
+                "fn": 2,
+                "precision": 0.333333,
+                "recall": 0.333333,
+                "f1": 0.333333
+              },
+              "price": {
+                "tp": 2,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.666667,
+                "recall": 1.0,
+                "f1": 0.8
+              },
+              "quantity": {
+                "tp": 2,
+                "fp": 2,
+                "fn": 0,
+                "precision": 0.5,
+                "recall": 1.0,
+                "f1": 0.666667
+              },
+              "tolerance": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 1,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              }
+            }
+          },
+          "relaxed": {
+            "tp": 9,
+            "fp": 6,
+            "fn": 1,
+            "precision": 0.6,
+            "recall": 0.9,
+            "f1": 0.72,
+            "mean_case_f1": 0.719048,
+            "by_label": {
+              "deadline": {
+                "tp": 2,
+                "fp": 2,
+                "fn": 0,
+                "precision": 0.5,
+                "recall": 1.0,
+                "f1": 0.666667
+              },
+              "part_or_model": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "price": {
+                "tp": 2,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.666667,
+                "recall": 1.0,
+                "f1": 0.8
+              },
+              "quantity": {
+                "tp": 2,
+                "fp": 2,
+                "fn": 0,
+                "precision": 0.5,
+                "recall": 1.0,
+                "f1": 0.666667
+              },
+              "tolerance": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 1,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              }
+            }
+          }
+        }
+      },
+      "0.5": {
+        "all": {
+          "case_count": 14,
+          "exact": {
+            "tp": 14,
+            "fp": 25,
+            "fn": 16,
+            "precision": 0.358974,
+            "recall": 0.466667,
+            "f1": 0.405797,
+            "mean_case_f1": 0.394078,
+            "by_label": {
+              "deadline": {
+                "tp": 1,
+                "fp": 4,
+                "fn": 2,
+                "precision": 0.2,
+                "recall": 0.333333,
+                "f1": 0.25
+              },
+              "part_or_model": {
+                "tp": 3,
+                "fp": 6,
+                "fn": 2,
+                "precision": 0.333333,
+                "recall": 0.6,
+                "f1": 0.428571
+              },
+              "price": {
+                "tp": 2,
+                "fp": 4,
+                "fn": 4,
+                "precision": 0.333333,
+                "recall": 0.333333,
+                "f1": 0.333333
+              },
+              "quantity": {
+                "tp": 8,
+                "fp": 6,
+                "fn": 2,
+                "precision": 0.571429,
+                "recall": 0.8,
+                "f1": 0.666667
+              },
+              "tolerance": {
+                "tp": 0,
+                "fp": 5,
+                "fn": 6,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              }
+            }
+          },
+          "relaxed": {
+            "tp": 19,
+            "fp": 20,
+            "fn": 11,
+            "precision": 0.487179,
+            "recall": 0.633333,
+            "f1": 0.550725,
+            "mean_case_f1": 0.54884,
+            "by_label": {
+              "deadline": {
+                "tp": 2,
+                "fp": 3,
+                "fn": 1,
+                "precision": 0.4,
+                "recall": 0.666667,
+                "f1": 0.5
+              },
+              "part_or_model": {
+                "tp": 5,
+                "fp": 4,
+                "fn": 0,
+                "precision": 0.555556,
+                "recall": 1.0,
+                "f1": 0.714286
+              },
+              "price": {
+                "tp": 3,
+                "fp": 3,
+                "fn": 3,
+                "precision": 0.5,
+                "recall": 0.5,
+                "f1": 0.5
+              },
+              "quantity": {
+                "tp": 8,
+                "fp": 6,
+                "fn": 2,
+                "precision": 0.571429,
+                "recall": 0.8,
+                "f1": 0.666667
+              },
+              "tolerance": {
+                "tp": 1,
+                "fp": 4,
+                "fn": 5,
+                "precision": 0.2,
+                "recall": 0.166667,
+                "f1": 0.181818
+              }
+            }
+          }
+        },
+        "real": {
+          "case_count": 10,
+          "exact": {
+            "tp": 5,
+            "fp": 13,
+            "fn": 10,
+            "precision": 0.277778,
+            "recall": 0.333333,
+            "f1": 0.30303,
+            "mean_case_f1": 0.35,
+            "by_label": {
+              "deadline": {
+                "tp": 0,
+                "fp": 2,
+                "fn": 1,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "part_or_model": {
+                "tp": 2,
+                "fp": 3,
+                "fn": 0,
+                "precision": 0.4,
+                "recall": 1.0,
+                "f1": 0.571429
+              },
+              "price": {
+                "tp": 0,
+                "fp": 3,
+                "fn": 4,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "quantity": {
+                "tp": 3,
+                "fp": 4,
+                "fn": 1,
+                "precision": 0.428571,
+                "recall": 0.75,
+                "f1": 0.545455
+              },
+              "tolerance": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 4,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              }
+            }
+          },
+          "relaxed": {
+            "tp": 7,
+            "fp": 11,
+            "fn": 8,
+            "precision": 0.388889,
+            "recall": 0.466667,
+            "f1": 0.424242,
+            "mean_case_f1": 0.483333,
+            "by_label": {
+              "deadline": {
+                "tp": 0,
+                "fp": 2,
+                "fn": 1,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "part_or_model": {
+                "tp": 2,
+                "fp": 3,
+                "fn": 0,
+                "precision": 0.4,
+                "recall": 1.0,
+                "f1": 0.571429
+              },
+              "price": {
+                "tp": 1,
+                "fp": 2,
+                "fn": 3,
+                "precision": 0.333333,
+                "recall": 0.25,
+                "f1": 0.285714
+              },
+              "quantity": {
+                "tp": 3,
+                "fp": 4,
+                "fn": 1,
+                "precision": 0.428571,
+                "recall": 0.75,
+                "f1": 0.545455
+              },
+              "tolerance": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 3,
+                "precision": 1.0,
+                "recall": 0.25,
+                "f1": 0.4
+              }
+            }
+          }
+        },
+        "derived": {
+          "case_count": 1,
+          "exact": {
+            "tp": 3,
+            "fp": 5,
+            "fn": 2,
+            "precision": 0.375,
+            "recall": 0.6,
+            "f1": 0.461538,
+            "mean_case_f1": 0.461538,
+            "by_label": {
+              "part_or_model": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "quantity": {
+                "tp": 3,
+                "fp": 1,
+                "fn": 1,
+                "precision": 0.75,
+                "recall": 0.75,
+                "f1": 0.75
+              },
+              "tolerance": {
+                "tp": 0,
+                "fp": 3,
+                "fn": 1,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              }
+            }
+          },
+          "relaxed": {
+            "tp": 3,
+            "fp": 5,
+            "fn": 2,
+            "precision": 0.375,
+            "recall": 0.6,
+            "f1": 0.461538,
+            "mean_case_f1": 0.461538,
+            "by_label": {
+              "part_or_model": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "quantity": {
+                "tp": 3,
+                "fp": 1,
+                "fn": 1,
+                "precision": 0.75,
+                "recall": 0.75,
+                "f1": 0.75
+              },
+              "tolerance": {
+                "tp": 0,
+                "fp": 3,
+                "fn": 1,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              }
+            }
+          }
+        },
+        "synthetic": {
+          "case_count": 3,
+          "exact": {
+            "tp": 6,
+            "fp": 7,
+            "fn": 4,
+            "precision": 0.461538,
+            "recall": 0.6,
+            "f1": 0.521739,
+            "mean_case_f1": 0.518519,
+            "by_label": {
+              "deadline": {
+                "tp": 1,
+                "fp": 2,
+                "fn": 1,
+                "precision": 0.333333,
+                "recall": 0.5,
+                "f1": 0.4
+              },
+              "part_or_model": {
+                "tp": 1,
+                "fp": 2,
+                "fn": 2,
+                "precision": 0.333333,
+                "recall": 0.333333,
+                "f1": 0.333333
+              },
+              "price": {
+                "tp": 2,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.666667,
+                "recall": 1.0,
+                "f1": 0.8
+              },
+              "quantity": {
+                "tp": 2,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.666667,
+                "recall": 1.0,
+                "f1": 0.8
+              },
+              "tolerance": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 1,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              }
+            }
+          },
+          "relaxed": {
+            "tp": 9,
+            "fp": 4,
+            "fn": 1,
+            "precision": 0.692308,
+            "recall": 0.9,
+            "f1": 0.782609,
+            "mean_case_f1": 0.796296,
+            "by_label": {
+              "deadline": {
+                "tp": 2,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.666667,
+                "recall": 1.0,
+                "f1": 0.8
+              },
+              "part_or_model": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "price": {
+                "tp": 2,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.666667,
+                "recall": 1.0,
+                "f1": 0.8
+              },
+              "quantity": {
+                "tp": 2,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.666667,
+                "recall": 1.0,
+                "f1": 0.8
+              },
+              "tolerance": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 1,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "best_threshold_by_real_relaxed_f1": 0.5,
+    "quality_gate": {
+      "real_relaxed_f1_required": 0.7,
+      "all_exact_f1_required": 0.6,
+      "minimum_relaxed_recall_per_label_required": 0.5,
+      "real_relaxed_f1_passed": false,
+      "all_exact_f1_passed": false,
+      "per_label_recall_passed": false,
+      "passed": false
+    },
+    "latency": {
+      "mean_case_seconds": 0.690965,
+      "max_case_seconds": 6.712095,
+      "total_inference_seconds": 9.673509
+    }
+  },
+  "quality_gate": {
+    "real_relaxed_f1_required": 0.7,
+    "all_exact_f1_required": 0.6,
+    "minimum_relaxed_recall_per_label_required": 0.5,
+    "real_relaxed_f1_passed": false,
+    "all_exact_f1_passed": false,
+    "per_label_recall_passed": false,
+    "passed": false
+  },
+  "artifacts": {
+    "summary": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\gliner\\runs\\20260816T222224Z\\summary.json",
+    "predictions": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\gliner\\runs\\20260816T222224Z\\predictions.json",
+    "log": "D:\\pythonProjects\\PrimaTask9\\spike\\logs\\gliner\\20260816T222224Z.log",
+    "latest_pointer": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\gliner\\latest.txt"
+  },
+  "error": null
+}

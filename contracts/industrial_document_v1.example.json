@@ -1,0 +1,179 @@
+{
+  "schema_version": "industrial-document/1.0",
+  "document_id": "doc_01JEXAMPLE",
+  "source_sha256": "766e6f369abe50fcdb9541f18402a852685d08b8fbed3e6983908aff71fd90e2",
+  "document_type": "tender",
+  "document_number": {
+    "raw": "RFQ No. 2026-184/B",
+    "value": "2026-184/B",
+    "evidence_ids": ["ev_p1_b3"],
+    "method": "deterministic",
+    "quality_score": 0.98,
+    "review_state": "pending"
+  },
+  "parties": [
+    {
+      "role": "buyer",
+      "name": {
+        "raw": "Example Manufacturing s.r.o.",
+        "value": "Example Manufacturing s.r.o.",
+        "evidence_ids": ["ev_p1_b7"],
+        "method": "llm",
+        "quality_score": 0.91,
+        "review_state": "pending"
+      }
+    }
+  ],
+  "deadlines": [
+    {
+      "type": "bid_submission",
+      "raw": "30.09.2026 14:00 CET",
+      "value": "2026-09-30T14:00:00+01:00",
+      "timezone_source": "explicit",
+      "evidence_ids": ["ev_p3_b9"],
+      "method": "deterministic",
+      "quality_score": 0.97,
+      "review_state": "pending"
+    }
+  ],
+  "line_items": [
+    {
+      "line_id": "10",
+      "source_row_ids": ["ev_p7_t2_r4"],
+      "part_number": {
+        "raw": "AX-1042",
+        "value": "AX-1042",
+        "evidence_ids": ["ev_p7_t2_r4_c1"],
+        "method": "deterministic",
+        "quality_score": 0.99,
+        "review_state": "pending"
+      },
+      "description": {
+        "raw": "Stainless steel shaft",
+        "value": "Stainless steel shaft",
+        "evidence_ids": ["ev_p7_t2_r4_c2"],
+        "method": "deterministic",
+        "quality_score": 0.96,
+        "review_state": "pending"
+      },
+      "quantity": {
+        "raw": "250 pcs",
+        "value": "250",
+        "unit": "piece",
+        "evidence_ids": ["ev_p7_t2_r4_c3"],
+        "method": "deterministic",
+        "quality_score": 0.98,
+        "review_state": "pending"
+      },
+      "tolerances": [
+        {
+          "type": "dimensional",
+          "target": "diameter",
+          "raw": "20 +0.02/-0.01 mm",
+          "nominal": "20.00",
+          "lower_limit": "19.99",
+          "upper_limit": "20.02",
+          "unit": "millimetre",
+          "standard": null,
+          "evidence_ids": ["ev_p7_t2_r4_c4"],
+          "method": "deterministic",
+          "quality_score": 0.95,
+          "review_state": "pending"
+        }
+      ],
+      "unit_price": {
+        "raw": "EUR 14,75",
+        "amount": "14.75",
+        "currency": "EUR",
+        "price_basis": "per_piece",
+        "evidence_ids": ["ev_p7_t2_r4_c5"],
+        "method": "deterministic",
+        "quality_score": 0.97,
+        "review_state": "pending"
+      },
+      "line_total": null,
+      "delivery_deadline": null
+    }
+  ],
+  "evidence_catalog": [
+    {
+      "evidence_id": "ev_p1_b3",
+      "page_number": 1,
+      "bbox": [0.10, 0.15, 0.42, 0.19],
+      "quote": "RFQ No. 2026-184/B",
+      "parser": "docling"
+    },
+    {
+      "evidence_id": "ev_p1_b7",
+      "page_number": 1,
+      "bbox": [0.10, 0.31, 0.64, 0.36],
+      "quote": "Example Manufacturing s.r.o.",
+      "parser": "docling"
+    },
+    {
+      "evidence_id": "ev_p3_b9",
+      "page_number": 3,
+      "bbox": [0.12, 0.42, 0.72, 0.47],
+      "quote": "30.09.2026 14:00 CET",
+      "parser": "docling"
+    },
+    {
+      "evidence_id": "ev_p7_t2_r4",
+      "page_number": 7,
+      "bbox": [0.08, 0.45, 0.92, 0.51],
+      "quote": "AX-1042 | Stainless steel shaft | 250 pcs | 20 +0.02/-0.01 mm | EUR 14,75",
+      "parser": "docling"
+    },
+    {
+      "evidence_id": "ev_p7_t2_r4_c1",
+      "page_number": 7,
+      "bbox": [0.08, 0.45, 0.21, 0.51],
+      "quote": "AX-1042",
+      "parser": "docling"
+    },
+    {
+      "evidence_id": "ev_p7_t2_r4_c2",
+      "page_number": 7,
+      "bbox": [0.21, 0.45, 0.49, 0.51],
+      "quote": "Stainless steel shaft",
+      "parser": "docling"
+    },
+    {
+      "evidence_id": "ev_p7_t2_r4_c3",
+      "page_number": 7,
+      "bbox": [0.49, 0.45, 0.59, 0.51],
+      "quote": "250 pcs",
+      "parser": "docling"
+    },
+    {
+      "evidence_id": "ev_p7_t2_r4_c4",
+      "page_number": 7,
+      "bbox": [0.59, 0.45, 0.77, 0.51],
+      "quote": "20 +0.02/-0.01 mm",
+      "parser": "docling"
+    },
+    {
+      "evidence_id": "ev_p7_t2_r4_c5",
+      "page_number": 7,
+      "bbox": [0.77, 0.45, 0.92, 0.51],
+      "quote": "EUR 14,75",
+      "parser": "docling"
+    }
+  ],
+  "validation_issues": [
+    {
+      "code": "LINE_TOTAL_MISSING",
+      "severity": "warning",
+      "field_path": "/line_items/0/line_total",
+      "message": "The source row does not state a line total.",
+      "status": "open"
+    }
+  ],
+  "review": {
+    "state": "needs_review",
+    "version": 1,
+    "approved_by": null,
+    "approved_at": null,
+    "snapshot_sha256": null
+  }
+}

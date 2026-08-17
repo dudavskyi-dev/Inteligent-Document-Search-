@@ -1,0 +1,517 @@
+{
+  "schema_version": "1.0",
+  "run_id": "20260816T181347Z",
+  "status": "success",
+  "profile": "full_7_pages",
+  "dpi": 180,
+  "started_at_utc": "2026-08-16T18:13:47.154147+00:00",
+  "finished_at_utc": "2026-08-16T18:20:29.150031+00:00",
+  "system": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.13 (main, Aug  7 2026, 02:26:41) [MSC v.1944 64 bit (AMD64)]",
+    "python_executable": "D:\\pythonProjects\\PrimaTask9\\.venv\\Scripts\\python.exe",
+    "cpu": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+    "logical_cpu_count": 8,
+    "physical_cpu_count": 4,
+    "total_memory_mb": 16291.8,
+    "nvidia_gpu": [
+      "NVIDIA GeForce GTX 1650 Ti, 4096, 581.57"
+    ]
+  },
+  "evaluation_note": "Runtime/resource values are measured. Content F1 is an automated cross-parser agreement proxy and is not human-verified parsing accuracy.",
+  "runs": [
+    {
+      "name": "docling_native",
+      "status": "success",
+      "input": "D:\\pythonProjects\\PrimaTask9\\spike\\data\\inputs\\05_GSA_Mixed_Table_Fixture.pdf",
+      "requested_pages": "1-7",
+      "canonical_output": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\parsing\\20260816T181347Z\\outputs\\docling_native.json",
+      "command": "D:\\pythonProjects\\PrimaTask9\\.venv\\Scripts\\python.exe -m benchmark.run_docling D:\\pythonProjects\\PrimaTask9\\spike\\data\\inputs\\05_GSA_Mixed_Table_Fixture.pdf --output D:\\pythonProjects\\PrimaTask9\\spike\\results\\parsing\\20260816T181347Z\\outputs\\docling_native.json --project-root D:\\pythonProjects\\PrimaTask9 --pages 1-7",
+      "wall_seconds": 42.2438,
+      "return_code": 0,
+      "metrics": {
+        "strategy": "docling_native",
+        "schema_version": "1.0",
+        "source_filename": "05_GSA_Mixed_Table_Fixture.pdf",
+        "sha256": "2668b6e5102717f0b02b5bbd46a87a4d4c2d465e03da74745d544f52251bbe60",
+        "parser_versions": {
+          "docling": "2.120.1"
+        },
+        "rendering_dpi": null,
+        "pages": 7,
+        "elapsed_seconds": 33.0813,
+        "seconds_per_page": 4.7259,
+        "peak_memory_mb": 1632.734375,
+        "internal_timings": {},
+        "route_counts": {
+          "docling_native": 7
+        },
+        "blocks": 26,
+        "nonempty_blocks": 26,
+        "tables": 6,
+        "cells": 121,
+        "text_characters": 3960,
+        "cell_characters": 1600,
+        "evidence_bbox_coverage": 1.0,
+        "warnings": [],
+        "pages_detail": [
+          {
+            "page_number": 1,
+            "blocks": 9,
+            "nonempty_blocks": 9,
+            "tables": 1,
+            "cells": 25,
+            "text_characters": 2528,
+            "cell_characters": 175
+          },
+          {
+            "page_number": 2,
+            "blocks": 0,
+            "nonempty_blocks": 0,
+            "tables": 1,
+            "cells": 0,
+            "text_characters": 0,
+            "cell_characters": 0
+          },
+          {
+            "page_number": 3,
+            "blocks": 11,
+            "nonempty_blocks": 11,
+            "tables": 1,
+            "cells": 42,
+            "text_characters": 1341,
+            "cell_characters": 232
+          },
+          {
+            "page_number": 4,
+            "blocks": 4,
+            "nonempty_blocks": 4,
+            "tables": 1,
+            "cells": 22,
+            "text_characters": 65,
+            "cell_characters": 792
+          },
+          {
+            "page_number": 5,
+            "blocks": 0,
+            "nonempty_blocks": 0,
+            "tables": 0,
+            "cells": 0,
+            "text_characters": 0,
+            "cell_characters": 0
+          },
+          {
+            "page_number": 6,
+            "blocks": 2,
+            "nonempty_blocks": 2,
+            "tables": 1,
+            "cells": 32,
+            "text_characters": 26,
+            "cell_characters": 401
+          },
+          {
+            "page_number": 7,
+            "blocks": 0,
+            "nonempty_blocks": 0,
+            "tables": 1,
+            "cells": 0,
+            "text_characters": 0,
+            "cell_characters": 0
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "name": "full_raster",
+      "status": "success",
+      "input": "D:\\pythonProjects\\PrimaTask9\\spike\\data\\inputs\\04_GSA_Table_Scan_Fixture.pdf",
+      "requested_pages": "1-7",
+      "canonical_output": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\parsing\\20260816T181347Z\\outputs\\full_raster.json",
+      "command": "D:\\pythonProjects\\PrimaTask9\\.venv\\Scripts\\python.exe -m benchmark.run_paddle D:\\pythonProjects\\PrimaTask9\\spike\\data\\inputs\\04_GSA_Table_Scan_Fixture.pdf --output D:\\pythonProjects\\PrimaTask9\\spike\\results\\parsing\\20260816T181347Z\\outputs\\full_raster.json --project-root D:\\pythonProjects\\PrimaTask9 --pages 1-7 --dpi 180",
+      "wall_seconds": 224.3467,
+      "return_code": 0,
+      "metrics": {
+        "strategy": "full_raster",
+        "schema_version": "1.0",
+        "source_filename": "04_GSA_Table_Scan_Fixture.pdf",
+        "sha256": "d463b18b2966ad09e4b41a561aba3f54d252cec4fcd15e73919642307d873357",
+        "parser_versions": {
+          "paddleocr": "3.7.0",
+          "paddlepaddle": "3.3.1",
+          "pymupdf": "1.28.2"
+        },
+        "rendering_dpi": 180,
+        "pages": 7,
+        "elapsed_seconds": 211.795,
+        "seconds_per_page": 30.2564,
+        "peak_memory_mb": 1227.02734375,
+        "internal_timings": {
+          "initialization": 3.2111102000344545,
+          "rendering": 0.9251881000236608,
+          "inference": 207.4906637999229
+        },
+        "route_counts": {
+          "paddle_ppstructurev3": 7
+        },
+        "blocks": 40,
+        "nonempty_blocks": 40,
+        "tables": 7,
+        "cells": 825,
+        "text_characters": 7232,
+        "cell_characters": 2782,
+        "evidence_bbox_coverage": 1.0,
+        "warnings": [
+          "MKL-DNN disabled for Paddle 3.3.1 compatibility on Windows."
+        ],
+        "pages_detail": [
+          {
+            "page_number": 1,
+            "blocks": 11,
+            "nonempty_blocks": 11,
+            "tables": 1,
+            "cells": 25,
+            "text_characters": 2572,
+            "cell_characters": 175
+          },
+          {
+            "page_number": 2,
+            "blocks": 7,
+            "nonempty_blocks": 7,
+            "tables": 1,
+            "cells": 8,
+            "text_characters": 3046,
+            "cell_characters": 65
+          },
+          {
+            "page_number": 3,
+            "blocks": 11,
+            "nonempty_blocks": 11,
+            "tables": 1,
+            "cells": 42,
+            "text_characters": 1386,
+            "cell_characters": 230
+          },
+          {
+            "page_number": 4,
+            "blocks": 3,
+            "nonempty_blocks": 3,
+            "tables": 1,
+            "cells": 357,
+            "text_characters": 42,
+            "cell_characters": 990
+          },
+          {
+            "page_number": 5,
+            "blocks": 4,
+            "nonempty_blocks": 4,
+            "tables": 1,
+            "cells": 14,
+            "text_characters": 134,
+            "cell_characters": 755
+          },
+          {
+            "page_number": 6,
+            "blocks": 2,
+            "nonempty_blocks": 2,
+            "tables": 1,
+            "cells": 333,
+            "text_characters": 26,
+            "cell_characters": 410
+          },
+          {
+            "page_number": 7,
+            "blocks": 2,
+            "nonempty_blocks": 2,
+            "tables": 1,
+            "cells": 46,
+            "text_characters": 26,
+            "cell_characters": 157
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "name": "hybrid",
+      "status": "success",
+      "input": "D:\\pythonProjects\\PrimaTask9\\spike\\data\\inputs\\05_GSA_Mixed_Table_Fixture.pdf",
+      "requested_pages": "all",
+      "canonical_output": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\parsing\\20260816T181347Z\\outputs\\hybrid.json",
+      "command": "D:\\pythonProjects\\PrimaTask9\\.venv\\Scripts\\python.exe -m benchmark.run_hybrid D:\\pythonProjects\\PrimaTask9\\spike\\data\\inputs\\05_GSA_Mixed_Table_Fixture.pdf --output D:\\pythonProjects\\PrimaTask9\\spike\\results\\parsing\\20260816T181347Z\\outputs\\hybrid.json --project-root D:\\pythonProjects\\PrimaTask9 --dpi 180",
+      "wall_seconds": 134.9424,
+      "return_code": 0,
+      "metrics": {
+        "strategy": "hybrid",
+        "schema_version": "1.0",
+        "source_filename": "05_GSA_Mixed_Table_Fixture.pdf",
+        "sha256": "2668b6e5102717f0b02b5bbd46a87a4d4c2d465e03da74745d544f52251bbe60",
+        "parser_versions": {
+          "docling": "2.120.1",
+          "paddleocr": "3.7.0",
+          "paddlepaddle": "3.3.1",
+          "pymupdf": "1.28.2"
+        },
+        "rendering_dpi": 180,
+        "pages": 7,
+        "elapsed_seconds": 134.2037,
+        "seconds_per_page": 19.172,
+        "peak_memory_mb": 1968.00390625,
+        "internal_timings": {
+          "docling_process": 35.91770130000077,
+          "paddle_process": 98.1527805000078,
+          "routing": 0.02614299999549985
+        },
+        "route_counts": {
+          "docling_native": 4,
+          "paddle_ppstructurev3": 3
+        },
+        "blocks": 39,
+        "nonempty_blocks": 39,
+        "tables": 7,
+        "cells": 189,
+        "text_characters": 7166,
+        "cell_characters": 2577,
+        "evidence_bbox_coverage": 1.0,
+        "warnings": [
+          "MKL-DNN disabled for Paddle 3.3.1 compatibility on Windows."
+        ],
+        "pages_detail": [
+          {
+            "page_number": 1,
+            "blocks": 9,
+            "nonempty_blocks": 9,
+            "tables": 1,
+            "cells": 25,
+            "text_characters": 2528,
+            "cell_characters": 175
+          },
+          {
+            "page_number": 2,
+            "blocks": 7,
+            "nonempty_blocks": 7,
+            "tables": 1,
+            "cells": 8,
+            "text_characters": 3046,
+            "cell_characters": 65
+          },
+          {
+            "page_number": 3,
+            "blocks": 4,
+            "nonempty_blocks": 4,
+            "tables": 1,
+            "cells": 22,
+            "text_characters": 65,
+            "cell_characters": 792
+          },
+          {
+            "page_number": 4,
+            "blocks": 2,
+            "nonempty_blocks": 2,
+            "tables": 1,
+            "cells": 32,
+            "text_characters": 26,
+            "cell_characters": 401
+          },
+          {
+            "page_number": 5,
+            "blocks": 4,
+            "nonempty_blocks": 4,
+            "tables": 1,
+            "cells": 14,
+            "text_characters": 134,
+            "cell_characters": 755
+          },
+          {
+            "page_number": 6,
+            "blocks": 11,
+            "nonempty_blocks": 11,
+            "tables": 1,
+            "cells": 42,
+            "text_characters": 1341,
+            "cell_characters": 232
+          },
+          {
+            "page_number": 7,
+            "blocks": 2,
+            "nonempty_blocks": 2,
+            "tables": 1,
+            "cells": 46,
+            "text_characters": 26,
+            "cell_characters": 157
+          }
+        ]
+      },
+      "error": null
+    }
+  ],
+  "comparisons": [
+    {
+      "left": "full_raster",
+      "right": "hybrid",
+      "warning": "These are automated agreement diagnostics, not accuracy against manually verified ground truth.",
+      "shared_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "mean_block_text_token_f1": 0.6726,
+      "mean_table_cell_text_token_f1": 0.6116,
+      "pages": [
+        {
+          "page_number": 1,
+          "block_text_token_f1": 0.9657701711491443,
+          "table_cell_text_token_f1": 1.0,
+          "left_table_count": 1,
+          "right_table_count": 1,
+          "left_cell_count": 25,
+          "right_cell_count": 25
+        },
+        {
+          "page_number": 2,
+          "block_text_token_f1": 1.0,
+          "table_cell_text_token_f1": 1.0,
+          "left_table_count": 1,
+          "right_table_count": 1,
+          "left_cell_count": 8,
+          "right_cell_count": 8
+        },
+        {
+          "page_number": 3,
+          "block_text_token_f1": 0.03968253968253969,
+          "table_cell_text_token_f1": 0.05235602094240837,
+          "left_table_count": 1,
+          "right_table_count": 1,
+          "left_cell_count": 42,
+          "right_cell_count": 22
+        },
+        {
+          "page_number": 4,
+          "block_text_token_f1": 0.6666666666666666,
+          "table_cell_text_token_f1": 0.17073170731707318,
+          "left_table_count": 1,
+          "right_table_count": 1,
+          "left_cell_count": 357,
+          "right_cell_count": 32
+        },
+        {
+          "page_number": 5,
+          "block_text_token_f1": 1.0,
+          "table_cell_text_token_f1": 1.0,
+          "left_table_count": 1,
+          "right_table_count": 1,
+          "left_cell_count": 14,
+          "right_cell_count": 14
+        },
+        {
+          "page_number": 6,
+          "block_text_token_f1": 0.03636363636363637,
+          "table_cell_text_token_f1": 0.05839416058394161,
+          "left_table_count": 1,
+          "right_table_count": 1,
+          "left_cell_count": 333,
+          "right_cell_count": 42
+        },
+        {
+          "page_number": 7,
+          "block_text_token_f1": 1.0,
+          "table_cell_text_token_f1": 1.0,
+          "left_table_count": 1,
+          "right_table_count": 1,
+          "left_cell_count": 46,
+          "right_cell_count": 46
+        }
+      ]
+    },
+    {
+      "left": "docling_native",
+      "right": "hybrid",
+      "warning": "These are automated agreement diagnostics, not accuracy against manually verified ground truth.",
+      "shared_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "mean_block_text_token_f1": 0.2216,
+      "mean_table_cell_text_token_f1": 0.187,
+      "pages": [
+        {
+          "page_number": 1,
+          "block_text_token_f1": 1.0,
+          "table_cell_text_token_f1": 1.0,
+          "left_table_count": 1,
+          "right_table_count": 1,
+          "left_cell_count": 25,
+          "right_cell_count": 25
+        },
+        {
+          "page_number": 2,
+          "block_text_token_f1": 0.0,
+          "table_cell_text_token_f1": 0.0,
+          "left_table_count": 1,
+          "right_table_count": 1,
+          "left_cell_count": 0,
+          "right_cell_count": 8
+        },
+        {
+          "page_number": 3,
+          "block_text_token_f1": 0.04405286343612335,
+          "table_cell_text_token_f1": 0.05181347150259068,
+          "left_table_count": 1,
+          "right_table_count": 1,
+          "left_cell_count": 42,
+          "right_cell_count": 22
+        },
+        {
+          "page_number": 4,
+          "block_text_token_f1": 0.47058823529411764,
+          "table_cell_text_token_f1": 0.1981132075471698,
+          "left_table_count": 1,
+          "right_table_count": 1,
+          "left_cell_count": 22,
+          "right_cell_count": 32
+        },
+        {
+          "page_number": 5,
+          "block_text_token_f1": 0.0,
+          "table_cell_text_token_f1": 0.0,
+          "left_table_count": 0,
+          "right_table_count": 1,
+          "left_cell_count": 0,
+          "right_cell_count": 14
+        },
+        {
+          "page_number": 6,
+          "block_text_token_f1": 0.03636363636363637,
+          "table_cell_text_token_f1": 0.05925925925925926,
+          "left_table_count": 1,
+          "right_table_count": 1,
+          "left_cell_count": 32,
+          "right_cell_count": 42
+        },
+        {
+          "page_number": 7,
+          "block_text_token_f1": 0.0,
+          "table_cell_text_token_f1": 0.0,
+          "left_table_count": 1,
+          "right_table_count": 1,
+          "left_cell_count": 0,
+          "right_cell_count": 46
+        }
+      ]
+    }
+  ],
+  "artifacts": {
+    "summary": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\parsing\\20260816T181347Z\\summary.json",
+    "log": "D:\\pythonProjects\\PrimaTask9\\spike\\logs\\parsing\\20260816T181347Z.log",
+    "latest_pointer": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\parsing\\latest.txt"
+  }
+}

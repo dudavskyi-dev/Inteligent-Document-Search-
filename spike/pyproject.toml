@@ -1,0 +1,51 @@
+[project]
+name = "prima-task9-parser-spike"
+version = "0.1.0"
+description = "Benchmark spike for selecting the Task 9 PDF parsing strategy"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "pdfplumber>=0.11,<0.12",
+    "psutil>=7.0,<8",
+    "pydantic>=2.10,<3",
+    "pypdf>=6.0,<7",
+]
+
+[project.optional-dependencies]
+docling = [
+    "docling>=2.70,<3",
+    "pymupdf>=1.25",
+]
+paddle = [
+    "paddleocr[doc-parser]>=3.3,<4",
+    "paddlepaddle>=3.3,<4",
+    "pymupdf>=1.25",
+]
+retrieval = [
+    "rank-bm25>=0.2.2,<0.3",
+    "sentence-transformers>=5.1,<6",
+]
+reranking = [
+    "rank-bm25>=0.2.2,<0.3",
+    "sentence-transformers>=5.1,<6",
+]
+gliner = [
+    "gliner>=0.2.22,<0.3",
+]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.9",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/benchmark"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
