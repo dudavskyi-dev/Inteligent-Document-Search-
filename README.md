@@ -1,10 +1,10 @@
 # Industrial Document Extraction — Architecture and Decision Spikes
 
-This repository is a build-ready architecture submission for Task 9, supported by focused,
+This repository is a build-ready architecture, supported by focused,
 user-run experiments. It is deliberately not a complete application.
 
 ## Start Here
-
+Here was made two architecture blueprints to consider all the avaliable possibilities of realization of this problem including the cost and perfomance.
 1. Read the portable [`architecture_blueprint.md`](architecture_blueprint.md).
 2. Compare the fully managed
    [`architecture_blueprint_google_cloud.md`](architecture_blueprint_google_cloud.md).
