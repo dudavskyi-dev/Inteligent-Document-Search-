@@ -61,12 +61,29 @@ def main() -> None:
     parser.add_argument("--project-root", type=Path, required=True)
     parser.add_argument("--query-id", type=str, required=True)
     parser.add_argument("--candidate-k", type=int, default=10)
+    parser.add_argument(
+        "--model-path",
+        type=Path,
+        default=None,
+        help=(
+            "Local folder with the reranker model files, to avoid a huggingface.co "
+            "download (e.g. on a machine that cannot reach it). Defaults to "
+            "spike/.local_models/ms-marco-MiniLM-L6-v2 if that folder exists, "
+            "otherwise the model is downloaded from the Hugging Face Hub as usual."
+        ),
+    )
     args = parser.parse_args()
 
     project_root = args.project_root.resolve()
     _configure_environment(project_root)
 
     from benchmark.reranking import RERANKER_MODEL, RerankingBenchmark
+
+    default_local_model = project_root / "spike" / ".local_models" / "ms-marco-MiniLM-L6-v2"
+    model_path = args.model_path or (default_local_model if default_local_model.is_dir() else None)
+    model_name = str(model_path.resolve()) if model_path is not None else RERANKER_MODEL
+    if model_path is not None:
+        print(f"Using local reranker model: {model_name}")
 
     retrieval_summary = _latest_successful_retrieval(project_root)
     documents = _load_documents(retrieval_summary)
@@ -92,7 +109,7 @@ def main() -> None:
     benchmark = RerankingBenchmark(
         documents,
         cache_folder=str(project_root / ".cache" / "sentence-transformers"),
-        model_name=RERANKER_MODEL,
+        model_name=model_name,
     )
     results = benchmark.rerank(query["query"], candidate_ids)
     top_entry = results["structural_cross_encoder"]["ranking"][0]

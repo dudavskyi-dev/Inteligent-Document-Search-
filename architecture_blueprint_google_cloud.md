@@ -49,7 +49,7 @@ flowchart TD
     C7 --> C8["8. Canonicalizer & Table Stitcher<br/>Cloud Run Jobs"]
     C8 --> C9["9. Search Data Store<br/>Vertex AI Search / Agent Search"]
     C9 --> C10["10. Search & Ranking<br/>Search API + Ranking API"]
-    C10 --> C11["11. Page-Level LLM Extractor<br/>Top-3 pages + Gemini structured output"]
+    C10 --> C11["11. Page-Level LLM Extractor<br/>Chunk+neighbor / stitched table + Gemini structured output"]
     C11 --> C12["12. Validation & Risk Scoring<br/>Cloud Run"]
     C12 --> C14["14. Mandatory Human Review<br/>Cloud Run + PDF.js"]
     C14 --> C2
@@ -94,10 +94,12 @@ Walkthrough:
 10. **Search & Ranking** filters to the current document, runs queries for each required field
     family, retrieves a broad semantic/lexical pool, optionally ranks it, and keeps the top three
     seed pages per family plus explicitly linked table continuations.
-11. **Page-Level LLM Extractor** sends the full canonical representations of those pages to a
-    configurable Gemini model through Vertex AI. The model locates facts inside the pages and must
-    return the complete candidate JSON matching the response schema. It never sees ERP credentials
-    and cannot approve a record.
+11. **Page-Level LLM Extractor** sends a narrower, structure-aware context per field family to a
+    configurable Gemini model through Vertex AI, drawn from those pages instead of their full text:
+    the top-ranked chunk plus its immediate neighboring chunk for non-table content, or the
+    complete stitched table for table content (`spike/src/benchmark/context_assembly.py`). The
+    model locates facts inside that context and must return the complete candidate JSON matching
+    the response schema. It never sees ERP credentials and cannot approve a record.
 12. **Validation & Risk Scoring** checks JSON Schema, types, units, currencies, totals, ranges,
     evidence references, part-master matches, and conflicts; it computes review risk.
 13. **Metadata & Audit Store** records documents, runs, hashes, stage status, prompt/model/schema
@@ -127,7 +129,7 @@ Names in this table exactly match the numbered diagram and walkthrough.
 | **8. Canonicalizer & Table Stitcher — Cloud Run Jobs** | Shared evidence JSON and logical tables | Preserve raw Document AI response and every source fragment; do not use an LLM as the default stitch decision. |
 | **9. Search Data Store — Vertex AI Search / Agent Search** | Managed searchable evidence index | The current pricing page calls the product Agent Search. Import already canonicalized chunks to avoid a second uncontrolled parse. |
 | **10. Search & Ranking — Search API + Ranking API** | Top-three seed pages per field family and linked continuation selection | Always filter by `tenant_id` and `document_id`; use Standard Search plus separate extraction for control. |
-| **11. Page-Level LLM Extractor — Top-3 pages + Gemini structured output** | Retrieved pages to complete candidate JSON | Model ID is configuration, not architecture. Require response schema, evidence IDs, and abstention. |
+| **11. Page-Level LLM Extractor — Chunk+neighbor / stitched table + Gemini structured output** | Assembled chunk/stitched-table context to complete candidate JSON | Model ID is configuration, not architecture. Require response schema, evidence IDs, and abstention. |
 | **12. Validation & Risk Scoring — Cloud Run** | Deterministic safety checks | Invalid, missing, conflicting, or low-evidence fields are review blockers, not silently repaired values. |
 | **13. Metadata & Audit Store — Cloud SQL PostgreSQL** | Workflow state and audit | Private IP, HA/backups/PITR for production, append-only audit events, no PDF bytes in relational rows. |
 | **14. Mandatory Human Review — Cloud Run + PDF.js** | Verification and correction | Optimistic locking; record old/new value, reviewer, timestamp, reason, and evidence. |
@@ -184,7 +186,7 @@ and maps it to the final contract after human approval.
 | Search ingestion | Import canonical structured evidence chunks | Letting Agent Search parse the same PDF again duplicates parsing, weakens schema control, and can make evidence IDs diverge. |
 | Retrieval | Agent Search Standard semantic search, document filter, optional Ranking API | Enterprise generative answers combine search and generation but give less control over the exact ERP schema and add query cost. |
 | Table continuation | Deterministic stitcher in Cloud Run Jobs | Layout Parser improves tables, but cross-page fragments still need a document-domain decision and reversible provenance. LLM adjudication is allowed only for a flagged review suggestion. |
-| Final extraction | Gemini reads top-three pages per field family plus continuations and returns schema-constrained JSON; deterministic rules validate it | GLiNER failed the local quality gate; no specific model version is hard-coded because quality, residency, and price change. **Under evaluation, not yet a decision:** sending a narrower chunk-plus-neighbor window for non-table content, and the whole stitched table for table content, instead of full top-three-page text — see the matching subsection in [`architecture_blueprint.md`](architecture_blueprint.md) and [`docs/decision_log.md`](docs/decision_log.md). |
+| Final extraction | Retrieve top-three pages per field family plus continuations (unchanged); Gemini reads a narrower chunk-plus-neighbor context for non-table content, or the whole stitched table (with a merge-confidence check) for table content, instead of each page's full text, and returns schema-constrained JSON; deterministic rules validate it | GLiNER failed the local quality gate; no specific model version is hard-coded because quality, residency, and price change. Selected on real-document evidence (see the matching subsection in [`architecture_blueprint.md`](architecture_blueprint.md) and [`docs/decision_log.md`](docs/decision_log.md)); sending each page's full text is kept only as a fallback until a live LLM extraction-accuracy comparison is run. |
 | State and audit | Cloud SQL PostgreSQL | Search index and Cloud Storage are not transactional workflow/audit databases. |
 | Compute | Cloud Run services and jobs | GKE adds cluster operations that this moderate asynchronous workload does not initially need. |
 | Approval | Mandatory human review | Autonomous export is unsafe for prices, quantities, tolerances, and deadlines. |

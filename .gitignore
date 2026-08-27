@@ -14,6 +14,10 @@ spike/outputs/
 spike/logs/
 tmp/
 
+# Manually downloaded model weights (workaround for machines that cannot reach
+# huggingface.co directly). Other machines let the code download this itself.
+spike/.local_models/
+
 # Local secrets and machine-specific settings.
 .env
 .env.*

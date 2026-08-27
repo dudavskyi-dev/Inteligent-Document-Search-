@@ -162,13 +162,54 @@ def _cumulative_column_shifts(logical_table: LogicalTable) -> dict[str, int]:
     return shifts
 
 
+# table_stitching.decide_pair() requires only score >= 0.72 (its merge threshold) to
+# call two fragments the same table; a merge that barely clears that bar is riskier
+# than one clearing it by a wide margin. Chosen from the real merges seen so far: a
+# correct equipment-table merge scored 0.917 and a correct delivery-schedule merge
+# scored 0.908, while a merge later found to mix in unrelated OCR-garbled content
+# scored only 0.848 - below this bar.
+_LOW_CONFIDENCE_MERGE_SCORE = 0.85
+
+
+def _join_scores(logical_table: LogicalTable) -> dict[str, float]:
+    return {join["right_table_id"]: join["score"] for join in logical_table.joins}
+
+
+def _tokenize(text: str) -> set[str]:
+    return set(re.findall(r"[\w]+", text.casefold(), flags=re.UNICODE))
+
+
+def _looks_like_repeated_header(row_cells: list[TableCell], canonical_header_tokens: set[str]) -> bool:
+    """Decide whether a row flagged is_column_header on a continuation fragment is a
+    genuine repeated header, rather than trusting the flag blindly.
+
+    A real gap found in a 7-page fixture: the OCR pass on a scanned continuation page
+    mislabelled an ordinary data row (chiller model/quantity/year) as a header row. A
+    naive "skip any row with is_column_header=True on a continuation" rule silently
+    dropped that real equipment record. Instead, only skip when the row's own text
+    substantially overlaps the first fragment's actual header words.
+    """
+    if not canonical_header_tokens or not any(cell.is_column_header for cell in row_cells):
+        return False
+    row_tokens = _tokenize(" ".join(cell.text for cell in row_cells))
+    if not row_tokens:
+        return False
+    return len(row_tokens & canonical_header_tokens) / len(canonical_header_tokens) >= 0.5
+
+
+def _header_tokens(fragment: TableFragment) -> set[str]:
+    return _tokenize(" ".join(cell.text for cell in fragment.cells if cell.is_column_header))
+
+
 def _render_fragments(
     document: CanonicalDocument,
     fragment_ids: list[str],
     page_numbers: list[int],
     column_shifts: dict[str, int] | None = None,
+    merge_scores: dict[str, float] | None = None,
 ) -> str:
     shifts = column_shifts or {}
+    scores = merge_scores or {}
     fragments = [find_table_fragment(document, fragment_id) for fragment_id in fragment_ids]
 
     positions = [
@@ -181,6 +222,7 @@ def _render_fragments(
         return "\n".join(lines)
     min_position = min(positions)
     column_count = max(positions) - min_position + 1
+    canonical_header_tokens = _header_tokens(fragments[0]) if fragments else set()
 
     for position, fragment in enumerate(fragments):
         if position > 0 and fragment.table_id not in shifts:
@@ -188,13 +230,19 @@ def _render_fragments(
                 f"[warning: column alignment for {fragment.table_id} could not be "
                 "determined; values below may be shifted]"
             )
+        elif position > 0 and scores.get(fragment.table_id, 1.0) < _LOW_CONFIDENCE_MERGE_SCORE:
+            lines.append(
+                f"[warning: low-confidence merge for {fragment.table_id} "
+                f"(stitching score={scores[fragment.table_id]:.3f}); "
+                "this continuation may not actually belong to the same table]"
+            )
         shift = shifts.get(fragment.table_id, 0)
         by_row: dict[int, list[TableCell]] = defaultdict(list)
         for cell in fragment.cells:
             by_row[cell.row].append(cell)
         for row_number in sorted(by_row):
             cells = by_row[row_number]
-            if position > 0 and any(cell.is_column_header for cell in cells):
+            if position > 0 and _looks_like_repeated_header(cells, canonical_header_tokens):
                 continue
             values = [""] * column_count
             for cell in cells:
@@ -208,7 +256,10 @@ def _render_fragments(
 
 def render_logical_table(document: CanonicalDocument, logical_table: LogicalTable) -> str:
     shifts = _cumulative_column_shifts(logical_table)
-    return _render_fragments(document, logical_table.fragment_ids, logical_table.page_numbers, shifts)
+    scores = _join_scores(logical_table)
+    return _render_fragments(
+        document, logical_table.fragment_ids, logical_table.page_numbers, shifts, scores
+    )
 
 
 def build_llm_context(

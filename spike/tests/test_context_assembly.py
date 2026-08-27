@@ -258,6 +258,48 @@ def test_render_logical_table_realigns_columns_using_stitch_offset() -> None:
     assert "warning" not in rendered
 
 
+def test_render_logical_table_keeps_data_row_mislabelled_as_header() -> None:
+    # Real gap found on a scanned continuation page: the OCR table-structure pass
+    # flagged an ordinary equipment row as is_column_header=True even though its text
+    # has nothing to do with the real header. A naive "skip flagged rows" rule would
+    # silently drop this chiller record from the final LLM context.
+    fragment_1 = _table(
+        "t1",
+        [
+            _cell("t1-c1", 0, 0, "Building", 1, is_column_header=True),
+            _cell("t1-c2", 0, 1, "Quantity", 1, is_column_header=True),
+            _cell("t1-c3", 1, 0, "2", 1),
+            _cell("t1-c4", 1, 1, "2", 1),
+        ],
+        1,
+    )
+    fragment_2 = _table(
+        "t2",
+        [
+            _cell("t2-c1", 0, 0, "3", 2, is_column_header=True),
+            _cell("t2-c2", 0, 1, "York 1200-ton", 2, is_column_header=True),
+            _cell("t2-c3", 1, 0, "1", 2),
+            _cell("t2-c4", 1, 1, "York JHJB 1130-ton", 2),
+        ],
+        2,
+    )
+    page1 = Page(page_number=1, width=1000, height=1400, blocks=[], tables=[fragment_1])
+    page2 = Page(page_number=2, width=1000, height=1400, blocks=[], tables=[fragment_2])
+    document = _document([page1, page2])
+    logical_table = LogicalTable(
+        logical_table_id="lt1",
+        fragment_ids=["t1", "t2"],
+        page_numbers=[1, 2],
+        source_cell_ids=[],
+        joins=[{"left_table_id": "t1", "right_table_id": "t2", "column_offset": 0, "score": 0.9}],
+    )
+
+    rendered = render_logical_table(document, logical_table)
+
+    assert "3 | York 1200-ton" in rendered
+    assert "1 | York JHJB 1130-ton" in rendered
+
+
 def test_render_logical_table_warns_when_alignment_is_unknown() -> None:
     fragment_1 = _table(
         "t1",
@@ -279,6 +321,54 @@ def test_render_logical_table_warns_when_alignment_is_unknown() -> None:
     rendered = render_logical_table(document, logical_table)
 
     assert "warning: column alignment for t2 could not be determined" in rendered
+
+
+def test_render_logical_table_warns_on_low_confidence_merge() -> None:
+    fragment_1 = _table(
+        "t1",
+        [_cell("t1-c1", 0, 0, "Model", 1, is_column_header=True), _cell("t1-c2", 1, 0, "A100", 1)],
+        1,
+    )
+    fragment_2 = _table("t2", [_cell("t2-c1", 0, 0, "B200", 2)], 2)
+    page1 = Page(page_number=1, width=1000, height=1400, blocks=[], tables=[fragment_1])
+    page2 = Page(page_number=2, width=1000, height=1400, blocks=[], tables=[fragment_2])
+    document = _document([page1, page2])
+    logical_table = LogicalTable(
+        logical_table_id="lt1",
+        fragment_ids=["t1", "t2"],
+        page_numbers=[1, 2],
+        source_cell_ids=[],
+        joins=[{"left_table_id": "t1", "right_table_id": "t2", "column_offset": 0, "score": 0.80}],
+    )
+
+    rendered = render_logical_table(document, logical_table)
+
+    assert "warning: low-confidence merge for t2" in rendered
+    assert "0.800" in rendered
+    assert "B200" in rendered  # the row itself still renders, just with a caveat
+
+
+def test_render_logical_table_no_warning_for_confident_merge() -> None:
+    fragment_1 = _table(
+        "t1",
+        [_cell("t1-c1", 0, 0, "Model", 1, is_column_header=True), _cell("t1-c2", 1, 0, "A100", 1)],
+        1,
+    )
+    fragment_2 = _table("t2", [_cell("t2-c1", 0, 0, "B200", 2)], 2)
+    page1 = Page(page_number=1, width=1000, height=1400, blocks=[], tables=[fragment_1])
+    page2 = Page(page_number=2, width=1000, height=1400, blocks=[], tables=[fragment_2])
+    document = _document([page1, page2])
+    logical_table = LogicalTable(
+        logical_table_id="lt1",
+        fragment_ids=["t1", "t2"],
+        page_numbers=[1, 2],
+        source_cell_ids=[],
+        joins=[{"left_table_id": "t1", "right_table_id": "t2", "column_offset": 0, "score": 0.92}],
+    )
+
+    rendered = render_logical_table(document, logical_table)
+
+    assert "warning" not in rendered
 
 
 def test_index_logical_tables_maps_every_fragment_id() -> None:
