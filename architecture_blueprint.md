@@ -54,7 +54,7 @@ flowchart TD
     C10 --> C11["11. Evidence Store & Search Index<br/>PostgreSQL + pgvector"]
     C11 --> C12["12. Retriever & Candidate Expansion<br/>Structural lexical/vector + RRF"]
     C12 --> C13["13. Optional Reranker<br/>Structural CrossEncoder"]
-    C13 --> C14["14. Page-Level LLM Extractor<br/>Top-3 pages + strict JSON schema"]
+    C13 --> C14["14. Page-Level LLM Extractor<br/>Chunk+neighbor / stitched table + strict JSON schema"]
     C14 --> C15["15. Validation & Risk Scoring<br/>Typed and business rules"]
     C15 --> C16["16. Mandatory Human Review<br/>Evidence highlighting"]
     C16 --> C1
@@ -90,9 +90,10 @@ Walkthrough:
    continuation.
 13. **Optional Reranker** reorders the small structural candidate pool when the accuracy profile is
    enabled; it cannot discard linked fragments.
-14. **Page-Level LLM Extractor** receives the retrieved page representations—including their full
-   text, tables, headings, evidence IDs, and coordinates—and locates the requested facts inside
-   those pages. It returns the complete candidate JSON through a strict schema; it does not receive
+14. **Page-Level LLM Extractor** receives, per field family, the top-ranked chunk plus its
+   immediate neighboring chunk (or the complete stitched table for table content) drawn from the
+   retrieved candidate pages—not those pages' full text—and locates the requested facts inside that
+   context. It returns the complete candidate JSON through a strict schema; it does not receive
    the entire document or return prose.
 15. **Validation & Risk Scoring** verifies evidence IDs, types, units, ranges, dates, arithmetic,
    conflicts, and required fields. Model self-confidence is not trusted.
@@ -124,7 +125,7 @@ The first column intentionally matches the Mermaid node names.
 | 11. Evidence Store & Search Index | Persist metadata, structural units, FTS/vector fields, artifacts | PostgreSQL JSONB/`tsvector`, pgvector, object storage |
 | 12. Retriever & Candidate Expansion | Field-family retrieval, top-3 seed pages, RRF, linked-table expansion | PostgreSQL queries + Python fusion |
 | 13. Optional Reranker | Accuracy-first reranking over blocks/rows, aggregated to pages | Local Sentence Transformers CrossEncoder |
-| 14. Page-Level LLM Extractor | Read retrieved pages and produce complete evidence-linked candidate JSON | Configurable local/cloud `StructuredExtractionClient` |
+| 14. Page-Level LLM Extractor | Read the assembled chunk/stitched-table context and produce complete evidence-linked candidate JSON | Configurable local/cloud `StructuredExtractionClient` |
 | 15. Validation & Risk Scoring | Types, decimals, dates, units, ranges, arithmetic, ERP lookups | Pydantic, Decimal, Pint/Babel, versioned safe rules |
 | 16. Mandatory Human Review | Confirm/correct fields and table joins using source boxes | Review UI + optimistic locking |
 | 17. ERP JSON Exporter | Transform an approved snapshot to file or ERP staging contract | JSON file, HTTP, or CSV/SFTP adapter |
@@ -194,19 +195,50 @@ temporary files, and generated artifacts have explicit volumes and retention pol
 
 ### 6. Retrieval first; the LLM creates the structured candidate JSON
 
-- Considered: rules/regex across the whole document, GLiNER, sending the whole PDF to an LLM, or
-  retrieving relevant pages and asking a schema-capable LLM to extract from them.
-- Selected: the retriever narrows the document to top-three pages per field family plus linked table
-  continuations. The configurable local or cloud LLM reads the complete retrieved page content,
-  selects the supporting blocks/cells, resolves relationships such as part-to-quantity, and returns
-  one complete `ExtractionCandidateResponse`. Fast regex/header signals help retrieval and may be
-  passed as non-authoritative hints, but they do not replace the LLM as the principal extractor.
+- Considered: rules/regex across the whole document, GLiNER, sending the whole PDF to an LLM,
+  retrieving relevant pages and sending each candidate page's complete text to a schema-capable
+  LLM, or retrieving relevant pages and sending only the relevant chunk found inside them.
+- Selected: the retriever narrows the document to top-three pages per field family plus linked
+  table continuations (unchanged retrieval stage). From those candidate pages, the configurable
+  local or cloud LLM then receives a narrower, structure-aware context per field family instead of
+  each page's full text:
+  - For **non-table** content: the top-ranked `StructuralUnit`/`Block` chunk (see
+    `Block.section_path` in `spike/src/benchmark/models.py`) plus its immediate neighboring chunk
+    before and after it in reading order.
+  - For **table** content: the complete stitched logical table produced by the existing
+    `stitch_document()` / `decide_pair()` cross-page table stitcher
+    (`spike/src/benchmark/table_stitching.py`), never a single page-bound fragment.
+  The LLM selects the supporting blocks/cells, resolves relationships such as part-to-quantity, and
+  returns one complete `ExtractionCandidateResponse`. Fast regex/header signals help retrieval and
+  may be passed as non-authoritative hints, but they do not replace the LLM as the principal
+  extractor.
+- Implementation: `spike/src/benchmark/context_assembly.py`
+  (`build_llm_context()`/`build_chunk_context()`/`render_logical_table()`), with tests in
+  `spike/tests/test_context_assembly.py`.
+- Evidence: on a real 60-page solicitation, the top-ranked chunk found by the existing structural
+  retrieval and reranker (`spike/src/benchmark/reranking.py`) produced a complete, correctly
+  assembled stitched table in 373 characters, versus 6164 characters for the two full candidate
+  pages the previous whole-page approach would have sent for the same fact — all fields the query
+  asked for were present. A second real 7-page fixture validated table assembly end to end as well.
+- Built-in confidence signal: a stitched table carries a per-continuation merge-confidence check,
+  based on the score `table_stitching.decide_pair()` already computes. When a continuation
+  fragment's merge score is low, `render_logical_table()` prepends an explicit
+  `[warning: low-confidence merge ...]` line before that fragment's rows, so a reviewer (or the LLM
+  itself) can see exactly which part of an assembled table to double-check rather than trust it
+  silently.
+- Superseded: sending each candidate page's complete text to the LLM. Chosen against on
+  context-size/completeness evidence above; kept only as a fallback context-assembly mode until the
+  point below is closed out.
 - Post-processing remains deterministic: resolve evidence IDs, parse decimals/dates/units,
   validate ranges/arithmetic/required fields, and reject unsupported or malformed values.
+- Trade-off to keep validating: a fixed neighbor window could exclude a supporting fact that sits
+  further away in the same page/section than one chunk; whole-page context does not have this risk.
 - Evidence: zero-shot GLiNER failed the gate on real excerpts: relaxed F1 `0.424`, exact F1 `0.303`,
   and `1.85 GB` peak memory. It is not the final extractor.
-- Status: local/cloud LLM extraction remains an implementation comparison; it was not tested in
-  this repository because no LLM API/runtime was available.
+- Status: **no live LLM call has been made in this repository yet** (no API/runtime was
+  available), so extraction accuracy is still unmeasured for either context strategy. The chunk/
+  stitched-table strategy above is selected on completeness and context-size evidence; the final
+  accuracy comparison against sending each candidate page's full text is still pending.
 - Record: [`spike/results/gliner_decision.md`](spike/results/gliner_decision.md).
 
 ### 7. Deterministic validation and mandatory review
@@ -320,11 +352,14 @@ output and enough context for the retrieved pages. Both implementations expose:
 extract(request: ExtractionRequest) -> ExtractionCandidateResponse
 ```
 
-The LLM receives complete canonical representations of the retrieved pages, not isolated snippets:
-page text in reading order, headings, tables/cells, page images when the selected model is
-multimodal, and the allowed evidence IDs. The candidate set is produced by top-three retrieval per
-field family, deduplication, and linked-table expansion. This deliberately lets the LLM find the
-exact facts within likely pages without paying to process the whole document.
+The LLM receives a narrow, structure-aware context per field family, not each retrieved page's
+complete text: the top-ranked chunk plus its immediate neighboring chunk for non-table content, or
+the complete stitched logical table for table content (`spike/src/benchmark/context_assembly.py`).
+Page images are still attached when the selected model is multimodal, along with the allowed
+evidence IDs. The candidate set is produced by top-three retrieval per field family, deduplication,
+and linked-table expansion (unchanged); context assembly then narrows what is actually sent to the
+LLM even further, so it processes only the relevant chunk/table rather than each candidate page's
+full text.
 
 The LLM does not return free text and cannot approve/export a record. It returns all requested
 fields in one strict `ExtractionCandidateResponse`; the server adds document/run metadata,
