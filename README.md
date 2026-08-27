@@ -71,6 +71,64 @@ The scripts save their output even when a later stage fails. Model downloads sta
 can be removed together with `.venv/` after review. Do not delete the frozen `spike/results/` if the
 repository is being submitted as evidence.
 
+## Local Web App
+
+`workspace_local/` holds a small local web app (FastAPI backend + React frontend) that
+uploads one PDF and runs it through the full pipeline — parsing, table stitching,
+per-field-family retrieval and reranking, context assembly, and one OpenRouter LLM
+call — then shows the extracted result with a review-needed badge per field. It lives
+entirely in `workspace_local/` so it stays isolated from `spike/`. Each processing run
+also saves its intermediate stage output (parsed document, stitching, retrieval
+contexts, LLM request/response) as JSON files under
+`workspace_local/backend/data/jobs/<job_id>/`, so a run can be inspected after the fact.
+
+The API key is never entered in the UI: copy
+`workspace_local/backend/.env.example` to `workspace_local/backend/.env` and set
+`OPENROUTER_API_KEY` there. The OpenRouter model itself is set from the app's Settings
+button, once it is running.
+
+### Run locally (no Docker)
+
+```powershell
+# one shared environment for spike + the backend
+python -m venv spike\.venv
+spike\.venv\Scripts\pip install -e "spike[docling,paddle,retrieval,reranking]"
+spike\.venv\Scripts\pip install -r workspace_local\backend\requirements.txt
+
+copy workspace_local\backend\.env.example workspace_local\backend\.env
+# edit workspace_local\backend\.env and set OPENROUTER_API_KEY
+
+cd workspace_local\backend
+..\..\spike\.venv\Scripts\python -m uvicorn app.main:app --reload --port 8000
+```
+
+In a second terminal:
+
+```powershell
+cd workspace_local\frontend
+npm install
+npm run dev
+```
+
+Open the Vite dev server URL it prints (proxies `/api` to `:8000`). Run the backend with
+exactly one process/worker — job, upload, and settings state live in process memory
+(see `workspace_local/backend/app/job_store.py`).
+
+### Run via Docker
+
+```powershell
+copy workspace_local\backend\.env.example workspace_local\backend\.env
+# edit workspace_local\backend\.env and set OPENROUTER_API_KEY
+
+cd workspace_local
+docker compose up --build
+```
+
+Open `http://localhost:8000`. The image bundles the full hybrid parser (Docling +
+PaddleOCR), so it is large and the **first** run downloads several GB of models before
+the first document can be processed — later runs reuse the `model-cache` volume and are
+much faster.
+
 ## Repository Map
 
 ```text
@@ -82,5 +140,6 @@ spike/src/                              benchmark and normalization code
 spike/data/README.md                    input manifest and public sources
 spike/results/                          retained decisions and machine-readable runs
 spike/*.ps1                             user-run setup and benchmark entry points
+workspace_local/                        isolated local web app: FastAPI backend + React frontend + Docker
 ```
 

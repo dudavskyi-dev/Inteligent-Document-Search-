@@ -1,0 +1,23 @@
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: workspace_local/Dockerfile
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./backend/.env
+    environment:
+      HF_HOME: /app/.cache/huggingface
+      HUGGINGFACE_HUB_CACHE: /app/.cache/huggingface/hub
+      TRANSFORMERS_CACHE: /app/.cache/huggingface/transformers
+      SENTENCE_TRANSFORMERS_HOME: /app/.cache/sentence-transformers
+      TORCH_HOME: /app/.cache/torch
+      TOKENIZERS_PARALLELISM: "false"
+    volumes:
+      - model-cache:/app/.cache
+      - job-data:/app/workspace_local/backend/data
+
+volumes:
+  model-cache:
+  job-data:
