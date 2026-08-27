@@ -18,3 +18,5 @@ tmp/
 .env
 .env.*
 !.env.example
+CLAUDE.md
+workspace_local/plans/2026-08-27-plan.md

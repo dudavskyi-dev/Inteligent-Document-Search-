@@ -209,6 +209,27 @@ temporary files, and generated artifacts have explicit volumes and retention pol
   this repository because no LLM API/runtime was available.
 - Record: [`spike/results/gliner_decision.md`](spike/results/gliner_decision.md).
 
+#### Alternative under evaluation: chunk + neighbor context, whole stitched table for tables
+
+- **Not yet tested in this repository / not yet a decision.** Recorded here only as a candidate
+  worth comparing against the selected top-three-pages approach above.
+- Idea: instead of sending the LLM extractor the complete text of the top-ranked page(s) for a
+  field family, send a narrower, structure-aware window:
+  - For **non-table** content: the top-ranked `StructuralUnit`/`Block` chunk (see
+    `Block.section_path` in `spike/src/benchmark/models.py`) plus its immediate neighboring chunk
+    before and after it in reading order, instead of the entire page/section.
+  - For **table** content: the complete stitched logical table produced by the existing
+    `stitch_document()` / `decide_pair()` cross-page table stitcher
+    (`spike/src/benchmark/table_stitching.py`), never a single page-bound fragment.
+- Motivation: potentially less irrelevant text in the LLM context window per field family, while
+  still giving the model the surrounding context it needs to disambiguate a fact, without changing
+  the retrieval stage that selects candidate pages.
+- Trade-off to validate: a fixed neighbor window could exclude a supporting fact that sits further
+  away in the same page/section than one chunk; whole-page context does not have this risk.
+- Next step: implement and compare against the selected top-three-pages approach on the same
+  frozen evaluation set before promoting it, then update this section (and
+  [`docs/decision_log.md`](docs/decision_log.md)) with the measured result and a decision either way.
+
 ### 7. Deterministic validation and mandatory review
 
 - Considered: prompt-only validation, rules only, or typed schema plus controlled business rules.
