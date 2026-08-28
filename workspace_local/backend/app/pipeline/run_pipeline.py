@@ -2,8 +2,9 @@ from __future__ import annotations
 
 import json
 import os
+from collections.abc import Callable
 from pathlib import Path
-from typing import Any
+from typing import Any, NamedTuple
 
 from benchmark.context_assembly import build_llm_context
 from benchmark.reranking import RerankingBenchmark
@@ -29,6 +30,69 @@ class ExtractionValidationError(Exception):
         self.errors = errors
 
 
+# architecture_blueprint.md, "Retriever & Candidate Expansion": keep the top three seed
+# units per field family, deduplicate them, then add every explicitly linked table
+# continuation. The continuation half is already covered by build_llm_context(), which
+# renders a matched table row as its whole stitched logical table.
+SEED_UNITS_PER_FAMILY = 3
+
+# One family now contributes several non-adjacent excerpts, so mark the gaps between
+# them; without this the model can read two unrelated passages as continuous text.
+EXCERPT_SEPARATOR = "\n\n[...]\n\n"
+
+
+class FamilySeeds(NamedTuple):
+    context: str
+    evidence_ids: list[str]
+    hits: list[dict[str, Any]]
+
+
+def select_family_seeds(
+    ranking: list[dict[str, Any]],
+    build_context: Callable[[str], str],
+    collect_ids: Callable[[str], list[str]],
+    limit: int = SEED_UNITS_PER_FAMILY,
+) -> FamilySeeds:
+    """Turn one field family's reranked hits into the excerpt text sent to the LLM.
+
+    Deduplication keys on the assembled context rather than on unit_id, because several
+    distinct rows of one stitched table each resolve to the same rendered logical table;
+    keying on unit_id would send that table two or three times and crowd out the other
+    seed pages the family should have contributed.
+    """
+    contexts: list[str] = []
+    evidence_ids: list[str] = []
+    seen_contexts: set[str] = set()
+    hits: list[dict[str, Any]] = []
+
+    for rank, hit in enumerate(ranking[:limit], start=1):
+        evidence = hit["evidence"]
+        record: dict[str, Any] = {
+            "rank": rank,
+            "page_number": hit["page_number"],
+            "evidence": evidence,
+        }
+        if evidence is None:
+            hits.append(record)
+            continue
+
+        unit_id = evidence["unit_id"]
+        context = build_context(unit_id)
+        if context in seen_contexts:
+            # Same content as an earlier seed; its evidence ids are already collected.
+            record["duplicate_of_earlier_seed"] = True
+        else:
+            seen_contexts.add(context)
+            contexts.append(context)
+            unit_evidence_ids = collect_ids(unit_id)
+            evidence_ids.extend(unit_evidence_ids)
+            record["context"] = context
+            record["evidence_ids"] = unit_evidence_ids
+        hits.append(record)
+
+    return FamilySeeds(EXCERPT_SEPARATOR.join(contexts), evidence_ids, hits)
+
+
 def run_extraction_pipeline(job_id: str, pdf_path: Path, model: str) -> dict[str, Any]:
     # Heavy import (pulls in the docling/paddle parsing stack); load lazily so the
     # FastAPI app itself starts quickly.
@@ -50,24 +114,22 @@ def run_extraction_pipeline(job_id: str, pdf_path: Path, model: str) -> dict[str
     family_records: list[dict[str, Any]] = []
     for family in FIELD_FAMILIES:
         result = reranker.rerank(family.query, candidate_ids)
-        top = result["structural_cross_encoder"]["ranking"][0]
-        evidence = top["evidence"]
-        record: dict[str, Any] = {
-            "key": family.key,
-            "label": family.label,
-            "query": family.query,
-            "top_page_number": top["page_number"],
-            "evidence": evidence,
-        }
-        if evidence is not None:
-            unit_id = evidence["unit_id"]
-            context = build_llm_context(document, stitch_result, unit_id)
-            unit_evidence_ids = collect_evidence_ids(document, stitch_result, unit_id)
-            contexts[family.label] = context
-            evidence_ids.update(unit_evidence_ids)
-            record["context"] = context
-            record["evidence_ids"] = unit_evidence_ids
-        family_records.append(record)
+        seeds = select_family_seeds(
+            result["structural_cross_encoder"]["ranking"],
+            lambda unit_id: build_llm_context(document, stitch_result, unit_id),
+            lambda unit_id: collect_evidence_ids(document, stitch_result, unit_id),
+        )
+        if seeds.context:
+            contexts[family.label] = seeds.context
+        evidence_ids.update(seeds.evidence_ids)
+        family_records.append(
+            {
+                "key": family.key,
+                "label": family.label,
+                "query": family.query,
+                "hits": seeds.hits,
+            }
+        )
     job_artifacts.save_stage(job_id, "03_field_family_contexts", family_records)
 
     schema = load_schema()
