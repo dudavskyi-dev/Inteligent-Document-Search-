@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/api/client.ts","./src/components/jobstatusbanner.tsx","./src/components/lineitemstable.tsx","./src/components/resultsview.tsx","./src/components/settingspanel.tsx","./src/components/statusbadge.tsx","./src/components/uploadcontrol.tsx","./src/types/extraction.ts"],"version":"5.9.3"}
