@@ -1,0 +1,960 @@
+{
+  "schema_version": "industrial-document-candidate/1.0",
+  "document_number": {
+    "status": "supported",
+    "raw": "36C24420Q0680",
+    "value": "36C24420Q0680",
+    "evidence_ids": [
+      "ev_p1_b0",
+      "ev_p2_b0",
+      "ev_p3_b9",
+      "ev_p4_b20",
+      "ev_p5_b0",
+      "ev_p6_b24",
+      "ev_p7_b0"
+    ],
+    "conflict_evidence_ids": []
+  },
+  "parties": [
+    {
+      "role": "buyer",
+      "name": {
+        "status": "supported",
+        "raw": "Department of Veterans Affairs",
+        "value": "Department of Veterans Affairs",
+        "evidence_ids": [
+          "ev_p6_t3_c2",
+          "ev_p5_b3"
+        ],
+        "conflict_evidence_ids": []
+      }
+    },
+    {
+      "role": "buyer",
+      "name": {
+        "status": "supported",
+        "raw": "CMC VAMC",
+        "value": "CMC VAMC",
+        "evidence_ids": [
+          "ev_p1_b2",
+          "ev_p5_t0_c5"
+        ],
+        "conflict_evidence_ids": []
+      }
+    },
+    {
+      "role": "buyer",
+      "name": {
+        "status": "supported",
+        "raw": "Wilmington VAMC",
+        "value": "Wilmington VAMC",
+        "evidence_ids": [
+          "ev_p4_t2_c10"
+        ],
+        "conflict_evidence_ids": []
+      }
+    },
+    {
+      "role": "buyer",
+      "name": {
+        "status": "supported",
+        "raw": "Lebanon VAMC",
+        "value": "Lebanon VAMC",
+        "evidence_ids": [
+          "ev_p4_t2_c14"
+        ],
+        "conflict_evidence_ids": []
+      }
+    },
+    {
+      "role": "supplier",
+      "name": {
+        "status": "supported",
+        "raw": "York International",
+        "value": "York International",
+        "evidence_ids": [
+          "ev_p2_b3"
+        ],
+        "conflict_evidence_ids": []
+      }
+    },
+    {
+      "role": "other",
+      "name": {
+        "status": "supported",
+        "raw": "Toshiba",
+        "value": "Toshiba",
+        "evidence_ids": [
+          "ev_p3_b10"
+        ],
+        "conflict_evidence_ids": []
+      }
+    }
+  ],
+  "deadlines": [],
+  "line_items": [
+    {
+      "source_row_ids": [
+        "ev_p4_t2_r1"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "0001",
+        "value": "0001",
+        "evidence_ids": [
+          "ev_p4_t2_c6"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "XXXXX Preventive Maintenance on Five (5) York / Carrier 0.00",
+        "value": "XXXXX Preventive Maintenance on Five (5) York / Carrier",
+        "evidence_ids": [
+          "ev_p4_t2_c7"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "0.00",
+        "value": "0.00",
+        "unit": null,
+        "evidence_ids": [
+          "ev_p4_t2_c7"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p4_t2_r1",
+        "ev_p6_t3_r0"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "0001AA",
+        "value": "0001AA",
+        "evidence_ids": [
+          "ev_p4_t2_c9",
+          "ev_p6_t3_c0"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "4.00 JB Quarterly Preventive Maintenance on Five (5) York / Carrier Chillers IAW SOW. Wilmington VAMC . Contract Period: Base POP Begin:",
+        "value": "Quarterly Preventive Maintenance on Five (5) York / Carrier Chillers IAW SOW. Wilmington VAMC.",
+        "evidence_ids": [
+          "ev_p4_t2_c10"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "4.00",
+        "value": "4.00",
+        "unit": "JB",
+        "evidence_ids": [
+          "ev_p4_t2_c10",
+          "ev_p6_t3_c3"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p4_t2_r2",
+        "ev_p6_t3_r1"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "0001AB",
+        "value": "0001AB",
+        "evidence_ids": [
+          "ev_p4_t2_c11",
+          "ev_p6_t3_c4"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "1.00 JB Annual Preventive Maintenance on Five (5) York / Carrier Chillers IAW SOW. Wilmington VAMC. Contract Period: Base POP Begin: POP End:",
+        "value": "Annual Preventive Maintenance on Five (5) York / Carrier Chillers IAW SOW. Wilmington VAMC.",
+        "evidence_ids": [
+          "ev_p4_t2_c12"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "1.00",
+        "value": "1.00",
+        "unit": "JB",
+        "evidence_ids": [
+          "ev_p4_t2_c12",
+          "ev_p6_t3_c7"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p4_t2_r4",
+        "ev_p6_t3_r2"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "0002",
+        "value": "0002",
+        "evidence_ids": [
+          "ev_p4_t2_c13",
+          "ev_p6_t3_c8"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "XXXXX Lebanon VAMC Preventive Maintenance on Two (2) Carrier Chillers IAW SOW. Contract Period: Base POP Begin: 0.00",
+        "value": "XXXXX Lebanon VAMC Preventive Maintenance on Two (2) Carrier Chillers IAW SOW.",
+        "evidence_ids": [
+          "ev_p4_t2_c14"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "0.00",
+        "value": "0.00",
+        "unit": null,
+        "evidence_ids": [
+          "ev_p4_t2_c14",
+          "ev_p6_t3_c11"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p4_t2_r5",
+        "ev_p6_t3_r3"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "0002AA",
+        "value": "0002AA",
+        "evidence_ids": [
+          "ev_p4_t2_c16",
+          "ev_p6_t3_c12"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "1.00 JB Annual Inspections on Two (2) Carrier Chillers IAW SOW. Lebanon VAMC. Contract Period: Base POP Begin: POP End:",
+        "value": "Annual Inspections on Two (2) Carrier Chillers IAW SOW. Lebanon VAMC.",
+        "evidence_ids": [
+          "ev_p4_t2_c17"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "1.00",
+        "value": "1.00",
+        "unit": "JB",
+        "evidence_ids": [
+          "ev_p4_t2_c17",
+          "ev_p6_t3_c15"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p4_t2_r6",
+        "ev_p6_t3_r4"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "0002AB",
+        "value": "0002AB",
+        "evidence_ids": [
+          "ev_p4_t2_c18",
+          "ev_p6_t3_c16"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "2.00 JB Operating Inspections on Two (2) Carrier Chillers IAW SOW. Lebanon VAMC.",
+        "value": "Operating Inspections on Two (2) Carrier Chillers IAW SOW. Lebanon VAMC.",
+        "evidence_ids": [
+          "ev_p4_t2_c19"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "2.00",
+        "value": "2.00",
+        "unit": "JB",
+        "evidence_ids": [
+          "ev_p4_t2_c19",
+          "ev_p6_t3_c19"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p4_t2_r7",
+        "ev_p6_t3_r5"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "0002AC",
+        "value": "0002AC",
+        "evidence_ids": [
+          "ev_p4_t2_c20",
+          "ev_p6_t3_c20"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "not_found",
+        "raw": null,
+        "value": null,
+        "evidence_ids": [],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "2.00",
+        "value": "2.00",
+        "unit": "JB",
+        "evidence_ids": [
+          "ev_p4_t2_c21",
+          "ev_p6_t3_c23"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p5_t0_r1",
+        "ev_p6_t3_r6"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "0003",
+        "value": "0003",
+        "evidence_ids": [
+          "ev_p6_t3_c24",
+          "ev_p5_t0_c2"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "0003 Testing on Ten (10) York Chillers IAW. Contract Period: Base POP Begin: 0.00 XXXXX Do Not Quote CMC (Philadelphia) VAMC. Maintenance, Inspection, Repair and POP End:",
+        "value": "XXXXX Maintenance, Inspection, Repair and Testing on Ten (10) York Chillers IAW. CMC (Philadelphia) VAMC.",
+        "evidence_ids": [
+          "ev_p5_t0_c2",
+          "ev_p5_t0_c3"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "0.00",
+        "value": "0.00",
+        "unit": null,
+        "evidence_ids": [
+          "ev_p5_t0_c3",
+          "ev_p6_t3_c27"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p5_t0_r2",
+        "ev_p6_t3_r7"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "0003AA",
+        "value": "0003AA",
+        "evidence_ids": [
+          "ev_p5_t0_c4",
+          "ev_p6_t3_c28"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "12.00 MO Monthly Maintenance, Inspection, Repair and Testing on Ten (10) York Chillers IAW. CMC VAMC.",
+        "value": "Monthly Maintenance, Inspection, Repair and Testing on Ten (10) York Chillers IAW. CMC VAMC.",
+        "evidence_ids": [
+          "ev_p5_t0_c5"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "12.00",
+        "value": "12.00",
+        "unit": "MO",
+        "evidence_ids": [
+          "ev_p5_t0_c5",
+          "ev_p6_t3_c31"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [
+        {
+          "status": "supported",
+          "type": "acceptance",
+          "target": "All listed chillers",
+          "raw": "All listed chillers must be repaired and serviced by commercially certified technicians in accordance with manufacturers specifications to include technician certification requirements.",
+          "nominal": null,
+          "lower_limit": null,
+          "upper_limit": null,
+          "unit": null,
+          "standard": "manufacturers specifications",
+          "evidence_ids": [
+            "ev_p1_b6"
+          ],
+          "conflict_evidence_ids": []
+        },
+        {
+          "status": "supported",
+          "type": "acceptance",
+          "target": "Chiller maintenance services",
+          "raw": "Maintenance includes emergency responses 24 hours per day, seven days per week.",
+          "nominal": null,
+          "lower_limit": null,
+          "upper_limit": null,
+          "unit": null,
+          "standard": null,
+          "evidence_ids": [
+            "ev_p1_b5"
+          ],
+          "conflict_evidence_ids": []
+        },
+        {
+          "status": "supported",
+          "type": "acceptance",
+          "target": "Chiller maintenance checklists and service reports",
+          "raw": "Manual records are not acceptable.  Both the checklist and the service reports are to be provided electronically to the COR.",
+          "nominal": null,
+          "lower_limit": null,
+          "upper_limit": null,
+          "unit": null,
+          "standard": null,
+          "evidence_ids": [
+            "ev_p1_b4"
+          ],
+          "conflict_evidence_ids": []
+        }
+      ],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p5_t0_r3",
+        "ev_p7_t0_r1"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "0003AB",
+        "value": "0003AB",
+        "evidence_ids": [
+          "ev_p5_t0_c6",
+          "ev_p7_t0_c1"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "0.00 EA Government will Do Not Quote provide dollar amount upon award Emergency Repair $2,500- $15,0000 IAW SOW. CMC VAMC. Contract Period: Base",
+        "value": "Government will provide dollar amount upon award Emergency Repair $2,500- $15,0000 IAW SOW. CMC VAMC.",
+        "evidence_ids": [
+          "ev_p5_t0_c7"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "0.00",
+        "value": "0.00",
+        "unit": "EA",
+        "evidence_ids": [
+          "ev_p5_t0_c7",
+          "ev_p7_t0_c3"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p5_t0_r4",
+        "ev_p7_t0_r2"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "0003AC",
+        "value": "0003AC",
+        "evidence_ids": [
+          "ev_p7_t0_c4",
+          "ev_p5_t0_c8"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "0.00 EA Government will Do Not Quote provide dollar amount upon award Parts or Repair over $15,000 IAW SOW. CMC VAMC.",
+        "value": "Government will provide dollar amount upon award Parts or Repair over $15,000 IAW SOW. CMC VAMC.",
+        "evidence_ids": [
+          "ev_p5_t0_c9"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "0.00",
+        "value": "0.00",
+        "unit": "EA",
+        "evidence_ids": [
+          "ev_p5_t0_c9",
+          "ev_p7_t0_c6"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p5_t0_r5",
+        "ev_p5_t0_r6",
+        "ev_p7_t0_r9"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "0003AD",
+        "value": "0003AD",
+        "evidence_ids": [
+          "ev_p7_t0_c25",
+          "ev_p5_t0_c10"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "0.00EA Additional Cleaning IAW SOW. CMC VAMC. Contract Period: Base POP Begin: POP End:",
+        "value": "Additional Cleaning IAW SOW. CMC VAMC.",
+        "evidence_ids": [
+          "ev_p5_t0_c12"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "0.00",
+        "value": "0.00",
+        "unit": "EA",
+        "evidence_ids": [
+          "ev_p5_t0_c12",
+          "ev_p7_t0_c27"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p1_t0_r1"
+      ],
+      "part_number": {
+        "status": "ambiguous",
+        "raw": "York 276-ton air cooled 480 volt",
+        "value": null,
+        "evidence_ids": [
+          "ev_p1_t0_c7"
+        ],
+        "conflict_evidence_ids": [
+          "ev_p2_b3"
+        ]
+      },
+      "description": {
+        "status": "supported",
+        "raw": "2 | 2 | York 276-ton air cooled 480 volt | Yes | 2011",
+        "value": "Building 2 chiller; VSD: Yes; Installation Year: 2011",
+        "evidence_ids": [
+          "ev_p1_t0_c5",
+          "ev_p1_t0_c8",
+          "ev_p1_t0_c9"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "2",
+        "value": "2",
+        "unit": null,
+        "evidence_ids": [
+          "ev_p1_t0_c6"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [
+        {
+          "status": "supported",
+          "type": "acceptance",
+          "target": "Building 2 York chillers",
+          "raw": "All warranty requirements shall apply for this chiller. All visits as noted, Eddy current testing yearly, oil renewal as noted, leak checking with refrigerant program as noted,all tube cleaning of the condenser tubes yearly for the chillers in building 2 at the end of the season.",
+          "nominal": null,
+          "lower_limit": null,
+          "upper_limit": null,
+          "unit": null,
+          "standard": null,
+          "evidence_ids": [
+            "ev_p2_b3"
+          ],
+          "conflict_evidence_ids": []
+        }
+      ],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p1_t0_r2"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "York YCIVO177",
+        "value": "York YCIVO177",
+        "evidence_ids": [
+          "ev_p1_t0_c12"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "2 | 1 | York YCIVO177 | Yes | 2015",
+        "value": "Building 2 Lab service (AC19) York chiller; VSD: Yes; Installation Year: 2015",
+        "evidence_ids": [
+          "ev_p1_t0_c10",
+          "ev_p1_t0_c13",
+          "ev_p1_t0_c14"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "1",
+        "value": "1",
+        "unit": null,
+        "evidence_ids": [
+          "ev_p1_t0_c11"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [
+        {
+          "status": "supported",
+          "type": "acceptance",
+          "target": "A/C19 air cooled chiller (Building 2)",
+          "raw": "The warranty for A/C19 air cooled chiller will be void unless refrigerant, fan oil, variable speed drive parts are provided through York International.",
+          "nominal": null,
+          "lower_limit": null,
+          "upper_limit": null,
+          "unit": null,
+          "standard": null,
+          "evidence_ids": [
+            "ev_p2_b3"
+          ],
+          "conflict_evidence_ids": []
+        }
+      ],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p1_t0_r3"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "York 600-ton 480 volt",
+        "value": "York 600-ton 480 volt",
+        "evidence_ids": [
+          "ev_p1_t0_c17"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "21 | 1 | York 600-ton 480 volt | Yes | 2011",
+        "value": "Building 21 Research Building York centrifugal chiller with low voltage variable frequency drive; VSD: Yes; Installation Year: 2011",
+        "evidence_ids": [
+          "ev_p1_t0_c15",
+          "ev_p1_t0_c18",
+          "ev_p1_t0_c19",
+          "ev_p2_b4"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "1",
+        "value": "1",
+        "unit": null,
+        "evidence_ids": [
+          "ev_p1_t0_c16"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [
+        {
+          "status": "supported",
+          "type": "acceptance",
+          "target": "Building 21 York centrifugal chiller",
+          "raw": "This unit is a York Model YK and all warranty requirements shall apply. All visits as noted, Eddy current testing yearly,oil renewal as noted, leak checking with refrigerant program as noted, all tube cleaning of the condenser tubes yearly for the chiller in the building 21 at the end of the season.",
+          "nominal": null,
+          "lower_limit": null,
+          "upper_limit": null,
+          "unit": null,
+          "standard": null,
+          "evidence_ids": [
+            "ev_p2_b4"
+          ],
+          "conflict_evidence_ids": []
+        }
+      ],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p1_t0_r4"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "York AB AB P2 300-ton 480 volt",
+        "value": "York AB AB P2 300-ton 480 volt",
+        "evidence_ids": [
+          "ev_p1_t0_c22"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "30 | 2 | York AB AB P2 300-ton 480 volt | Yes | 2000",
+        "value": "CLC Building 30 York 300-ton chillers (model YKABABP2-CKF); VSD: Yes; Installation Year: 2000",
+        "evidence_ids": [
+          "ev_p1_t0_c20",
+          "ev_p1_t0_c23",
+          "ev_p1_t0_c24",
+          "ev_p2_b5"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "2",
+        "value": "2",
+        "unit": null,
+        "evidence_ids": [
+          "ev_p1_t0_c21"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [
+        {
+          "status": "supported",
+          "type": "acceptance",
+          "target": "Building 30 York 300-ton chillers",
+          "raw": "All visits as noted, Eddy current testing yearly, oil renewal as noted, leak checking with refrigerant program as noted, all tube cleaning of the condenser tubes yearly for the chillers in building 30 at the end of the season.",
+          "nominal": null,
+          "lower_limit": null,
+          "upper_limit": null,
+          "unit": null,
+          "standard": null,
+          "evidence_ids": [
+            "ev_p2_b5"
+          ],
+          "conflict_evidence_ids": []
+        }
+      ],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p2_t0_r0",
+        "ev_p2_b6"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "York 1200-ton 4160 volt",
+        "value": "York 1200-ton 4160 volt",
+        "evidence_ids": [
+          "ev_p2_t0_c1"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "3 | York 1200-ton 4160 volt | Yes | 2011",
+        "value": "Building 31 York large tonnage centrifugal chillers, 1200-ton capacity, 4160 Volt, remote mounted variable frequency drives; VSD: Yes; Installation Year: 2011",
+        "evidence_ids": [
+          "ev_p2_t0_c2",
+          "ev_p2_t0_c3",
+          "ev_p2_b6"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "3",
+        "value": "3",
+        "unit": null,
+        "evidence_ids": [
+          "ev_p2_t0_c0",
+          "ev_p2_b6"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [
+        {
+          "status": "supported",
+          "type": "acceptance",
+          "target": "York 4160 medium voltage variable speed drives (MVVSD)",
+          "raw": "The York 4160 medium voltage variable speed drives (MVVSD) are manufactured by Toshiba.  The MVVSD shall be serviced by technicians described in paragraph 6.3 of the SOW.",
+          "nominal": null,
+          "lower_limit": null,
+          "upper_limit": null,
+          "unit": null,
+          "standard": null,
+          "evidence_ids": [
+            "ev_p3_b10"
+          ],
+          "conflict_evidence_ids": []
+        }
+      ],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p2_t0_r1",
+        "ev_p3_b10"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "York JHJB 1130-ton 480volt",
+        "value": "York JHJB 1130-ton 480volt",
+        "evidence_ids": [
+          "ev_p2_t0_c5"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "1 | York JHJB 1130-ton 480volt | Yes | 2001",
+        "value": "Building 31 fourth unit, earlier model design (model YKJHJBJ1DAE) with unit mounted 4160 MVVSD; VSD: Yes; Installation Year: 2001",
+        "evidence_ids": [
+          "ev_p2_t0_c6",
+          "ev_p2_t0_c7",
+          "ev_p3_b10"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "1",
+        "value": "1",
+        "unit": null,
+        "evidence_ids": [
+          "ev_p2_t0_c4"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [
+        {
+          "status": "supported",
+          "type": "acceptance",
+          "target": "Fourth chiller in Building 31 (YKJHJBJ1DAE)",
+          "raw": "The fourth chiller is a model YKJHJBJ1DAE. The contractor shall provide preventative maintenance tasks noted as well as the unit mounted MVVSD.",
+          "nominal": null,
+          "lower_limit": null,
+          "upper_limit": null,
+          "unit": null,
+          "standard": null,
+          "evidence_ids": [
+            "ev_p3_b10"
+          ],
+          "conflict_evidence_ids": []
+        }
+      ],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    }
+  ],
+  "abstained_field_paths": [
+    "/deadlines"
+  ]
+}

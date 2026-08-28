@@ -1,0 +1,41 @@
+{
+  "schema_version": "industrial-document-candidate/1.0",
+  "document_number": {
+    "status": "supported",
+    "raw": "NASA-STD-8739.14 - 2020-06-02",
+    "value": "NASA-STD-8739.14",
+    "evidence_ids": [
+      "ev_p6_b37"
+    ],
+    "conflict_evidence_ids": []
+  },
+  "parties": [
+    {
+      "role": "buyer",
+      "name": {
+        "status": "supported",
+        "raw": "NASA Center quality management systems",
+        "value": "NASA",
+        "evidence_ids": [
+          "ev_p6_b45"
+        ],
+        "conflict_evidence_ids": []
+      }
+    },
+    {
+      "role": "other",
+      "name": {
+        "status": "supported",
+        "raw": "Defense Logistics Agency (DLA) Qualified Suppliers List (https://www.dla.mil/TroopSupport/IndustrialHardware/Engineering-and-Technicalservices/Qualified-Suppliers-List/)",
+        "value": "Defense Logistics Agency (DLA)",
+        "evidence_ids": [
+          "ev_p12_b167"
+        ],
+        "conflict_evidence_ids": []
+      }
+    }
+  ],
+  "deadlines": [],
+  "line_items": [],
+  "abstained_field_paths": []
+}

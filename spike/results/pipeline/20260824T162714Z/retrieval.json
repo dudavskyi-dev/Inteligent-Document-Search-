@@ -1,0 +1,575 @@
+{
+  "field_families": [
+    {
+      "field_family": "document_identity",
+      "query": "What is the solicitation or document number, title, and issuing office?",
+      "method": "hybrid_rrf",
+      "pool": [
+        {
+          "rank": 1,
+          "page_number": 5,
+          "score": 0.06430053288858155
+        },
+        {
+          "rank": 2,
+          "page_number": 1,
+          "score": 0.06381141627043267
+        },
+        {
+          "rank": 3,
+          "page_number": 4,
+          "score": 0.0627636476426799
+        },
+        {
+          "rank": 4,
+          "page_number": 2,
+          "score": 0.06231203665002413
+        },
+        {
+          "rank": 5,
+          "page_number": 7,
+          "score": 0.06159053592852341
+        },
+        {
+          "rank": 6,
+          "page_number": 3,
+          "score": 0.061574904158859384
+        },
+        {
+          "rank": 7,
+          "page_number": 6,
+          "score": 0.061574904158859384
+        }
+      ],
+      "reranked": true,
+      "rerank_order": [
+        {
+          "page_number": 5,
+          "retrieval_rank": 1,
+          "score": -10.550863265991211,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p5-b3"
+        },
+        {
+          "page_number": 7,
+          "retrieval_rank": 5,
+          "score": -11.003690719604492,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p7-b0"
+        },
+        {
+          "page_number": 6,
+          "retrieval_rank": 7,
+          "score": -11.009367942810059,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p6-b24"
+        },
+        {
+          "page_number": 4,
+          "retrieval_rank": 3,
+          "score": -11.024608612060547,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p4-t2-r0"
+        },
+        {
+          "page_number": 1,
+          "retrieval_rank": 2,
+          "score": -11.06460189819336,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p1-b3"
+        },
+        {
+          "page_number": 2,
+          "retrieval_rank": 4,
+          "score": -11.27249526977539,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p2-b3"
+        },
+        {
+          "page_number": 3,
+          "retrieval_rank": 6,
+          "score": -11.301921844482422,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p3-b10"
+        }
+      ],
+      "seed_page_ids": [
+        "05_GSA_Mixed_Table_Fixture.pdf::p5",
+        "05_GSA_Mixed_Table_Fixture.pdf::p7",
+        "05_GSA_Mixed_Table_Fixture.pdf::p6"
+      ]
+    },
+    {
+      "field_family": "parties",
+      "query": "Which buyer, contracting agency, contractor, or supplier organizations are named?",
+      "method": "hybrid_rrf",
+      "pool": [
+        {
+          "rank": 1,
+          "page_number": 1,
+          "score": 0.06456494325346786
+        },
+        {
+          "rank": 2,
+          "page_number": 5,
+          "score": 0.06376447436898257
+        },
+        {
+          "rank": 3,
+          "page_number": 4,
+          "score": 0.0630272952853598
+        },
+        {
+          "rank": 4,
+          "page_number": 3,
+          "score": 0.06253054740957967
+        },
+        {
+          "rank": 5,
+          "page_number": 2,
+          "score": 0.0620789364169239
+        },
+        {
+          "rank": 6,
+          "page_number": 6,
+          "score": 0.06156066156066156
+        },
+        {
+          "rank": 7,
+          "page_number": 7,
+          "score": 0.06040111940298508
+        }
+      ],
+      "reranked": true,
+      "rerank_order": [
+        {
+          "page_number": 1,
+          "retrieval_rank": 1,
+          "score": -6.389488220214844,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p1-b3"
+        },
+        {
+          "page_number": 3,
+          "retrieval_rank": 4,
+          "score": -10.023238182067871,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p3-b11"
+        },
+        {
+          "page_number": 4,
+          "retrieval_rank": 3,
+          "score": -10.409076690673828,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p4-t2-r0"
+        },
+        {
+          "page_number": 7,
+          "retrieval_rank": 7,
+          "score": -10.43850326538086,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p7-t0-r0"
+        },
+        {
+          "page_number": 5,
+          "retrieval_rank": 2,
+          "score": -10.445636749267578,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p5-t0-r4"
+        },
+        {
+          "page_number": 6,
+          "retrieval_rank": 6,
+          "score": -10.47183609008789,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p6-b24"
+        },
+        {
+          "page_number": 2,
+          "retrieval_rank": 5,
+          "score": -10.506525993347168,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p2-b0"
+        }
+      ],
+      "seed_page_ids": [
+        "05_GSA_Mixed_Table_Fixture.pdf::p1",
+        "05_GSA_Mixed_Table_Fixture.pdf::p3",
+        "05_GSA_Mixed_Table_Fixture.pdf::p4"
+      ]
+    },
+    {
+      "field_family": "parts_quantities",
+      "query": "Which part numbers, models, equipment, and their quantities and units are listed?",
+      "method": "hybrid_rrf",
+      "pool": [
+        {
+          "rank": 1,
+          "page_number": 3,
+          "score": 0.06426850662704708
+        },
+        {
+          "rank": 2,
+          "page_number": 1,
+          "score": 0.06403688524590165
+        },
+        {
+          "rank": 3,
+          "page_number": 2,
+          "score": 0.06351569577376029
+        },
+        {
+          "rank": 4,
+          "page_number": 4,
+          "score": 0.06329170565024611
+        },
+        {
+          "rank": 5,
+          "page_number": 5,
+          "score": 0.06250763125763126
+        },
+        {
+          "rank": 6,
+          "page_number": 6,
+          "score": 0.06015377657168702
+        },
+        {
+          "rank": 7,
+          "page_number": 7,
+          "score": 0.06015377657168702
+        }
+      ],
+      "reranked": true,
+      "rerank_order": [
+        {
+          "page_number": 4,
+          "retrieval_rank": 4,
+          "score": -4.86328125,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p4-t2-r0"
+        },
+        {
+          "page_number": 2,
+          "retrieval_rank": 3,
+          "score": -7.420239448547363,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p2-b6"
+        },
+        {
+          "page_number": 1,
+          "retrieval_rank": 2,
+          "score": -9.634028434753418,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p1-b7"
+        },
+        {
+          "page_number": 3,
+          "retrieval_rank": 1,
+          "score": -10.157682418823242,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p3-b10"
+        },
+        {
+          "page_number": 5,
+          "retrieval_rank": 5,
+          "score": -10.570154190063477,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p5-b3"
+        },
+        {
+          "page_number": 7,
+          "retrieval_rank": 7,
+          "score": -10.836830139160156,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p7-b0"
+        },
+        {
+          "page_number": 6,
+          "retrieval_rank": 6,
+          "score": -10.839826583862305,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p6-b24"
+        }
+      ],
+      "seed_page_ids": [
+        "05_GSA_Mixed_Table_Fixture.pdf::p4",
+        "05_GSA_Mixed_Table_Fixture.pdf::p2",
+        "05_GSA_Mixed_Table_Fixture.pdf::p1"
+      ]
+    },
+    {
+      "field_family": "tolerances",
+      "query": "What tolerances, acceptance criteria, inspection requirements, or standards apply?",
+      "method": "hybrid_rrf",
+      "pool": [
+        {
+          "rank": 1,
+          "page_number": 1,
+          "score": 0.06530936012691699
+        },
+        {
+          "rank": 2,
+          "page_number": 3,
+          "score": 0.0637560803891449
+        },
+        {
+          "rank": 3,
+          "page_number": 2,
+          "score": 0.06280258903209723
+        },
+        {
+          "rank": 4,
+          "page_number": 4,
+          "score": 0.06277127890031116
+        },
+        {
+          "rank": 5,
+          "page_number": 5,
+          "score": 0.06274801587301587
+        },
+        {
+          "rank": 6,
+          "page_number": 6,
+          "score": 0.06061301882197405
+        },
+        {
+          "rank": 7,
+          "page_number": 7,
+          "score": 0.05992763455450023
+        }
+      ],
+      "reranked": true,
+      "rerank_order": [
+        {
+          "page_number": 3,
+          "retrieval_rank": 2,
+          "score": -10.603281021118164,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p3-b12"
+        },
+        {
+          "page_number": 1,
+          "retrieval_rank": 1,
+          "score": -11.039937019348145,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p1-b6"
+        },
+        {
+          "page_number": 5,
+          "retrieval_rank": 5,
+          "score": -11.155275344848633,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p5-b0"
+        },
+        {
+          "page_number": 6,
+          "retrieval_rank": 6,
+          "score": -11.156925201416016,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p6-b24"
+        },
+        {
+          "page_number": 4,
+          "retrieval_rank": 4,
+          "score": -11.160167694091797,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p4-b20"
+        },
+        {
+          "page_number": 7,
+          "retrieval_rank": 7,
+          "score": -11.160950660705566,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p7-b0"
+        },
+        {
+          "page_number": 2,
+          "retrieval_rank": 3,
+          "score": -11.16712760925293,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p2-b0"
+        }
+      ],
+      "seed_page_ids": [
+        "05_GSA_Mixed_Table_Fixture.pdf::p3",
+        "05_GSA_Mixed_Table_Fixture.pdf::p1",
+        "05_GSA_Mixed_Table_Fixture.pdf::p5"
+      ]
+    },
+    {
+      "field_family": "deadlines",
+      "query": "What are the submission deadlines, delivery dates, and periods of performance?",
+      "method": "hybrid_rrf",
+      "pool": [
+        {
+          "rank": 1,
+          "page_number": 5,
+          "score": 0.06478893337698204
+        },
+        {
+          "rank": 2,
+          "page_number": 1,
+          "score": 0.06381141627043267
+        },
+        {
+          "rank": 3,
+          "page_number": 3,
+          "score": 0.0625
+        },
+        {
+          "rank": 4,
+          "page_number": 4,
+          "score": 0.06210881078478575
+        },
+        {
+          "rank": 5,
+          "page_number": 2,
+          "score": 0.06185279439973711
+        },
+        {
+          "rank": 6,
+          "page_number": 6,
+          "score": 0.06153846153846154
+        },
+        {
+          "rank": 7,
+          "page_number": 7,
+          "score": 0.06132756132756133
+        }
+      ],
+      "reranked": true,
+      "rerank_order": [
+        {
+          "page_number": 5,
+          "retrieval_rank": 1,
+          "score": -7.084066390991211,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p5-b2"
+        },
+        {
+          "page_number": 1,
+          "retrieval_rank": 2,
+          "score": -10.96460247039795,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p1-b1"
+        },
+        {
+          "page_number": 7,
+          "retrieval_rank": 7,
+          "score": -11.252543449401855,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p7-b0"
+        },
+        {
+          "page_number": 2,
+          "retrieval_rank": 5,
+          "score": -11.294010162353516,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p2-b3"
+        },
+        {
+          "page_number": 4,
+          "retrieval_rank": 4,
+          "score": -11.296659469604492,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p4-b23"
+        },
+        {
+          "page_number": 3,
+          "retrieval_rank": 3,
+          "score": -11.331474304199219,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p3-b10"
+        },
+        {
+          "page_number": 6,
+          "retrieval_rank": 6,
+          "score": -11.457534790039062,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p6-t3-r7"
+        }
+      ],
+      "seed_page_ids": [
+        "05_GSA_Mixed_Table_Fixture.pdf::p5",
+        "05_GSA_Mixed_Table_Fixture.pdf::p1",
+        "05_GSA_Mixed_Table_Fixture.pdf::p7"
+      ]
+    },
+    {
+      "field_family": "prices",
+      "query": "Find the price and cost schedule line items with quantities, units, unit prices, and amounts.",
+      "method": "hybrid_rrf",
+      "pool": [
+        {
+          "rank": 1,
+          "page_number": 4,
+          "score": 0.06557377049180328
+        },
+        {
+          "rank": 2,
+          "page_number": 1,
+          "score": 0.06350006400409626
+        },
+        {
+          "rank": 3,
+          "page_number": 5,
+          "score": 0.06277127890031116
+        },
+        {
+          "rank": 4,
+          "page_number": 3,
+          "score": 0.06253054740957967
+        },
+        {
+          "rank": 5,
+          "page_number": 2,
+          "score": 0.06231203665002413
+        },
+        {
+          "rank": 6,
+          "page_number": 6,
+          "score": 0.061079545454545456
+        },
+        {
+          "rank": 7,
+          "page_number": 7,
+          "score": 0.060160734787600464
+        }
+      ],
+      "reranked": true,
+      "rerank_order": [
+        {
+          "page_number": 4,
+          "retrieval_rank": 1,
+          "score": -1.7010952234268188,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p4-t2-r7"
+        },
+        {
+          "page_number": 5,
+          "retrieval_rank": 3,
+          "score": -8.315357208251953,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p5-b3"
+        },
+        {
+          "page_number": 7,
+          "retrieval_rank": 7,
+          "score": -10.452314376831055,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p7-b0"
+        },
+        {
+          "page_number": 6,
+          "retrieval_rank": 6,
+          "score": -10.456432342529297,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p6-b24"
+        },
+        {
+          "page_number": 1,
+          "retrieval_rank": 2,
+          "score": -10.704994201660156,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p1-b7"
+        },
+        {
+          "page_number": 2,
+          "retrieval_rank": 5,
+          "score": -11.175626754760742,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p2-b6"
+        },
+        {
+          "page_number": 3,
+          "retrieval_rank": 4,
+          "score": -11.22812557220459,
+          "evidence_unit": "05_GSA_Mixed_Table_Fixture:p3-b16"
+        }
+      ],
+      "seed_page_ids": [
+        "05_GSA_Mixed_Table_Fixture.pdf::p4",
+        "05_GSA_Mixed_Table_Fixture.pdf::p5",
+        "05_GSA_Mixed_Table_Fixture.pdf::p7"
+      ]
+    }
+  ],
+  "seed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "linked_table_expansion": [],
+  "pages_sent_to_llm": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ]
+}

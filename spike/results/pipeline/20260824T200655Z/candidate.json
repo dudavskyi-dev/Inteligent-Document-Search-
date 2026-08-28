@@ -1,0 +1,514 @@
+{
+  "abstained_field_paths": [
+    "/line_items/unit_price",
+    "/line_items/line_total",
+    "/line_items/delivery_deadline"
+  ],
+  "deadlines": [
+    {
+      "conflict_evidence_ids": [],
+      "evidence_ids": [
+        "ev_p1_b11"
+      ],
+      "raw": "07 - 21 - 2020",
+      "status": "supported",
+      "timezone_source": "document_locale",
+      "type": "bid_submission",
+      "value": "2020-07-21T00:00:00.000Z"
+    }
+  ],
+  "document_number": {
+    "conflict_evidence_ids": [],
+    "evidence_ids": [
+      "ev_p2_b97"
+    ],
+    "raw": "36C24420Q0680",
+    "status": "supported",
+    "value": "36C24420Q0680"
+  },
+  "line_items": [
+    {
+      "delivery_deadline": null,
+      "description": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p24_t12_r1"
+        ],
+        "raw": "XXXXX Preventive Maintenance on Five (5) York / Carrier Chillers IAW SOW. Wilmington VAMC . Contract Period: Base POP Begin:",
+        "status": "supported",
+        "value": "XXXXX Preventive Maintenance on Five (5) York / Carrier Chillers IAW SOW. Wilmington VAMC . Contract Period: Base POP Begin:"
+      },
+      "line_total": null,
+      "part_number": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p24_t12_r1"
+        ],
+        "raw": "0001",
+        "status": "supported",
+        "value": "0001"
+      },
+      "quantity": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p24_t12_r1"
+        ],
+        "raw": "0.00",
+        "status": "supported",
+        "unit": "Do Not Quote",
+        "value": "0.00"
+      },
+      "source_row_ids": [
+        "ev_p24_t12_r1"
+      ],
+      "tolerances": [],
+      "unit_price": null
+    },
+    {
+      "delivery_deadline": null,
+      "description": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p24_t12_r2"
+        ],
+        "raw": "4.00 JB Quarterly Preventive Maintenance on Five (5) York / Carrier Chillers IAW SOW. Wilmington VAMC . Contract Period: Base POP Begin:",
+        "status": "supported",
+        "value": "4.00 JB Quarterly Preventive Maintenance on Five (5) York / Carrier Chillers IAW SOW. Wilmington VAMC . Contract Period: Base POP Begin:"
+      },
+      "line_total": null,
+      "part_number": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p24_t12_r2"
+        ],
+        "raw": "0001AA",
+        "status": "supported",
+        "value": "0001AA"
+      },
+      "quantity": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p24_t12_r2"
+        ],
+        "raw": "4.00",
+        "status": "supported",
+        "unit": "JB",
+        "value": "4.00"
+      },
+      "source_row_ids": [
+        "ev_p24_t12_r2"
+      ],
+      "tolerances": [],
+      "unit_price": null
+    },
+    {
+      "delivery_deadline": null,
+      "description": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p24_t12_r3"
+        ],
+        "raw": "1.00 JB Annual Preventive Maintenance on Five (5) York / Carrier Chillers IAW SOW. Wilmington VAMC. Contract Period: Base POP Begin: POP End:",
+        "status": "supported",
+        "value": "1.00 JB Annual Preventive Maintenance on Five (5) York / Carrier Chillers IAW SOW. Wilmington VAMC. Contract Period: Base POP Begin: POP End:"
+      },
+      "line_total": null,
+      "part_number": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p24_t12_r3"
+        ],
+        "raw": "0001AB",
+        "status": "supported",
+        "value": "0001AB"
+      },
+      "quantity": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p24_t12_r3"
+        ],
+        "raw": "1.00",
+        "status": "supported",
+        "unit": "JB",
+        "value": "1.00"
+      },
+      "source_row_ids": [
+        "ev_p24_t12_r3"
+      ],
+      "tolerances": [],
+      "unit_price": null
+    },
+    {
+      "delivery_deadline": null,
+      "description": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p24_t12_r4"
+        ],
+        "raw": "XXXXX Lebanon VAMC Preventive Maintenance on Two (2) Carrier Chillers IAW SOW. Contract Period: Base POP Begin:",
+        "status": "supported",
+        "value": "XXXXX Lebanon VAMC Preventive Maintenance on Two (2) Carrier Chillers IAW SOW. Contract Period: Base POP Begin:"
+      },
+      "line_total": null,
+      "part_number": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p24_t12_r4"
+        ],
+        "raw": "0002",
+        "status": "supported",
+        "value": "0002"
+      },
+      "quantity": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p24_t12_r4"
+        ],
+        "raw": "0.00",
+        "status": "supported",
+        "unit": "Do Not Quote",
+        "value": "0.00"
+      },
+      "source_row_ids": [
+        "ev_p24_t12_r4"
+      ],
+      "tolerances": [],
+      "unit_price": null
+    },
+    {
+      "delivery_deadline": null,
+      "description": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p24_t12_r5"
+        ],
+        "raw": "1.00 JB Annual Inspections on Two (2) Carrier Chillers IAW SOW. Lebanon VAMC. Contract Period: Base POP Begin: POP End:",
+        "status": "supported",
+        "value": "1.00 JB Annual Inspections on Two (2) Carrier Chillers IAW SOW. Lebanon VAMC. Contract Period: Base POP Begin: POP End:"
+      },
+      "line_total": null,
+      "part_number": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p24_t12_r5"
+        ],
+        "raw": "0002AA",
+        "status": "supported",
+        "value": "0002AA"
+      },
+      "quantity": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p24_t12_r5"
+        ],
+        "raw": "1.00",
+        "status": "supported",
+        "unit": "JB",
+        "value": "1.00"
+      },
+      "source_row_ids": [
+        "ev_p24_t12_r5"
+      ],
+      "tolerances": [],
+      "unit_price": null
+    },
+    {
+      "delivery_deadline": null,
+      "description": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p24_t12_r6"
+        ],
+        "raw": "2.00 JB Operating Inspections on Two (2) Carrier Chillers IAW SOW. Lebanon VAMC.",
+        "status": "supported",
+        "value": "2.00 JB Operating Inspections on Two (2) Carrier Chillers IAW SOW. Lebanon VAMC."
+      },
+      "line_total": null,
+      "part_number": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p24_t12_r6"
+        ],
+        "raw": "0002AB",
+        "status": "supported",
+        "value": "0002AB"
+      },
+      "quantity": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p24_t12_r6"
+        ],
+        "raw": "2.00",
+        "status": "supported",
+        "unit": "JB",
+        "value": "2.00"
+      },
+      "source_row_ids": [
+        "ev_p24_t12_r6"
+      ],
+      "tolerances": [],
+      "unit_price": null
+    },
+    {
+      "delivery_deadline": null,
+      "description": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p24_t12_r7"
+        ],
+        "raw": "2.00 JB",
+        "status": "supported",
+        "value": "2.00 JB"
+      },
+      "line_total": null,
+      "part_number": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p24_t12_r7"
+        ],
+        "raw": "0002AC",
+        "status": "supported",
+        "value": "0002AC"
+      },
+      "quantity": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p24_t12_r7"
+        ],
+        "raw": "2.00",
+        "status": "supported",
+        "unit": "JB",
+        "value": "2.00"
+      },
+      "source_row_ids": [
+        "ev_p24_t12_r7"
+      ],
+      "tolerances": [],
+      "unit_price": null
+    },
+    {
+      "delivery_deadline": null,
+      "description": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p25_b391"
+        ],
+        "raw": "xxxxx CMC (Philadelphia) VAMC. Maintenance, Inspection, Repair and Testing on Ten (10) York Chillers IAW.",
+        "status": "supported",
+        "value": "xxxxx CMC (Philadelphia) VAMC. Maintenance, Inspection, Repair and Testing on Ten (10) York Chillers IAW."
+      },
+      "line_total": null,
+      "part_number": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p25_b389"
+        ],
+        "raw": "0003",
+        "status": "supported",
+        "value": "0003"
+      },
+      "quantity": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p25_b395"
+        ],
+        "raw": "0.00",
+        "status": "supported",
+        "unit": "Do Not Quote",
+        "value": "0.00"
+      },
+      "source_row_ids": [
+        "ev_p25_b389"
+      ],
+      "tolerances": [],
+      "unit_price": null
+    },
+    {
+      "delivery_deadline": null,
+      "description": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p25_b397"
+        ],
+        "raw": "12.00 MO Monthly Maintenance, Inspection, Repair and Testing on Ten (10) York Chillers IAW. CMC VAMC.",
+        "status": "supported",
+        "value": "12.00 MO Monthly Maintenance, Inspection, Repair and Testing on Ten (10) York Chillers IAW. CMC VAMC."
+      },
+      "line_total": null,
+      "part_number": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p25_b398"
+        ],
+        "raw": "0003AA",
+        "status": "supported",
+        "value": "0003AA"
+      },
+      "quantity": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p25_b396"
+        ],
+        "raw": "12.00",
+        "status": "supported",
+        "unit": "MO",
+        "value": "12.00"
+      },
+      "source_row_ids": [
+        "ev_p25_b398"
+      ],
+      "tolerances": [],
+      "unit_price": null
+    },
+    {
+      "delivery_deadline": null,
+      "description": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p25_b401"
+        ],
+        "raw": "0.00 EA Emergency Repair $2,500- $15,0000 IAW SOW. CMC VAMC.",
+        "status": "supported",
+        "value": "0.00 EA Emergency Repair $2,500- $15,0000 IAW SOW. CMC VAMC."
+      },
+      "line_total": null,
+      "part_number": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p25_b406"
+        ],
+        "raw": "0003AB",
+        "status": "supported",
+        "value": "0003AB"
+      },
+      "quantity": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p25_b407"
+        ],
+        "raw": "0.00",
+        "status": "supported",
+        "unit": "EA",
+        "value": "0.00"
+      },
+      "source_row_ids": [
+        "ev_p25_b406"
+      ],
+      "tolerances": [],
+      "unit_price": null
+    },
+    {
+      "delivery_deadline": null,
+      "description": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p25_b414"
+        ],
+        "raw": "0.00 EA Parts or Repair over $15,000 IAW SOW. CMC VAMC.",
+        "status": "supported",
+        "value": "0.00 EA Parts or Repair over $15,000 IAW SOW. CMC VAMC."
+      },
+      "line_total": null,
+      "part_number": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p25_b408"
+        ],
+        "raw": "0003AC",
+        "status": "supported",
+        "value": "0003AC"
+      },
+      "quantity": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p25_b419"
+        ],
+        "raw": "0.00",
+        "status": "supported",
+        "unit": "EA",
+        "value": "0.00"
+      },
+      "source_row_ids": [
+        "ev_p25_b408"
+      ],
+      "tolerances": [],
+      "unit_price": null
+    },
+    {
+      "delivery_deadline": null,
+      "description": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p25_b420"
+        ],
+        "raw": "0.00 EA Additional Cleaning IAW SOW. CMC VAMC.",
+        "status": "supported",
+        "value": "0.00 EA Additional Cleaning IAW SOW. CMC VAMC."
+      },
+      "line_total": null,
+      "part_number": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p25_b418"
+        ],
+        "raw": "0003AD",
+        "status": "supported",
+        "value": "0003AD"
+      },
+      "quantity": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p25_b419"
+        ],
+        "raw": "0.00",
+        "status": "supported",
+        "unit": "EA",
+        "value": "0.00"
+      },
+      "source_row_ids": [
+        "ev_p25_b418"
+      ],
+      "tolerances": [],
+      "unit_price": null
+    }
+  ],
+  "parties": [
+    {
+      "name": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p1_b21"
+        ],
+        "raw": "Department of Veterans Affairs",
+        "status": "supported",
+        "value": "Department of Veterans Affairs"
+      },
+      "role": "buyer"
+    },
+    {
+      "name": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p1_b21"
+        ],
+        "raw": "Department of Veterans Affairs Network Contracting",
+        "status": "supported",
+        "value": "Department of Veterans Affairs Network Contracting"
+      },
+      "role": "buyer"
+    },
+    {
+      "name": {
+        "conflict_evidence_ids": [],
+        "evidence_ids": [
+          "ev_p1_b54"
+        ],
+        "raw": "Austin Payment Center Department of Veterans Affairs",
+        "status": "supported",
+        "value": "Austin Payment Center Department of Veterans Affairs"
+      },
+      "role": "other"
+    }
+  ],
+  "schema_version": "industrial-document-candidate/1.0"
+}

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Extraction Report — Run 20260824T163546Z</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #fbfaf8; --surface: #ffffff; --surface-2: #f3f1ed; --border: #ddd8d0;
+    --text: #1c1a17; --muted: #67615a; --accent: #8a3d1f;
+    --ok: #2f6b3d; --ok-bg: #e6f2e8;
+    --warn: #8a6014; --warn-bg: #f7efdc;
+    --bad: #8a2c2c; --bad-bg: #f8e6e6;
+    --native: #2a5b7a; --native-bg: #e2edf3;
+    --ocr: #6b3d7a; --ocr-bg: #efe6f3;
+    --code-bg: #f5f3ef;
+    --mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+    --sans: ui-sans-serif, -apple-system, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #161513; --surface: #1e1d1a; --surface-2: #262421; --border: #38352f;
+      --text: #eceae6; --muted: #a29b92; --accent: #e0895f;
+      --ok: #7fc08d; --ok-bg: #1e2f22;
+      --warn: #d9ad6a; --warn-bg: #2e2718;
+      --bad: #e08d8d; --bad-bg: #33201f;
+      --native: #86b8d6; --native-bg: #1a2730;
+      --ocr: #c39ad4; --ocr-bg: #271d2c;
+      --code-bg: #201f1c;
+    }
+  }
+  * { box-sizing: border-box; min-width: 0; }
+  html, body { background: var(--bg); color: var(--text); margin: 0; padding: 0; }
+  body { font-family: var(--sans); font-size: 16px; line-height: 1.6; }
+  .page { max-width: 1240px; margin: 0 auto; padding: 3rem 1.25rem 6rem; }
+  header.masthead { border-bottom: 2px solid var(--border); padding-bottom: 1.75rem; margin-bottom: 2.5rem; }
+  h1 { font-size: clamp(1.8rem, 1.3rem + 2.2vw, 2.6rem); line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 .5rem; }
+  h2 { font-size: clamp(1.25rem, 1.05rem + 1vw, 1.6rem); line-height: 1.25; margin: 3rem 0 .35rem; letter-spacing: -0.01em; }
+  h3 { font-size: 1.02rem; margin: 1.75rem 0 .5rem; }
+  .sub, .lede { color: var(--muted); max-width: 72ch; margin: 0 0 1.25rem; }
+  .sub { font-size: 1.05rem; }
+  p, li { max-width: 72ch; overflow-wrap: anywhere; }
+  .meta { color: var(--muted); font-size: .85rem; font-family: var(--mono); margin-top: 1rem; }
+  code { font-family: var(--mono); font-size: .86em; background: var(--code-bg); padding: .1em .35em; border-radius: 4px; overflow-wrap: anywhere; }
+  a { color: var(--accent); }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 1rem; margin: 1.5rem 0; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.1rem; }
+  .card h4 { margin: 0 0 .35rem; font-size: .74rem; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); font-weight: 600; }
+  .card .big { font-size: 1.7rem; font-weight: 600; letter-spacing: -0.02em; display: block; line-height: 1.1; margin-bottom: .3rem; }
+  .card p { margin: 0; font-size: .86rem; color: var(--muted); }
+
+  .scroll { overflow-x: auto; margin: 1.25rem 0; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); }
+  table { border-collapse: collapse; width: 100%; font-size: .87rem; }
+  th, td { text-align: left; padding: .55rem .75rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { background: var(--surface-2); font-weight: 600; font-size: .74rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); white-space: nowrap; }
+  tr:last-child td { border-bottom: none; }
+  td.num { font-family: var(--mono); white-space: nowrap; }
+  td.wrap { min-width: 200px; }
+
+  .pill { display: inline-block; font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; padding: .12rem .4rem; border-radius: 4px; white-space: nowrap; }
+  .p-ok { background: var(--ok-bg); color: var(--ok); }
+  .p-warn { background: var(--warn-bg); color: var(--warn); }
+  .p-bad { background: var(--bad-bg); color: var(--bad); }
+  .p-native { background: var(--native-bg); color: var(--native); }
+  .p-ocr { background: var(--ocr-bg); color: var(--ocr); }
+
+  .callout { border-left: 3px solid var(--accent); background: var(--surface); padding: .9rem 1.2rem; margin: 1.5rem 0; border-radius: 0 6px 6px 0; }
+  .callout p { margin: 0; } .callout p + p { margin-top: .6rem; }
+  .callout.bad { border-left-color: var(--bad); }
+  .callout.ok { border-left-color: var(--ok); }
+
+  pre { background: var(--code-bg); border: 1px solid var(--border); border-radius: 8px; padding: .9rem 1rem; overflow-x: auto; margin: 1rem 0; font-size: .82rem; line-height: 1.5; }
+  pre code { background: none; padding: 0; white-space: pre; }
+  blockquote { margin: .5rem 0 0; padding-left: .8rem; border-left: 2px solid var(--border); color: var(--muted); font-size: .85rem; font-family: var(--mono); }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="masthead">
+  <h1>Extraction Report</h1>
+  <p class="sub">What the LLM actually pulled out of the GSA chiller-maintenance fixture, which page each value came from, whether that page was native text or OCR, and whether the value is right.</p>
+  <p class="meta">run 20260824T163546Z · z-ai/glm-5.2:free · 05_GSA_Mixed_Table_Fixture.pdf · solicitation 36C24420Q0680 · cost $0.00</p>
+</header>
+
+<section>
+  <h2>Headline</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h4>Line items found</h4>
+      <span class="big" style="color:var(--ok)">21 / 21</span>
+      <p>Every real line item in the document was extracted. Nothing was missed.</p>
+    </div>
+    <div class="card">
+      <h4>Spurious extras</h4>
+      <span class="big" style="color:var(--bad)">3</span>
+      <p>"Do Not Quote" summary header rows extracted as if they were line items.</p>
+    </div>
+    <div class="card">
+      <h4>Precision</h4>
+      <span class="big">0.88</span>
+      <p>21 correct of 24 returned.</p>
+    </div>
+    <div class="card">
+      <h4>Caught by validator</h4>
+      <span class="big" style="color:var(--warn)">5</span>
+      <p>Prices claimed as <code>supported</code> with no amount. Repair call fired; they survived it.</p>
+    </div>
+  </div>
+
+  <div class="callout ok">
+    <p><strong>The extraction is substantially correct.</strong> All six chillers in the equipment inventory, all six rows of the service-frequency table, and all nine contract line items came out with the right part numbers, quantities, and units — across both native and OCR pages. The defects are three over-extractions, one mangled description, and one evidence-attribution gap.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Page map — what came from where</h2>
+  <p class="lede">The fixture is deliberately mixed: four pages keep their native text layer, three were rasterized and had to go through OCR. The router got all seven right.</p>
+
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Page</th><th>Route</th><th>Content</th><th>Extracted from it</th><th>Quality</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="num">1</td>
+          <td><span class="pill p-native">native</span></td>
+          <td>Chiller equipment inventory, first half</td>
+          <td>4 chillers with quantity, model, VSD, install year</td>
+          <td><span class="pill p-ok">clean</span></td>
+        </tr>
+        <tr>
+          <td class="num">2</td>
+          <td><span class="pill p-ocr">OCR</span></td>
+          <td>Equipment inventory continuation + narrative §6.2.2.x</td>
+          <td>2 chillers (1200-ton, 1130-ton)</td>
+          <td><span class="pill p-warn">attribution gap</span></td>
+        </tr>
+        <tr>
+          <td class="num">3</td>
+          <td><span class="pill p-native">native</span></td>
+          <td>Service-frequency table by chiller model</td>
+          <td>6 models with service counts</td>
+          <td><span class="pill p-ok">clean</span></td>
+        </tr>
+        <tr>
+          <td class="num">4</td>
+          <td><span class="pill p-native">native</span></td>
+          <td>Price schedule, CLINs 0001–0002AC</td>
+          <td>7 rows → 5 real items + 2 summary rows</td>
+          <td><span class="pill p-bad">2 spurious</span></td>
+        </tr>
+        <tr>
+          <td class="num">5</td>
+          <td><span class="pill p-ocr">OCR</span></td>
+          <td>Price schedule, CLINs 0003–0003AD</td>
+          <td>5 rows → 4 real items + 1 summary row</td>
+          <td><span class="pill p-bad">1 spurious</span></td>
+        </tr>
+        <tr>
+          <td class="num">6</td>
+          <td><span class="pill p-native">native</span></td>
+          <td>Ship-to continuation for CLINs 0001–0002</td>
+          <td><em>Nothing</em> — see below</td>
+          <td><span class="pill p-warn">unused</span></td>
+        </tr>
+        <tr>
+          <td class="num">7</td>
+          <td><span class="pill p-ocr">OCR</span></td>
+          <td>Ship-to continuation for CLINs 0003</td>
+          <td>Buyer name only</td>
+          <td><span class="pill p-warn">unused</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <p><strong>OCR pages performed as well as native pages.</strong> Pages 2 and 5 are rasterized images that went through PaddleOCR, and their extracted quantities and part numbers are as accurate as the native ones — <code>0003AA / 12.00 MO</code> and <code>York JHJB 1130-ton 480volt</code> both came off OCR. The parser choice is not the bottleneck here.</p>
+    <p>One OCR artifact did survive: the emergency-repair band reads <code>$2,500- $15,0000</code> — an extra zero. The model copied it faithfully rather than silently "fixing" it, which is the correct behaviour for a <code>raw</code> field.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Document-level fields</h2>
+
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Field</th><th>Value</th><th>Source</th><th>Verdict</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Document number</td>
+          <td class="num">36C24420Q0680</td>
+          <td class="num">p1–p7, header block on every page</td>
+          <td><span class="pill p-ok">correct</span></td>
+        </tr>
+        <tr>
+          <td>Buyer</td>
+          <td>Department of Veterans Affairs</td>
+          <td class="num">p6 cell, p7 cell <span class="pill p-ocr">OCR</span></td>
+          <td><span class="pill p-ok">correct</span></td>
+        </tr>
+        <tr>
+          <td>Buyer</td>
+          <td>CMC VAMC</td>
+          <td class="num">p1 paragraph</td>
+          <td><span class="pill p-warn">site, not buyer</span></td>
+        </tr>
+        <tr>
+          <td>Buyer</td>
+          <td>Wilmington VAMC</td>
+          <td class="num">p4 table cell</td>
+          <td><span class="pill p-warn">site, not buyer</span></td>
+        </tr>
+        <tr>
+          <td>Buyer</td>
+          <td>Lebanon VAMC</td>
+          <td class="num">p4 table cell</td>
+          <td><span class="pill p-warn">site, not buyer</span></td>
+        </tr>
+        <tr>
+          <td>Other party</td>
+          <td>York International</td>
+          <td class="num">p2 paragraph §6.2.2.2 <span class="pill p-ocr">OCR</span></td>
+          <td><span class="pill p-bad">not a party</span></td>
+        </tr>
+        <tr>
+          <td>Deadlines</td>
+          <td><em>none</em></td>
+          <td class="num">—</td>
+          <td><span class="pill p-ok">correct</span></td>
+        </tr>
+        <tr>
+          <td>Tolerances</td>
+          <td><em>none</em></td>
+          <td class="num">—</td>
+          <td><span class="pill p-ok">correct</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>The three VAMC entries and York International are the same underlying mistake: my prompt defines parties as "buyer, supplier, contractor, or other named organizations," which is loose enough to sweep in delivery sites and equipment manufacturers. <strong>York International is a chiller brand named in a technical description</strong>, not an organization party to this solicitation.</p>
+
+  <p>Empty deadlines is <em>correct</em>, not a miss — the fixture's period-of-performance fields are literally blank:</p>
+  <blockquote>Contract Period: Base POP Begin: POP End:</blockquote>
+  <p>But the model left <code>abstained_field_paths</code> empty rather than declaring <code>/deadlines</code>. It silently returned nothing instead of stating that it found nothing.</p>
+</section>
+
+<section>
+  <h2>Line items — all 24</h2>
+  <p class="lede">Rows shaded by verdict. Page and route show where each came from.</p>
+
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>#</th><th>Part / CLIN</th><th>Qty</th><th>Unit</th><th>Description</th><th>Page</th><th>Verdict</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="num">0</td><td class="num">York 276-ton air cooled 480 volt</td><td class="num">2</td><td>—</td><td class="wrap">Building 2, VSD Yes, 2011</td><td class="num">1 <span class="pill p-native">native</span></td><td><span class="pill p-ok">correct</span></td></tr>
+        <tr><td class="num">1</td><td class="num">York YCIVO177</td><td class="num">1</td><td>—</td><td class="wrap">Building 2, VSD Yes, 2015</td><td class="num">1 <span class="pill p-native">native</span></td><td><span class="pill p-ok">correct</span></td></tr>
+        <tr><td class="num">2</td><td class="num">York 600-ton 480 volt</td><td class="num">1</td><td>—</td><td class="wrap">Building 21, VSD Yes, 2011</td><td class="num">1 <span class="pill p-native">native</span></td><td><span class="pill p-ok">correct</span></td></tr>
+        <tr><td class="num">3</td><td class="num">York AB AB P2 300-ton 480 volt</td><td class="num">2</td><td>—</td><td class="wrap">Building 30, VSD Yes, 2000</td><td class="num">1 <span class="pill p-native">native</span></td><td><span class="pill p-ok">correct</span></td></tr>
+        <tr style="background:var(--warn-bg)"><td class="num">4</td><td class="num">York 1200-ton 4160 volt</td><td class="num">3</td><td>—</td><td class="wrap">Building 31, VSD Yes, 2011</td><td class="num">2 <span class="pill p-ocr">OCR</span></td><td><span class="pill p-warn">attribution</span></td></tr>
+        <tr style="background:var(--warn-bg)"><td class="num">5</td><td class="num">York JHJB 1130-ton 480volt</td><td class="num">1</td><td>—</td><td class="wrap">Building 31, VSD Yes, 2001</td><td class="num">2 <span class="pill p-ocr">OCR</span></td><td><span class="pill p-warn">attribution</span></td></tr>
+        <tr><td class="num">6</td><td class="num">YCIV0177</td><td class="num">1</td><td>—</td><td class="wrap">Comprehensive 1, Operational 6, Oil 1, Tube 1</td><td class="num">3 <span class="pill p-native">native</span></td><td><span class="pill p-ok">correct</span></td></tr>
+        <tr><td class="num">7</td><td class="num">YCIV0267</td><td class="num">2</td><td>—</td><td class="wrap">Comprehensive 1, Operational 6, Oil 1, Tube 1</td><td class="num">3 <span class="pill p-native">native</span></td><td><span class="pill p-ok">correct</span></td></tr>
+        <tr><td class="num">8</td><td class="num">WC, centrifugal, 451-600T/Comp</td><td class="num">1</td><td>—</td><td class="wrap">Comprehensive 1, Operational 6, Oil 1, Tube 1</td><td class="num">3 <span class="pill p-native">native</span></td><td><span class="pill p-ok">correct</span></td></tr>
+        <tr><td class="num">9</td><td class="num">WC, centrifugal, 451-1500T/Comp</td><td class="num">3</td><td>—</td><td class="wrap">Comprehensive 1, Operational 6, Oil 1, Tube 1</td><td class="num">3 <span class="pill p-native">native</span></td><td><span class="pill p-ok">correct</span></td></tr>
+        <tr><td class="num">10</td><td class="num">YKJHJBJ1DAE</td><td class="num">1</td><td>—</td><td class="wrap">Comprehensive 1, Operational 6, Oil 1, Tube 1</td><td class="num">3 <span class="pill p-native">native</span></td><td><span class="pill p-ok">correct</span></td></tr>
+        <tr><td class="num">11</td><td class="num">YKABABP2-CKF</td><td class="num">2</td><td>—</td><td class="wrap">Comprehensive 1, Operational 6, Oil 1, Tube 1</td><td class="num">3 <span class="pill p-native">native</span></td><td><span class="pill p-ok">correct</span></td></tr>
+        <tr style="background:var(--bad-bg)"><td class="num">12</td><td class="num">0001</td><td class="num">—</td><td>—</td><td class="wrap">XXXXX Preventive Maintenance on Five (5) York / Carrier 0.00</td><td class="num">4 <span class="pill p-native">native</span></td><td><span class="pill p-bad">summary row</span></td></tr>
+        <tr><td class="num">13</td><td class="num">0001AA</td><td class="num">4.00</td><td class="num">JB</td><td class="wrap">Quarterly Preventive Maintenance on Five (5) York / Carrier Chillers IAW SOW. Wilmington VAMC</td><td class="num">4 <span class="pill p-native">native</span></td><td><span class="pill p-ok">correct</span></td></tr>
+        <tr><td class="num">14</td><td class="num">0001AB</td><td class="num">1.00</td><td class="num">JB</td><td class="wrap">Annual Preventive Maintenance on Five (5) York / Carrier Chillers IAW SOW. Wilmington VAMC</td><td class="num">4 <span class="pill p-native">native</span></td><td><span class="pill p-ok">correct</span></td></tr>
+        <tr style="background:var(--bad-bg)"><td class="num">15</td><td class="num">0002</td><td class="num">—</td><td>—</td><td class="wrap">Lebanon VAMC Preventive Maintenance on Two (2) Carrier Chillers IAW SOW</td><td class="num">4 <span class="pill p-native">native</span></td><td><span class="pill p-bad">summary row</span></td></tr>
+        <tr><td class="num">16</td><td class="num">0002AA</td><td class="num">1.00</td><td class="num">JB</td><td class="wrap">Annual Inspections on Two (2) Carrier Chillers IAW SOW. Lebanon VAMC</td><td class="num">4 <span class="pill p-native">native</span></td><td><span class="pill p-ok">correct</span></td></tr>
+        <tr><td class="num">17</td><td class="num">0002AB</td><td class="num">2.00</td><td class="num">JB</td><td class="wrap">Operating Inspections on Two (2) Carrier Chillers IAW SOW. Lebanon VAMC</td><td class="num">4 <span class="pill p-native">native</span></td><td><span class="pill p-ok">correct</span></td></tr>
+        <tr style="background:var(--warn-bg)"><td class="num">18</td><td class="num">0002AC</td><td class="num">2.00</td><td class="num">JB</td><td class="wrap"><em>"2.00 JB"</em> — quantity copied into the description</td><td class="num">4 <span class="pill p-native">native</span></td><td><span class="pill p-warn">bad description</span></td></tr>
+        <tr style="background:var(--bad-bg)"><td class="num">19</td><td class="num">0003</td><td class="num">—</td><td>—</td><td class="wrap">Testing on Ten (10) York Chillers IAW. CMC (Philadelphia) VAMC</td><td class="num">5 <span class="pill p-ocr">OCR</span></td><td><span class="pill p-bad">summary row</span></td></tr>
+        <tr><td class="num">20</td><td class="num">0003AA</td><td class="num">12.00</td><td class="num">MO</td><td class="wrap">Monthly Maintenance, Inspection, Repair and Testing on Ten (10) York Chillers. CMC VAMC</td><td class="num">5 <span class="pill p-ocr">OCR</span></td><td><span class="pill p-ok">correct</span></td></tr>
+        <tr style="background:var(--warn-bg)"><td class="num">21</td><td class="num">0003AB</td><td class="num">0.00</td><td class="num">EA</td><td class="wrap">Emergency Repair $2,500–$15,0000 IAW SOW. CMC VAMC</td><td class="num">5 <span class="pill p-ocr">OCR</span></td><td><span class="pill p-warn">price incoherent</span></td></tr>
+        <tr style="background:var(--warn-bg)"><td class="num">22</td><td class="num">0003AC</td><td class="num">0.00</td><td class="num">EA</td><td class="wrap">Parts or Repair over $15,000 IAW SOW. CMC VAMC</td><td class="num">5 <span class="pill p-ocr">OCR</span></td><td><span class="pill p-warn">price incoherent</span></td></tr>
+        <tr><td class="num">23</td><td class="num">0003AD</td><td class="num">0.00</td><td class="num">EA</td><td class="wrap">Additional Cleaning IAW SOW. CMC VAMC</td><td class="num">5 <span class="pill p-ocr">OCR</span></td><td><span class="pill p-ok">correct</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout ok">
+    <p><strong>Every unit price is null, and that is correct.</strong> This GSA form is an unpriced solicitation — the price columns say "Do Not Quote" or "Government will provide dollar amount upon award." The model did not invent a single number, which is the behaviour that matters most for an ERP feed.</p>
+  </div>
+</section>
+
+<section>
+  <h2>The four defects, precisely</h2>
+
+  <h3>1 · Three summary rows extracted as line items <span class="pill p-bad">worst</span></h3>
+  <p>CLINs <code>0001</code>, <code>0002</code>, and <code>0003</code> are group headers covering the sub-items beneath them. Their source text carries the tell:</p>
+  <pre><code>0001  |  XXXXX Preventive Maintenance on Five (5) York / Carrier  0.00  |  Do Not Quote</code></pre>
+  <p>An ERP fed this would create three phantom order lines. The fix belongs in the prompt: a row whose item number has no letter suffix and whose price says "Do Not Quote" is a grouping header, not a deliverable.</p>
+
+  <h3>2 · Five prices claimed as supported with no amount <span class="pill p-warn">caught</span></h3>
+  <p>On items 12, 15, 19, 21 and 22 the model set <code>unit_price.status = "supported"</code> while leaving <code>amount</code> null — asserting it had found a price it had not. <strong>The validator caught all five</strong>, fired one automatic repair call, and the five survived it, so the run ended as <code>completed_with_issues</code> rather than <code>success</code>. This is the deterministic layer doing exactly its job.</p>
+
+  <h3>3 · "Building 31" is not in the cited evidence <span class="pill p-warn">attribution</span></h3>
+  <p>Items 4 and 5 say Building 31. The string does appear in the document — twice, in the narrative sections. But the evidence ID they cite is the table row, which contains no building column at all:</p>
+  <blockquote>ev_p2_t0_r0 = "3 | York 1200-ton 4160 volt | Yes | 2011"</blockquote>
+  <p>So this is not a hallucination — the fact is real and in the document. It is an <em>attribution</em> failure: the value cannot be verified from the evidence offered. A reviewer clicking that citation would not find Building 31 there. Page 2's OCR dropped the building column that page 1 has, and the model filled the gap from context without citing where.</p>
+
+  <h3>4 · One description is just the quantity <span class="pill p-warn">minor</span></h3>
+  <p>Item <code>0002AC</code> has description <code>"2.00 JB"</code>. The source cell genuinely contains only <code>"2.00 JB"</code> — the descriptive text landed in a different cell that the model did not pull in. A parsing/segmentation artifact, faithfully propagated.</p>
+</section>
+
+<section>
+  <h2>Model comparison — same prompt, same pages</h2>
+  <p class="lede">Three models on identical input. The spread is larger than any other variable in the pipeline.</p>
+
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Model</th><th>Items</th><th>Blocking issues</th><th>Abstention</th><th>Cross-page links</th><th>Time</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="num">z-ai/glm-5.2:free</td>
+          <td class="num">24</td><td class="num">5</td>
+          <td><span class="pill p-bad">none</span></td>
+          <td><span class="pill p-bad">no</span></td>
+          <td class="num">64 s</td>
+          <td>completed_with_issues</td>
+        </tr>
+        <tr>
+          <td class="num">stealth/ox-alpha</td>
+          <td class="num">18</td><td class="num">0</td>
+          <td><span class="pill p-ok">/deadlines</span></td>
+          <td><span class="pill p-ok">yes</span></td>
+          <td class="num">503 s</td>
+          <td>success</td>
+        </tr>
+        <tr>
+          <td class="num">nvidia/nemotron-3-super-120b:free</td>
+          <td class="num">0</td><td class="num">0</td>
+          <td><span class="pill p-bad">none</span></td>
+          <td>—</td>
+          <td class="num">59 s</td>
+          <td>success</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p><strong>GLM finds more; ox-alpha is more disciplined.</strong> GLM extracted all 21 real items but asserted prices it lacked and never declared abstention. ox-alpha found 18, declared <code>/deadlines</code> honestly, and linked each price row on page 4 to its ship-to continuation on page 6 — the multi-page table work paying off. GLM ignored pages 6 and 7 entirely.</p>
+
+  <div class="callout bad">
+    <p><strong>Note what the status field did.</strong> Nemotron returned <em>nothing at all</em> and scored <code>success</code>, because an empty array is schema-valid. GLM returned the most usable data in the set and scored <code>completed_with_issues</code>. The status currently measures structural cleanliness, not whether the extraction is any good — a coverage rule is needed before that field means anything.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Verdict</h2>
+
+  <p><strong>The pipeline works and the data is largely correct.</strong> A reviewer handed this would accept 21 items, delete 3, fix 1 description, and re-check 2 citations. That is a usable first pass, and the review step the architecture requires is exactly where those corrections belong.</p>
+
+  <p>Three fixes, in order of value:</p>
+
+  <div class="scroll">
+    <table>
+      <thead><tr><th>#</th><th>Fix</th><th>Where</th><th>Removes</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td>Teach the prompt that an unsuffixed CLIN marked "Do Not Quote" is a grouping header</td><td>prompt</td><td>3 phantom items</td></tr>
+        <tr><td class="num">2</td><td>Narrow the party definition to organizations party to the document; exclude manufacturers named in specs and delivery sites</td><td>prompt</td><td>4 bad parties</td></tr>
+        <tr><td class="num">3</td><td>Coverage rule: empty <code>line_items</code> or empty <code>deadlines</code> with no abstention declared raises an issue</td><td>validator</td><td>silent failures like nemotron's</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>None of this is an accuracy measurement. It is one document, hand-checked. Blueprint §9 still wants 50 labelled documents before any number here is quotable.</p>
+</section>
+
+</div>
+</body>
+</html>

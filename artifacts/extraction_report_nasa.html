@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Extraction Report — NASA-STD-8739.14</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg:#fbfaf8; --surface:#ffffff; --surface-2:#f3f1ed; --border:#ddd8d0;
+    --text:#1c1a17; --muted:#67615a; --accent:#8a3d1f;
+    --ok:#2f6b3d; --ok-bg:#e6f2e8;
+    --warn:#8a6014; --warn-bg:#f7efdc;
+    --bad:#8a2c2c; --bad-bg:#f8e6e6;
+    --native:#2a5b7a; --native-bg:#e2edf3;
+    --code-bg:#f5f3ef;
+    --mono: ui-monospace,"SF Mono","Cascadia Mono",Menlo,Consolas,monospace;
+    --sans: ui-sans-serif,-apple-system,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:#161513; --surface:#1e1d1a; --surface-2:#262421; --border:#38352f;
+      --text:#eceae6; --muted:#a29b92; --accent:#e0895f;
+      --ok:#7fc08d; --ok-bg:#1e2f22;
+      --warn:#d9ad6a; --warn-bg:#2e2718;
+      --bad:#e08d8d; --bad-bg:#33201f;
+      --native:#86b8d6; --native-bg:#1a2730;
+      --code-bg:#201f1c;
+    }
+  }
+  *{box-sizing:border-box;min-width:0}
+  html,body{background:var(--bg);color:var(--text);margin:0;padding:0}
+  body{font-family:var(--sans);font-size:16px;line-height:1.6}
+  .page{max-width:1180px;margin:0 auto;padding:3rem 1.25rem 6rem}
+  header.masthead{border-bottom:2px solid var(--border);padding-bottom:1.75rem;margin-bottom:2.5rem}
+  h1{font-size:clamp(1.8rem,1.3rem + 2.2vw,2.6rem);line-height:1.15;letter-spacing:-.02em;margin:0 0 .5rem}
+  h2{font-size:clamp(1.25rem,1.05rem + 1vw,1.6rem);line-height:1.25;margin:3rem 0 .35rem;letter-spacing:-.01em}
+  h3{font-size:1.02rem;margin:1.75rem 0 .5rem}
+  .sub,.lede{color:var(--muted);max-width:72ch;margin:0 0 1.25rem}
+  .sub{font-size:1.05rem}
+  p,li{max-width:72ch;overflow-wrap:anywhere}
+  .meta{color:var(--muted);font-size:.85rem;font-family:var(--mono);margin-top:1rem}
+  code{font-family:var(--mono);font-size:.86em;background:var(--code-bg);padding:.1em .35em;border-radius:4px;overflow-wrap:anywhere}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:1rem;margin:1.5rem 0}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1rem 1.1rem}
+  .card h4{margin:0 0 .35rem;font-size:.74rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:600}
+  .card .big{font-size:1.7rem;font-weight:600;letter-spacing:-.02em;display:block;line-height:1.1;margin-bottom:.3rem}
+  .card p{margin:0;font-size:.86rem;color:var(--muted)}
+  .scroll{overflow-x:auto;margin:1.25rem 0;border:1px solid var(--border);border-radius:8px;background:var(--surface)}
+  table{border-collapse:collapse;width:100%;font-size:.87rem}
+  th,td{text-align:left;padding:.55rem .75rem;border-bottom:1px solid var(--border);vertical-align:top}
+  th{background:var(--surface-2);font-weight:600;font-size:.74rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);white-space:nowrap}
+  tr:last-child td{border-bottom:none}
+  td.num{font-family:var(--mono);white-space:nowrap}
+  td.wrap{min-width:220px}
+  .pill{display:inline-block;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:.12rem .4rem;border-radius:4px;white-space:nowrap}
+  .p-ok{background:var(--ok-bg);color:var(--ok)}
+  .p-warn{background:var(--warn-bg);color:var(--warn)}
+  .p-bad{background:var(--bad-bg);color:var(--bad)}
+  .p-native{background:var(--native-bg);color:var(--native)}
+  .callout{border-left:3px solid var(--accent);background:var(--surface);padding:.9rem 1.2rem;margin:1.5rem 0;border-radius:0 6px 6px 0}
+  .callout p{margin:0}.callout p+p{margin-top:.6rem}
+  .callout.bad{border-left-color:var(--bad)}
+  .callout.ok{border-left-color:var(--ok)}
+  pre{background:var(--code-bg);border:1px solid var(--border);border-radius:8px;padding:.9rem 1rem;overflow-x:auto;margin:1rem 0;font-size:.8rem;line-height:1.5}
+  pre code{background:none;padding:0;white-space:pre}
+  blockquote{margin:.5rem 0 0;padding-left:.8rem;border-left:2px solid var(--border);color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="masthead">
+  <h1>Extraction Report — NASA Fastener Standard</h1>
+  <p class="sub">The model returned four values from a sixteen-page document. Three of them are right, the absences are right too — and the single most important thing in the document could not be recorded at all.</p>
+  <p class="meta">run 20260824T194334Z · openrouter/free · 03_NASA_Fastener_Procurement_Standard.pdf · 16 pages, all native text · 29,621 tokens · $0.00 · 24.8 s</p>
+</header>
+
+<section>
+  <h2>Headline</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h4>Values returned</h4>
+      <span class="big">4</span>
+      <p>Document number, two parties, and two justified absences.</p>
+    </div>
+    <div class="card">
+      <h4>Correct</h4>
+      <span class="big" style="color:var(--ok)">3 of 4</span>
+      <p>Including the empty <code>line_items</code>, which is the right answer here.</p>
+    </div>
+    <div class="card">
+      <h4>Blocking issues</h4>
+      <span class="big">0</span>
+      <p>Schema valid, every evidence ID resolves.</p>
+    </div>
+    <div class="card">
+      <h4>Unrecordable</h4>
+      <span class="big" style="color:var(--bad)">26 rows</span>
+      <p>Acceptance criteria the contract has no field for.</p>
+    </div>
+  </div>
+
+  <div class="callout bad">
+    <p><strong>This document broke the contract, not the pipeline.</strong> NASA-STD-8739.14 is a procurement <em>standard</em> — it has no order lines, no quantities, no prices. Its substance is acceptance criteria: a fifteen-row lot-size sampling plan and a quality-control matrix on page 16, plus tensile and dimensional inspection rules on pages 14–15.</p>
+    <p>In <code>extraction_candidate_v1.schema.json</code>, <code>tolerances</code> exists <strong>only inside <code>candidateLineItem</code></strong>. With zero line items there is nowhere to put any of it. The retriever found those pages, the parser captured both tables cleanly, the model was handed all of it — and the schema had no field to receive it.</p>
+  </div>
+</section>
+
+<section>
+  <h2>What was extracted</h2>
+
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Field</th><th>Value</th><th>Evidence</th><th>Verdict</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Document number</td>
+          <td class="num">NASA-STD-8739.14</td>
+          <td class="wrap">p6 <span class="pill p-native">native</span> <code>ev_p6_b37</code><blockquote>"NASA-STD-8739.14 - 2020-06-02"</blockquote></td>
+          <td><span class="pill p-ok">correct</span></td>
+        </tr>
+        <tr>
+          <td>Party — buyer</td>
+          <td>NASA</td>
+          <td class="wrap">p6 <span class="pill p-native">native</span> <code>ev_p6_b45</code><blockquote>"…shall be addressed within NASA Center quality management systems within a year of the publication of this standard."</blockquote></td>
+          <td><span class="pill p-ok">correct</span></td>
+        </tr>
+        <tr style="background:var(--warn-bg)">
+          <td>Party — other</td>
+          <td>Defense Logistics Agency (DLA)</td>
+          <td class="wrap">p12 <span class="pill p-native">native</span> <code>ev_p12_b167</code><blockquote>"The supplier is listed in the Defense Logistics Agency (DLA) Qualified Suppliers List (QSL)."</blockquote></td>
+          <td><span class="pill p-warn">not a party</span></td>
+        </tr>
+        <tr>
+          <td>Deadlines</td>
+          <td><em>none</em></td>
+          <td>—</td>
+          <td><span class="pill p-ok">correct</span></td>
+        </tr>
+        <tr>
+          <td>Line items</td>
+          <td><em>none</em></td>
+          <td>—</td>
+          <td><span class="pill p-ok">correct</span></td>
+        </tr>
+        <tr style="background:var(--bad-bg)">
+          <td>Abstentions declared</td>
+          <td><em>none</em></td>
+          <td>—</td>
+          <td><span class="pill p-bad">should list both</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p><strong>The empty <code>line_items</code> is a success, not a miss.</strong> This is the failure mode I was watching for: page 7 carries a table of applicable documents — <code>NPR 7120.5</code>, <code>NASA-STD-5019</code>, <code>NPR 7900.3</code> — which look superficially like part numbers in a two-column table. The model did not turn them into order lines. That is correct restraint.</p>
+
+  <p>But <code>abstained_field_paths</code> is empty again. Both <code>/line_items</code> and <code>/deadlines</code> were deliberate absences and should have been declared. That makes three runs out of four where the model returned nothing without saying so — the one exception being <code>stealth/ox-alpha</code>, which declared <code>/deadlines</code> on the GSA document.</p>
+
+  <p>DLA is the same class of error as York International on the chiller run: an organization named in the text as a <em>reference</em> — here, the authority maintaining the Qualified Suppliers List — rather than a party to the document. Milder, since DLA is at least a procurement body, but still not a party.</p>
+</section>
+
+<section>
+  <h2>What could not be recorded</h2>
+  <p class="lede">All of this was parsed correctly, retrieved into the top pages, and sent to the model. None of it has a home in the output contract.</p>
+
+  <h3>Page 16, table 2 — lot-size sampling plan</h3>
+  <pre><code>Lot Size          | Sample Size A | B  | C | Acceptance Criteria
+1-2               |  2            |  1 | 1 | 0 failures
+3-15              |  3            |  2 | 2 | 0 failures
+16-25             |  4            |  3 | 2 | 0 failures
+26-50             |  5            |  4 | 2 | 0 failures
+51-90             |  6            |  5 | 2 | 0 failures
+91-150            |  7            |  6 | 2 | 0 failures
+151-280           | 10            |  7 | 2 | 0 failures
+281-500           | 11            |  9 | 3 | 0 failures
+501-1200          | 15            | 11 | 3 | 0 failures
+1201-3200         | 18            | 13 | 3 | 0 failures
+3201-10,000       | 22            | 15 | 4 | 0 failures
+10,001-35,000     | 29            | 15 | 4 | 0 failures
+35,001-150,000    | 29            | 15 | 5 | 0 failures
+150,001-500,000   | 29            | 15 | 6 | 0 failures
+500,001+          | 29            | 15 | 7 | 0 failures</code></pre>
+
+  <h3>Page 16, table 1 — quality-control level matrix</h3>
+  <pre><code>Quality Controls              | Level I        | Level II       | Level III
+Supplier Qualification        | Qualified      | Nonqualified   | Qualified or Nonqualified
+Traceability Level            | Complete       | Incomplete     | Complete or Incomplete
+CoC                           | Required       | Required       | Required
+MTR                           | Required       | Required       | Optional
+Dimensional Inspection        | System 22 100% | Sample Size C  | Sample Size B
+Visual Inspection for Finish  | Sample Size B  | Sample Size C  | Sample Size A
+Visual Inspection Uniformity  | 100%           | 100%           | 100%
+Chemical Analysis             | Optional       | Sample Size C  | Sample Size A
+Tensile Testing               | Optional       | Sample Size C  | Sample Size A</code></pre>
+
+  <h3>Page 15 — tensile testing requirements</h3>
+  <blockquote>"Tensile testing shall be performed on a sampling basis for level II threaded fasteners such as bolts, screws, nuts, and nut plates that have been procured from a nonqualified suppliers or have incomplete traceability."</blockquote>
+  <blockquote>"Tensile test reports shall identify the location of the tensile break, the ultimate load/strength, and the specification minimum and maximum values."</blockquote>
+  <p>With named standards <code>NASM1312-8</code> and <code>NAM1312-108</code> — exactly what <code>candidateTolerance.standard</code> was designed to hold.</p>
+
+  <div class="callout">
+    <p><strong>Task 9 asks for "tolerances or acceptance criteria" as a first-class extraction target.</strong> The contract can only express them as a property of a purchase line item. Any specification or standard — a whole document class the scope statement explicitly includes — loses them entirely.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Retrieval finally did its job</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h4>Pages narrowed</h4>
+      <span class="big">8 of 16</span>
+      <p>Half the document dropped before the model saw it.</p>
+    </div>
+    <div class="card">
+      <h4>Selected</h4>
+      <span class="big" style="font-size:1.05rem">6, 7, 10, 12–16</span>
+      <p>Requirements, applicable documents, procurement provisions, inspection, sampling tables.</p>
+    </div>
+    <div class="card">
+      <h4>Structural units</h4>
+      <span class="big">302</span>
+      <p>Indexed in 7.1 s, entirely in memory.</p>
+    </div>
+  </div>
+
+  <p>On the seven-page chiller fixture, retrieval selected all seven pages — a no-op that proved nothing. Here it halved a sixteen-page document and kept every page that mattered: the sampling tables on 16, the inspection rules on 14–15, the procurement provisions on 12–13. Nothing important was dropped. This is the first run where the retrieval stage earned its place.</p>
+
+  <p>The stitcher correctly did nothing — <code>6 fragments into 6 logical tables, 0 spanning pages</code>. This document has no multi-page tables, and linked-table expansion added no pages. Both stages behaving correctly on a document that does not need them.</p>
+</section>
+
+<section>
+  <h2>Compared with the chiller solicitation</h2>
+
+  <div class="scroll">
+    <table>
+      <thead><tr><th></th><th>GSA chiller solicitation</th><th>NASA fastener standard</th></tr></thead>
+      <tbody>
+        <tr><td>Document type</td><td>Priced solicitation</td><td>Technical standard</td></tr>
+        <tr><td>Pages / routes</td><td>7 — 4 native, 3 OCR</td><td>16 — all native</td></tr>
+        <tr><td>Retrieval</td><td>7 of 7 <span class="pill p-warn">no-op</span></td><td>8 of 16 <span class="pill p-ok">halved</span></td></tr>
+        <tr><td>Multi-page tables</td><td>3 <span class="pill p-ok">stitched</span></td><td>0 <span class="pill p-ok">correctly none</span></td></tr>
+        <tr><td>Line items</td><td>24 returned, 21 real</td><td>0 — correct</td></tr>
+        <tr><td>Tolerances</td><td>none in document</td><td><strong>26 rows, unrecordable</strong></td></tr>
+        <tr><td>Blocking issues</td><td>5 <span class="pill p-warn">caught</span></td><td>0</td></tr>
+        <tr><td>Abstention declared</td><td>no</td><td>no</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Between them the two documents exercise every branch: both parser routes, stitching present and absent, retrieval narrowing and not, a document full of line items and a document with none. The contract held for one and failed for the other.</p>
+</section>
+
+<section>
+  <h2>Verdict</h2>
+
+  <p><strong>The pipeline behaved correctly throughout.</strong> It routed, parsed, indexed, narrowed, and extracted without a single blocking issue, and it resisted the trap of turning a reference-document table into order lines. What it produced is accurate.</p>
+
+  <p>What it produced is also nearly useless for this document, and that is a contract problem with a clear fix.</p>
+
+  <div class="scroll">
+    <table>
+      <thead><tr><th>#</th><th>Fix</th><th>Where</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="num">1</td>
+          <td>Add a top-level <code>acceptance_criteria</code> array using the existing <code>candidateTolerance</code> shape, for criteria that apply to the document rather than to one line item</td>
+          <td>contract + schema</td>
+        </tr>
+        <tr>
+          <td class="num">2</td>
+          <td>Coverage rule: empty <code>line_items</code> with no abstention declared raises an issue — this run would have flagged it</td>
+          <td>validator</td>
+        </tr>
+        <tr>
+          <td class="num">3</td>
+          <td>Narrow the party definition to organizations party to the document, excluding referenced authorities and manufacturers</td>
+          <td>prompt</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Fix 1 is the substantive one. It is a schema change, so it needs your decision rather than mine — and it is the kind of finding that only appears when you run a real document end to end instead of reasoning about the design.</p>
+</section>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,1046 @@
+{
+  "schema_version": "industrial-document-candidate/1.0",
+  "document_number": {
+    "status": "supported",
+    "raw": "36C24420Q0680",
+    "value": "36C24420Q0680",
+    "evidence_ids": [
+      "ev_p1_b0",
+      "ev_p2_b0",
+      "ev_p3_b9",
+      "ev_p4_b20",
+      "ev_p5_b0",
+      "ev_p6_b24",
+      "ev_p7_b0"
+    ],
+    "conflict_evidence_ids": []
+  },
+  "parties": [
+    {
+      "role": "buyer",
+      "name": {
+        "status": "supported",
+        "raw": "Department of Veterans Affairs",
+        "value": "Department of Veterans Affairs",
+        "evidence_ids": [
+          "ev_p5_b3",
+          "ev_p6_t3_c2",
+          "ev_p7_t0_c2"
+        ],
+        "conflict_evidence_ids": []
+      }
+    },
+    {
+      "role": "other",
+      "name": {
+        "status": "supported",
+        "raw": "York International",
+        "value": "York International",
+        "evidence_ids": [
+          "ev_p2_b3"
+        ],
+        "conflict_evidence_ids": []
+      }
+    },
+    {
+      "role": "buyer",
+      "name": {
+        "status": "supported",
+        "raw": "CMC VAMC",
+        "value": "CMC VAMC",
+        "evidence_ids": [
+          "ev_p1_b2",
+          "ev_p2_b3"
+        ],
+        "conflict_evidence_ids": []
+      }
+    },
+    {
+      "role": "buyer",
+      "name": {
+        "status": "supported",
+        "raw": "Wilmington VAMC",
+        "value": "Wilmington VAMC",
+        "evidence_ids": [
+          "ev_p4_t2_c10"
+        ],
+        "conflict_evidence_ids": []
+      }
+    },
+    {
+      "role": "buyer",
+      "name": {
+        "status": "supported",
+        "raw": "Lebanon VAMC",
+        "value": "Lebanon VAMC",
+        "evidence_ids": [
+          "ev_p4_t2_c12"
+        ],
+        "conflict_evidence_ids": []
+      }
+    }
+  ],
+  "deadlines": [],
+  "line_items": [
+    {
+      "source_row_ids": [
+        "ev_p1_t0_r1"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "York 276-ton air cooled 480 volt",
+        "value": "York 276-ton air cooled 480 volt",
+        "evidence_ids": [
+          "ev_p1_t0_c7"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "Building 2, VSD Yes, Installation Year 2011",
+        "value": "Building 2, VSD Yes, Installation Year 2011",
+        "evidence_ids": [
+          "ev_p1_t0_c5",
+          "ev_p1_t0_c8",
+          "ev_p1_t0_c9"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "2",
+        "value": "2",
+        "unit": "unit",
+        "evidence_ids": [
+          "ev_p1_t0_c6"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p1_t0_r2"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "York YCIVO177",
+        "value": "York YCIVO177",
+        "evidence_ids": [
+          "ev_p1_t0_c12"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "Building 2, VSD Yes, Installation Year 2015",
+        "value": "Building 2, VSD Yes, Installation Year 2015",
+        "evidence_ids": [
+          "ev_p1_t0_c10",
+          "ev_p1_t0_c13",
+          "ev_p1_t0_c14"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "1",
+        "value": "1",
+        "unit": "unit",
+        "evidence_ids": [
+          "ev_p1_t0_c11"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p1_t0_r3"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "York 600-ton 480 volt",
+        "value": "York 600-ton 480 volt",
+        "evidence_ids": [
+          "ev_p1_t0_c17"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "Building 21, VSD Yes, Installation Year 2011",
+        "value": "Building 21, VSD Yes, Installation Year 2011",
+        "evidence_ids": [
+          "ev_p1_t0_c15",
+          "ev_p1_t0_c18",
+          "ev_p1_t0_c19"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "1",
+        "value": "1",
+        "unit": "unit",
+        "evidence_ids": [
+          "ev_p1_t0_c16"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p1_t0_r4"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "York AB AB P2 300-ton 480 volt",
+        "value": "York AB AB P2 300-ton 480 volt",
+        "evidence_ids": [
+          "ev_p1_t0_c22"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "Building 30, VSD Yes, Installation Year 2000",
+        "value": "Building 30, VSD Yes, Installation Year 2000",
+        "evidence_ids": [
+          "ev_p1_t0_c20",
+          "ev_p1_t0_c23",
+          "ev_p1_t0_c24"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "2",
+        "value": "2",
+        "unit": "unit",
+        "evidence_ids": [
+          "ev_p1_t0_c21"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p2_t0_r0"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "York 1200-ton 4160 volt",
+        "value": "York 1200-ton 4160 volt",
+        "evidence_ids": [
+          "ev_p2_t0_c1"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "Building 31, VSD Yes, Installation Year 2011",
+        "value": "Building 31, VSD Yes, Installation Year 2011",
+        "evidence_ids": [
+          "ev_p2_b6",
+          "ev_p2_t0_c2",
+          "ev_p2_t0_c3"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "3",
+        "value": "3",
+        "unit": "unit",
+        "evidence_ids": [
+          "ev_p2_t0_c0"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p2_t0_r1"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "York JHJB 1130-ton 480volt",
+        "value": "York JHJB 1130-ton 480volt",
+        "evidence_ids": [
+          "ev_p2_t0_c5"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "Building 31, VSD Yes, Installation Year 2001",
+        "value": "Building 31, VSD Yes, Installation Year 2001",
+        "evidence_ids": [
+          "ev_p2_b6",
+          "ev_p2_t0_c6",
+          "ev_p2_t0_c7"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "1",
+        "value": "1",
+        "unit": "unit",
+        "evidence_ids": [
+          "ev_p2_t0_c4"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p3_t1_r1"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "YCIV0177",
+        "value": "YCIV0177",
+        "evidence_ids": [
+          "ev_p3_t1_c7"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "Comprehensive Service 1, Operational Service 6, Oil Testing/Changing 1, Tube Cleaning/coil cleaning 1",
+        "value": "Comprehensive Service 1, Operational Service 6, Oil Testing/Changing 1, Tube Cleaning/coil cleaning 1",
+        "evidence_ids": [
+          "ev_p3_t1_c8",
+          "ev_p3_t1_c9",
+          "ev_p3_t1_c10",
+          "ev_p3_t1_c11"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "1",
+        "value": "1",
+        "unit": "unit",
+        "evidence_ids": [
+          "ev_p3_t1_c6"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p3_t1_r2"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "YCIV0267",
+        "value": "YCIV0267",
+        "evidence_ids": [
+          "ev_p3_t1_c13"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "Comprehensive Service 1, Operational Service 6, Oil Testing/Changing 1, Tube Cleaning/coil cleaning 1",
+        "value": "Comprehensive Service 1, Operational Service 6, Oil Testing/Changing 1, Tube Cleaning/coil cleaning 1",
+        "evidence_ids": [
+          "ev_p3_t1_c14",
+          "ev_p3_t1_c15",
+          "ev_p3_t1_c16",
+          "ev_p3_t1_c17"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "2",
+        "value": "2",
+        "unit": "unit",
+        "evidence_ids": [
+          "ev_p3_t1_c12"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p3_t1_r3"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "WC, centrifugal, 451- 600T/Comp",
+        "value": "WC, centrifugal, 451- 600T/Comp",
+        "evidence_ids": [
+          "ev_p3_t1_c19"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "Comprehensive Service 1, Operational Service 6, Oil Testing/Changing 1, Tube Cleaning/coil cleaning 1",
+        "value": "Comprehensive Service 1, Operational Service 6, Oil Testing/Changing 1, Tube Cleaning/coil cleaning 1",
+        "evidence_ids": [
+          "ev_p3_t1_c20",
+          "ev_p3_t1_c21",
+          "ev_p3_t1_c22",
+          "ev_p3_t1_c23"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "1",
+        "value": "1",
+        "unit": "unit",
+        "evidence_ids": [
+          "ev_p3_t1_c18"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p3_t1_r4"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "WC, centrifugal, 451- 1500T/Comp",
+        "value": "WC, centrifugal, 451- 1500T/Comp",
+        "evidence_ids": [
+          "ev_p3_t1_c25"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "Comprehensive Service 1, Operational Service 6, Oil Testing/Changing 1, Tube Cleaning/coil cleaning 1",
+        "value": "Comprehensive Service 1, Operational Service 6, Oil Testing/Changing 1, Tube Cleaning/coil cleaning 1",
+        "evidence_ids": [
+          "ev_p3_t1_c26",
+          "ev_p3_t1_c27",
+          "ev_p3_t1_c28",
+          "ev_p3_t1_c29"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "3",
+        "value": "3",
+        "unit": "unit",
+        "evidence_ids": [
+          "ev_p3_t1_c24"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p3_t1_r5"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "YKJHJBJ1DAE",
+        "value": "YKJHJBJ1DAE",
+        "evidence_ids": [
+          "ev_p3_t1_c31"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "Comprehensive Service 1, Operational Service 6, Oil Testing/Changing 1, Tube Cleaning/coil cleaning 1",
+        "value": "Comprehensive Service 1, Operational Service 6, Oil Testing/Changing 1, Tube Cleaning/coil cleaning 1",
+        "evidence_ids": [
+          "ev_p3_t1_c32",
+          "ev_p3_t1_c33",
+          "ev_p3_t1_c34",
+          "ev_p3_t1_c35"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "1",
+        "value": "1",
+        "unit": "unit",
+        "evidence_ids": [
+          "ev_p3_t1_c30"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p3_t1_r6"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "YKABABP2-CKF",
+        "value": "YKABABP2-CKF",
+        "evidence_ids": [
+          "ev_p3_t1_c37"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "Comprehensive Service 1, Operational Service 6, Oil Testing/Changing 1, Tube Cleaning/coil cleaning 1",
+        "value": "Comprehensive Service 1, Operational Service 6, Oil Testing/Changing 1, Tube Cleaning/coil cleaning 1",
+        "evidence_ids": [
+          "ev_p3_t1_c38",
+          "ev_p3_t1_c39",
+          "ev_p3_t1_c40",
+          "ev_p3_t1_c41"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "2",
+        "value": "2",
+        "unit": "unit",
+        "evidence_ids": [
+          "ev_p3_t1_c36"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p4_t2_r1"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "0001",
+        "value": "0001",
+        "evidence_ids": [
+          "ev_p4_t2_c6"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "XXXXX Preventive Maintenance on Five (5) York / Carrier 0.00",
+        "value": "XXXXX Preventive Maintenance on Five (5) York / Carrier 0.00",
+        "evidence_ids": [
+          "ev_p4_t2_c7"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": null,
+      "tolerances": [],
+      "unit_price": {
+        "status": "supported",
+        "raw": "Do Not Quote",
+        "amount": null,
+        "currency": null,
+        "price_basis": "Do Not Quote",
+        "evidence_ids": [
+          "ev_p4_t2_c8"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p4_t2_r2"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "0001AA",
+        "value": "0001AA",
+        "evidence_ids": [
+          "ev_p4_t2_c9"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "4.00 JB Quarterly Preventive Maintenance on Five (5) York / Carrier Chillers IAW SOW. Wilmington VAMC . Contract Period: Base POP Begin:",
+        "value": "Quarterly Preventive Maintenance on Five (5) York / Carrier Chillers IAW SOW. Wilmington VAMC",
+        "evidence_ids": [
+          "ev_p4_t2_c10"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "4.00",
+        "value": "4.00",
+        "unit": "JB",
+        "evidence_ids": [
+          "ev_p4_t2_c10"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p4_t2_r3"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "0001AB",
+        "value": "0001AB",
+        "evidence_ids": [
+          "ev_p4_t2_c11"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "1.00 JB Annual Preventive Maintenance on Five (5) York / Carrier Chillers IAW SOW. Wilmington VAMC. Contract Period: Base POP Begin: POP End:",
+        "value": "Annual Preventive Maintenance on Five (5) York / Carrier Chillers IAW SOW. Wilmington VAMC",
+        "evidence_ids": [
+          "ev_p4_t2_c12"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "1.00",
+        "value": "1.00",
+        "unit": "JB",
+        "evidence_ids": [
+          "ev_p4_t2_c12"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p4_t2_r4"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "0002",
+        "value": "0002",
+        "evidence_ids": [
+          "ev_p4_t2_c13"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "XXXXX Lebanon VAMC Preventive Maintenance on Two (2) Carrier Chillers IAW SOW. Contract Period: Base POP Begin: 0.00",
+        "value": "Lebanon VAMC Preventive Maintenance on Two (2) Carrier Chillers IAW SOW",
+        "evidence_ids": [
+          "ev_p4_t2_c14"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": null,
+      "tolerances": [],
+      "unit_price": {
+        "status": "supported",
+        "raw": "Do Not Quote",
+        "amount": null,
+        "currency": null,
+        "price_basis": "Do Not Quote",
+        "evidence_ids": [
+          "ev_p4_t2_c15"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p4_t2_r5"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "0002AA",
+        "value": "0002AA",
+        "evidence_ids": [
+          "ev_p4_t2_c16"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "1.00 JB Annual Inspections on Two (2) Carrier Chillers IAW SOW. Lebanon VAMC. Contract Period: Base POP Begin: POP End:",
+        "value": "Annual Inspections on Two (2) Carrier Chillers IAW SOW. Lebanon VAMC",
+        "evidence_ids": [
+          "ev_p4_t2_c17"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "1.00",
+        "value": "1.00",
+        "unit": "JB",
+        "evidence_ids": [
+          "ev_p4_t2_c17"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p4_t2_r6"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "0002AB",
+        "value": "0002AB",
+        "evidence_ids": [
+          "ev_p4_t2_c18"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "2.00 JB Operating Inspections on Two (2) Carrier Chillers IAW SOW. Lebanon VAMC.",
+        "value": "Operating Inspections on Two (2) Carrier Chillers IAW SOW. Lebanon VAMC",
+        "evidence_ids": [
+          "ev_p4_t2_c19"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "2.00",
+        "value": "2.00",
+        "unit": "JB",
+        "evidence_ids": [
+          "ev_p4_t2_c19"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p4_t2_r7"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "0002AC",
+        "value": "0002AC",
+        "evidence_ids": [
+          "ev_p4_t2_c20"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "2.00 JB",
+        "value": "2.00 JB",
+        "evidence_ids": [
+          "ev_p4_t2_c21"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "2.00",
+        "value": "2.00",
+        "unit": "JB",
+        "evidence_ids": [
+          "ev_p4_t2_c21"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p5_t0_r1"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "0003",
+        "value": "0003",
+        "evidence_ids": [
+          "ev_p5_t0_c2"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "Testing on Ten (10) York Chillers IAW. Contract Period: Base POP Begin:",
+        "value": "Testing on Ten (10) York Chillers IAW. CMC (Philadelphia) VAMC. Maintenance, Inspection, Repair and POP End:",
+        "evidence_ids": [
+          "ev_p5_t0_c2",
+          "ev_p5_t0_c3"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": null,
+      "tolerances": [],
+      "unit_price": {
+        "status": "supported",
+        "raw": "0.00 XXXXX Do Not Quote",
+        "amount": null,
+        "currency": null,
+        "price_basis": "Do Not Quote",
+        "evidence_ids": [
+          "ev_p5_t0_c3"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p5_t0_r2"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "0003AA",
+        "value": "0003AA",
+        "evidence_ids": [
+          "ev_p5_t0_c4"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "12.00 MO Monthly Maintenance, Inspection, Repair and Testing on Ten (10) York Chillers IAW. CMC VAMC.",
+        "value": "Monthly Maintenance, Inspection, Repair and Testing on Ten (10) York Chillers IAW. CMC VAMC",
+        "evidence_ids": [
+          "ev_p5_t0_c5"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "12.00",
+        "value": "12.00",
+        "unit": "MO",
+        "evidence_ids": [
+          "ev_p5_t0_c5"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p5_t0_r3"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "0003AB",
+        "value": "0003AB",
+        "evidence_ids": [
+          "ev_p5_t0_c6"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "0.00 EA Government will Do Not Quote provide dollar amount upon award Emergency Repair $2,500- $15,0000 IAW SOW. CMC VAMC. Contract Period: Base",
+        "value": "Emergency Repair $2,500- $15,0000 IAW SOW. CMC VAMC",
+        "evidence_ids": [
+          "ev_p5_t0_c7"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "0.00",
+        "value": "0.00",
+        "unit": "EA",
+        "evidence_ids": [
+          "ev_p5_t0_c7"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [
+        {
+          "status": "supported",
+          "type": "acceptance",
+          "target": "Emergency Repair cost range",
+          "raw": "Emergency Repair $2,500- $15,0000",
+          "nominal": null,
+          "lower_limit": "2500",
+          "upper_limit": "15000",
+          "unit": "USD",
+          "standard": null,
+          "evidence_ids": [
+            "ev_p5_t0_c7"
+          ],
+          "conflict_evidence_ids": []
+        }
+      ],
+      "unit_price": {
+        "status": "supported",
+        "raw": "Do Not Quote",
+        "amount": null,
+        "currency": null,
+        "price_basis": "Do Not Quote",
+        "evidence_ids": [
+          "ev_p5_t0_c7"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p5_t0_r4"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "0003AC",
+        "value": "0003AC",
+        "evidence_ids": [
+          "ev_p5_t0_c8"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "0.00 EA Government will Do Not Quote provide dollar amount upon award Parts or Repair over $15,000 IAW SOW. CMC VAMC.",
+        "value": "Parts or Repair over $15,000 IAW SOW. CMC VAMC",
+        "evidence_ids": [
+          "ev_p5_t0_c9"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "0.00",
+        "value": "0.00",
+        "unit": "EA",
+        "evidence_ids": [
+          "ev_p5_t0_c9"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [],
+      "unit_price": {
+        "status": "supported",
+        "raw": "Do Not Quote",
+        "amount": null,
+        "currency": null,
+        "price_basis": "Do Not Quote",
+        "evidence_ids": [
+          "ev_p5_t0_c9"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "line_total": null,
+      "delivery_deadline": null
+    },
+    {
+      "source_row_ids": [
+        "ev_p5_t0_r5",
+        "ev_p5_t0_r6"
+      ],
+      "part_number": {
+        "status": "supported",
+        "raw": "0003AD",
+        "value": "0003AD",
+        "evidence_ids": [
+          "ev_p5_t0_c10"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "description": {
+        "status": "supported",
+        "raw": "0.00EA Additional Cleaning IAW SOW. CMC VAMC. Contract Period: Base POP Begin: POP End:",
+        "value": "Additional Cleaning IAW SOW. CMC VAMC",
+        "evidence_ids": [
+          "ev_p5_t0_c12"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "quantity": {
+        "status": "supported",
+        "raw": "0.00",
+        "value": "0.00",
+        "unit": "EA",
+        "evidence_ids": [
+          "ev_p5_t0_c12"
+        ],
+        "conflict_evidence_ids": []
+      },
+      "tolerances": [],
+      "unit_price": null,
+      "line_total": null,
+      "delivery_deadline": null
+    }
+  ],
+  "abstained_field_paths": []
+}

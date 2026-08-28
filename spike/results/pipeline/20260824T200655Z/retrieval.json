@@ -1,0 +1,818 @@
+{
+  "field_families": [
+    {
+      "field_family": "document_identity",
+      "query": "What is the solicitation or document number, title, and issuing office?",
+      "method": "hybrid_rrf",
+      "pool": [
+        {
+          "rank": 1,
+          "page_number": 1,
+          "score": 0.06478893337698204
+        },
+        {
+          "rank": 2,
+          "page_number": 40,
+          "score": 0.06426850662704708
+        },
+        {
+          "rank": 3,
+          "page_number": 41,
+          "score": 0.06273601418133337
+        },
+        {
+          "rank": 4,
+          "page_number": 43,
+          "score": 0.06086701288907172
+        },
+        {
+          "rank": 5,
+          "page_number": 56,
+          "score": 0.05913461538461538
+        },
+        {
+          "rank": 6,
+          "page_number": 48,
+          "score": 0.05749641662685141
+        },
+        {
+          "rank": 7,
+          "page_number": 58,
+          "score": 0.05596788325578585
+        },
+        {
+          "rank": 8,
+          "page_number": 47,
+          "score": 0.05524064543051884
+        },
+        {
+          "rank": 9,
+          "page_number": 59,
+          "score": 0.05348783369167383
+        },
+        {
+          "rank": 10,
+          "page_number": 28,
+          "score": 0.05327960030165913
+        }
+      ],
+      "reranked": true,
+      "rerank_order": [
+        {
+          "page_number": 1,
+          "retrieval_rank": 1,
+          "score": 0.15224824845790863,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p1-b85"
+        },
+        {
+          "page_number": 40,
+          "retrieval_rank": 2,
+          "score": -0.01569771021604538,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p40-b677"
+        },
+        {
+          "page_number": 28,
+          "retrieval_rank": 10,
+          "score": -0.9933432936668396,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p28-b451"
+        },
+        {
+          "page_number": 41,
+          "retrieval_rank": 3,
+          "score": -3.3488500118255615,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p41-b710"
+        },
+        {
+          "page_number": 48,
+          "retrieval_rank": 6,
+          "score": -3.7774014472961426,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p48-b820"
+        },
+        {
+          "page_number": 43,
+          "retrieval_rank": 4,
+          "score": -4.242061614990234,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p43-b732"
+        },
+        {
+          "page_number": 56,
+          "retrieval_rank": 5,
+          "score": -4.489803314208984,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p56-b953"
+        },
+        {
+          "page_number": 47,
+          "retrieval_rank": 8,
+          "score": -4.8321757316589355,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p47-b815"
+        },
+        {
+          "page_number": 58,
+          "retrieval_rank": 7,
+          "score": -4.963077545166016,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p58-b993"
+        },
+        {
+          "page_number": 59,
+          "retrieval_rank": 9,
+          "score": -5.049129962921143,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p59-b1015"
+        }
+      ],
+      "seed_page_ids": [
+        "01_GSA_VA_Chiller_Maintenance_Solicitation.pdf::p1",
+        "01_GSA_VA_Chiller_Maintenance_Solicitation.pdf::p40",
+        "01_GSA_VA_Chiller_Maintenance_Solicitation.pdf::p28"
+      ]
+    },
+    {
+      "field_family": "parties",
+      "query": "Which buyer, contracting agency, contractor, or supplier organizations are named?",
+      "method": "hybrid_rrf",
+      "pool": [
+        {
+          "rank": 1,
+          "page_number": 31,
+          "score": 0.060944667722161325
+        },
+        {
+          "rank": 2,
+          "page_number": 36,
+          "score": 0.059538211623733864
+        },
+        {
+          "rank": 3,
+          "page_number": 57,
+          "score": 0.05875604942177553
+        },
+        {
+          "rank": 4,
+          "page_number": 28,
+          "score": 0.058621933621933624
+        },
+        {
+          "rank": 5,
+          "page_number": 19,
+          "score": 0.058558959126454806
+        },
+        {
+          "rank": 6,
+          "page_number": 55,
+          "score": 0.05809676487425849
+        },
+        {
+          "rank": 7,
+          "page_number": 58,
+          "score": 0.057628613197404144
+        },
+        {
+          "rank": 8,
+          "page_number": 1,
+          "score": 0.05715526093135201
+        },
+        {
+          "rank": 9,
+          "page_number": 56,
+          "score": 0.05540460689727299
+        },
+        {
+          "rank": 10,
+          "page_number": 46,
+          "score": 0.05433364801616849
+        }
+      ],
+      "reranked": true,
+      "rerank_order": [
+        {
+          "page_number": 19,
+          "retrieval_rank": 5,
+          "score": -5.705420970916748,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p19-b351"
+        },
+        {
+          "page_number": 28,
+          "retrieval_rank": 4,
+          "score": -6.607298851013184,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p28-b458"
+        },
+        {
+          "page_number": 1,
+          "retrieval_rank": 8,
+          "score": -6.856795310974121,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p1-b93"
+        },
+        {
+          "page_number": 36,
+          "retrieval_rank": 2,
+          "score": -7.18619441986084,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p36-b619"
+        },
+        {
+          "page_number": 31,
+          "retrieval_rank": 1,
+          "score": -8.154067993164062,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p31-b515"
+        },
+        {
+          "page_number": 57,
+          "retrieval_rank": 3,
+          "score": -8.275823593139648,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p57-b977"
+        },
+        {
+          "page_number": 55,
+          "retrieval_rank": 6,
+          "score": -8.552092552185059,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p55-b936"
+        },
+        {
+          "page_number": 56,
+          "retrieval_rank": 9,
+          "score": -9.682594299316406,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p56-b959"
+        },
+        {
+          "page_number": 58,
+          "retrieval_rank": 7,
+          "score": -10.772798538208008,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p58-b993"
+        },
+        {
+          "page_number": 46,
+          "retrieval_rank": 10,
+          "score": -10.939141273498535,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p46-b791"
+        }
+      ],
+      "seed_page_ids": [
+        "01_GSA_VA_Chiller_Maintenance_Solicitation.pdf::p19",
+        "01_GSA_VA_Chiller_Maintenance_Solicitation.pdf::p28",
+        "01_GSA_VA_Chiller_Maintenance_Solicitation.pdf::p1"
+      ]
+    },
+    {
+      "field_family": "parts_quantities",
+      "query": "Which part numbers, models, equipment, and their quantities and units are listed?",
+      "method": "hybrid_rrf",
+      "pool": [
+        {
+          "rank": 1,
+          "page_number": 55,
+          "score": 0.06406743265548132
+        },
+        {
+          "rank": 2,
+          "page_number": 43,
+          "score": 0.06236781762728467
+        },
+        {
+          "rank": 3,
+          "page_number": 13,
+          "score": 0.058287538864873145
+        },
+        {
+          "rank": 4,
+          "page_number": 14,
+          "score": 0.05388535104659878
+        },
+        {
+          "rank": 5,
+          "page_number": 50,
+          "score": 0.05371361192256715
+        },
+        {
+          "rank": 6,
+          "page_number": 11,
+          "score": 0.05346741728764201
+        },
+        {
+          "rank": 7,
+          "page_number": 28,
+          "score": 0.053212889555794986
+        },
+        {
+          "rank": 8,
+          "page_number": 16,
+          "score": 0.05246188154643369
+        },
+        {
+          "rank": 9,
+          "page_number": 41,
+          "score": 0.051786499533154264
+        },
+        {
+          "rank": 10,
+          "page_number": 9,
+          "score": 0.05176014409869553
+        }
+      ],
+      "reranked": true,
+      "rerank_order": [
+        {
+          "page_number": 43,
+          "retrieval_rank": 2,
+          "score": -0.5621758699417114,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p43-b732"
+        },
+        {
+          "page_number": 9,
+          "retrieval_rank": 10,
+          "score": -6.814256191253662,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p9-t3-r0"
+        },
+        {
+          "page_number": 14,
+          "retrieval_rank": 4,
+          "score": -7.632240295410156,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p14-b297"
+        },
+        {
+          "page_number": 55,
+          "retrieval_rank": 1,
+          "score": -8.832015991210938,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p55-b936"
+        },
+        {
+          "page_number": 28,
+          "retrieval_rank": 7,
+          "score": -9.723347663879395,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p28-b461"
+        },
+        {
+          "page_number": 16,
+          "retrieval_rank": 8,
+          "score": -10.174296379089355,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p16-b322"
+        },
+        {
+          "page_number": 13,
+          "retrieval_rank": 3,
+          "score": -10.533308029174805,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p13-b290"
+        },
+        {
+          "page_number": 50,
+          "retrieval_rank": 5,
+          "score": -10.636062622070312,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p50-b852"
+        },
+        {
+          "page_number": 11,
+          "retrieval_rank": 6,
+          "score": -10.67349624633789,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p11-b252"
+        },
+        {
+          "page_number": 41,
+          "retrieval_rank": 9,
+          "score": -11.220003128051758,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p41-b698"
+        }
+      ],
+      "seed_page_ids": [
+        "01_GSA_VA_Chiller_Maintenance_Solicitation.pdf::p43",
+        "01_GSA_VA_Chiller_Maintenance_Solicitation.pdf::p9",
+        "01_GSA_VA_Chiller_Maintenance_Solicitation.pdf::p14"
+      ]
+    },
+    {
+      "field_family": "tolerances",
+      "query": "What tolerances, acceptance criteria, inspection requirements, or standards apply?",
+      "method": "hybrid_rrf",
+      "pool": [
+        {
+          "rank": 1,
+          "page_number": 17,
+          "score": 0.06402049075403121
+        },
+        {
+          "rank": 2,
+          "page_number": 41,
+          "score": 0.060709103293058515
+        },
+        {
+          "rank": 3,
+          "page_number": 38,
+          "score": 0.05801589714633193
+        },
+        {
+          "rank": 4,
+          "page_number": 36,
+          "score": 0.05758291416186153
+        },
+        {
+          "rank": 5,
+          "page_number": 9,
+          "score": 0.05679989944695827
+        },
+        {
+          "rank": 6,
+          "page_number": 10,
+          "score": 0.056247288402942394
+        },
+        {
+          "rank": 7,
+          "page_number": 11,
+          "score": 0.0557840449144797
+        },
+        {
+          "rank": 8,
+          "page_number": 30,
+          "score": 0.0550158609313539
+        },
+        {
+          "rank": 9,
+          "page_number": 55,
+          "score": 0.05463683747376971
+        },
+        {
+          "rank": 10,
+          "page_number": 57,
+          "score": 0.054525718269647
+        }
+      ],
+      "reranked": true,
+      "rerank_order": [
+        {
+          "page_number": 30,
+          "retrieval_rank": 8,
+          "score": -10.573890686035156,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p30-b494"
+        },
+        {
+          "page_number": 9,
+          "retrieval_rank": 5,
+          "score": -10.583365440368652,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p9-b209"
+        },
+        {
+          "page_number": 11,
+          "retrieval_rank": 7,
+          "score": -10.663349151611328,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p11-b255"
+        },
+        {
+          "page_number": 38,
+          "retrieval_rank": 3,
+          "score": -10.696662902832031,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p38-b652"
+        },
+        {
+          "page_number": 36,
+          "retrieval_rank": 4,
+          "score": -10.718818664550781,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p36-b624"
+        },
+        {
+          "page_number": 57,
+          "retrieval_rank": 10,
+          "score": -10.780529022216797,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p57-b988"
+        },
+        {
+          "page_number": 10,
+          "retrieval_rank": 6,
+          "score": -10.901033401489258,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p10-b241"
+        },
+        {
+          "page_number": 17,
+          "retrieval_rank": 1,
+          "score": -10.981815338134766,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p17-b333"
+        },
+        {
+          "page_number": 41,
+          "retrieval_rank": 2,
+          "score": -11.152223587036133,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p41-b699"
+        },
+        {
+          "page_number": 55,
+          "retrieval_rank": 9,
+          "score": -11.200252532958984,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p55-b948"
+        }
+      ],
+      "seed_page_ids": [
+        "01_GSA_VA_Chiller_Maintenance_Solicitation.pdf::p30",
+        "01_GSA_VA_Chiller_Maintenance_Solicitation.pdf::p9",
+        "01_GSA_VA_Chiller_Maintenance_Solicitation.pdf::p11"
+      ]
+    },
+    {
+      "field_family": "deadlines",
+      "query": "What are the submission deadlines, delivery dates, and periods of performance?",
+      "method": "hybrid_rrf",
+      "pool": [
+        {
+          "rank": 1,
+          "page_number": 17,
+          "score": 0.06426850662704708
+        },
+        {
+          "rank": 2,
+          "page_number": 41,
+          "score": 0.059506601865142325
+        },
+        {
+          "rank": 3,
+          "page_number": 1,
+          "score": 0.05887339247439867
+        },
+        {
+          "rank": 4,
+          "page_number": 40,
+          "score": 0.05844710961381132
+        },
+        {
+          "rank": 5,
+          "page_number": 16,
+          "score": 0.05804371479774705
+        },
+        {
+          "rank": 6,
+          "page_number": 47,
+          "score": 0.05802534944325989
+        },
+        {
+          "rank": 7,
+          "page_number": 30,
+          "score": 0.05603900151585986
+        },
+        {
+          "rank": 8,
+          "page_number": 25,
+          "score": 0.054803916530382135
+        },
+        {
+          "rank": 9,
+          "page_number": 2,
+          "score": 0.05350127282349664
+        },
+        {
+          "rank": 10,
+          "page_number": 32,
+          "score": 0.05329856508575846
+        }
+      ],
+      "reranked": true,
+      "rerank_order": [
+        {
+          "page_number": 17,
+          "retrieval_rank": 1,
+          "score": -2.4186127185821533,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p17-b329"
+        },
+        {
+          "page_number": 1,
+          "retrieval_rank": 3,
+          "score": -4.036985397338867,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p1-b72"
+        },
+        {
+          "page_number": 25,
+          "retrieval_rank": 8,
+          "score": -4.9197282791137695,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p25-b428"
+        },
+        {
+          "page_number": 16,
+          "retrieval_rank": 5,
+          "score": -6.284841537475586,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p16-b319"
+        },
+        {
+          "page_number": 2,
+          "retrieval_rank": 9,
+          "score": -6.685358047485352,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p2-t0-r6"
+        },
+        {
+          "page_number": 32,
+          "retrieval_rank": 10,
+          "score": -8.498600006103516,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p32-b531"
+        },
+        {
+          "page_number": 30,
+          "retrieval_rank": 7,
+          "score": -10.11186408996582,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p30-b502"
+        },
+        {
+          "page_number": 40,
+          "retrieval_rank": 4,
+          "score": -10.180244445800781,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p40-b684"
+        },
+        {
+          "page_number": 47,
+          "retrieval_rank": 6,
+          "score": -10.573415756225586,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p47-b807"
+        },
+        {
+          "page_number": 41,
+          "retrieval_rank": 2,
+          "score": -10.648658752441406,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p41-b700"
+        }
+      ],
+      "seed_page_ids": [
+        "01_GSA_VA_Chiller_Maintenance_Solicitation.pdf::p17",
+        "01_GSA_VA_Chiller_Maintenance_Solicitation.pdf::p1",
+        "01_GSA_VA_Chiller_Maintenance_Solicitation.pdf::p25"
+      ]
+    },
+    {
+      "field_family": "prices",
+      "query": "Find the price and cost schedule line items with quantities, units, unit prices, and amounts.",
+      "method": "hybrid_rrf",
+      "pool": [
+        {
+          "rank": 1,
+          "page_number": 24,
+          "score": 0.06384129063829452
+        },
+        {
+          "rank": 2,
+          "page_number": 55,
+          "score": 0.06333725838023
+        },
+        {
+          "rank": 3,
+          "page_number": 2,
+          "score": 0.0623485622536856
+        },
+        {
+          "rank": 4,
+          "page_number": 1,
+          "score": 0.061223154684933424
+        },
+        {
+          "rank": 5,
+          "page_number": 13,
+          "score": 0.0569153209213776
+        },
+        {
+          "rank": 6,
+          "page_number": 29,
+          "score": 0.055682165057165056
+        },
+        {
+          "rank": 7,
+          "page_number": 11,
+          "score": 0.05375510345176675
+        },
+        {
+          "rank": 8,
+          "page_number": 51,
+          "score": 0.053122205454951936
+        },
+        {
+          "rank": 9,
+          "page_number": 25,
+          "score": 0.05254366229975986
+        },
+        {
+          "rank": 10,
+          "page_number": 12,
+          "score": 0.05179041757659983
+        }
+      ],
+      "reranked": true,
+      "rerank_order": [
+        {
+          "page_number": 24,
+          "retrieval_rank": 1,
+          "score": -2.638317108154297,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p24-t12-r7"
+        },
+        {
+          "page_number": 2,
+          "retrieval_rank": 3,
+          "score": -4.7361602783203125,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p2-t0-r4"
+        },
+        {
+          "page_number": 1,
+          "retrieval_rank": 4,
+          "score": -5.791137218475342,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p1-b68"
+        },
+        {
+          "page_number": 25,
+          "retrieval_rank": 9,
+          "score": -7.1844587326049805,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p25-b427"
+        },
+        {
+          "page_number": 12,
+          "retrieval_rank": 10,
+          "score": -9.918022155761719,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p12-b278"
+        },
+        {
+          "page_number": 29,
+          "retrieval_rank": 6,
+          "score": -10.054021835327148,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p29-b470"
+        },
+        {
+          "page_number": 51,
+          "retrieval_rank": 8,
+          "score": -10.189647674560547,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p51-b873"
+        },
+        {
+          "page_number": 55,
+          "retrieval_rank": 2,
+          "score": -10.203794479370117,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p55-b937"
+        },
+        {
+          "page_number": 11,
+          "retrieval_rank": 7,
+          "score": -10.832162857055664,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p11-b261"
+        },
+        {
+          "page_number": 13,
+          "retrieval_rank": 5,
+          "score": -11.026670455932617,
+          "evidence_unit": "01_GSA_VA_Chiller_Maintenance_Solicitation:p13-b290"
+        }
+      ],
+      "seed_page_ids": [
+        "01_GSA_VA_Chiller_Maintenance_Solicitation.pdf::p24",
+        "01_GSA_VA_Chiller_Maintenance_Solicitation.pdf::p2",
+        "01_GSA_VA_Chiller_Maintenance_Solicitation.pdf::p1"
+      ]
+    }
+  ],
+  "seed_pages": [
+    1,
+    2,
+    9,
+    11,
+    14,
+    17,
+    19,
+    24,
+    25,
+    28,
+    30,
+    40,
+    43
+  ],
+  "linked_table_expansion": [
+    {
+      "logical_table_id": "lt-005",
+      "fragment_ids": [
+        "p13-t4",
+        "p14-t5"
+      ],
+      "seed_pages": [
+        14
+      ],
+      "added_pages": [
+        13
+      ]
+    },
+    {
+      "logical_table_id": "lt-007",
+      "fragment_ids": [
+        "p19-t7",
+        "p20-t8",
+        "p21-t9"
+      ],
+      "seed_pages": [
+        19
+      ],
+      "added_pages": [
+        20,
+        21
+      ]
+    }
+  ],
+  "pages_sent_to_llm": [
+    1,
+    2,
+    9,
+    11,
+    13,
+    14,
+    17,
+    19,
+    20,
+    21,
+    24,
+    25,
+    28,
+    30,
+    40,
+    43
+  ],
+  "pages_dropped_by_cap": []
+}

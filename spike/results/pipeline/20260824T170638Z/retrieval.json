@@ -1,0 +1,775 @@
+{
+  "field_families": [
+    {
+      "field_family": "document_identity",
+      "query": "What is the solicitation or document number, title, and issuing office?",
+      "method": "hybrid_rrf",
+      "pool": [
+        {
+          "rank": 1,
+          "page_number": 10,
+          "score": 0.06376447436898257
+        },
+        {
+          "rank": 2,
+          "page_number": 15,
+          "score": 0.06124042359896406
+        },
+        {
+          "rank": 3,
+          "page_number": 6,
+          "score": 0.06093524531024531
+        },
+        {
+          "rank": 4,
+          "page_number": 3,
+          "score": 0.05976202239789197
+        },
+        {
+          "rank": 5,
+          "page_number": 7,
+          "score": 0.05968903708524699
+        },
+        {
+          "rank": 6,
+          "page_number": 1,
+          "score": 0.05932809495370579
+        },
+        {
+          "rank": 7,
+          "page_number": 13,
+          "score": 0.05921591478470573
+        },
+        {
+          "rank": 8,
+          "page_number": 5,
+          "score": 0.05917374325915825
+        },
+        {
+          "rank": 9,
+          "page_number": 8,
+          "score": 0.05845680779479528
+        },
+        {
+          "rank": 10,
+          "page_number": 12,
+          "score": 0.05842164488246423
+        }
+      ],
+      "reranked": true,
+      "rerank_order": [
+        {
+          "page_number": 15,
+          "retrieval_rank": 2,
+          "score": -10.321029663085938,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p15-b222"
+        },
+        {
+          "page_number": 10,
+          "retrieval_rank": 1,
+          "score": -10.710484504699707,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p10-b138"
+        },
+        {
+          "page_number": 7,
+          "retrieval_rank": 5,
+          "score": -10.918723106384277,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p7-b54"
+        },
+        {
+          "page_number": 8,
+          "retrieval_rank": 9,
+          "score": -10.993586540222168,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p8-b75"
+        },
+        {
+          "page_number": 1,
+          "retrieval_rank": 6,
+          "score": -11.008167266845703,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p1-b10"
+        },
+        {
+          "page_number": 6,
+          "retrieval_rank": 3,
+          "score": -11.06200885772705,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p6-b43"
+        },
+        {
+          "page_number": 3,
+          "retrieval_rank": 4,
+          "score": -11.098438262939453,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p3-b16"
+        },
+        {
+          "page_number": 13,
+          "retrieval_rank": 7,
+          "score": -11.126760482788086,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p13-b182"
+        },
+        {
+          "page_number": 5,
+          "retrieval_rank": 8,
+          "score": -11.172157287597656,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p5-b35"
+        },
+        {
+          "page_number": 12,
+          "retrieval_rank": 10,
+          "score": -11.189464569091797,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p12-b164"
+        }
+      ],
+      "seed_page_ids": [
+        "03_NASA_Fastener_Procurement_Standard.pdf::p15",
+        "03_NASA_Fastener_Procurement_Standard.pdf::p10",
+        "03_NASA_Fastener_Procurement_Standard.pdf::p7"
+      ]
+    },
+    {
+      "field_family": "parties",
+      "query": "Which buyer, contracting agency, contractor, or supplier organizations are named?",
+      "method": "hybrid_rrf",
+      "pool": [
+        {
+          "rank": 1,
+          "page_number": 12,
+          "score": 0.06504494976203068
+        },
+        {
+          "rank": 2,
+          "page_number": 10,
+          "score": 0.06453291699193339
+        },
+        {
+          "rank": 3,
+          "page_number": 6,
+          "score": 0.06228216228216228
+        },
+        {
+          "rank": 4,
+          "page_number": 7,
+          "score": 0.06026433165283095
+        },
+        {
+          "rank": 5,
+          "page_number": 9,
+          "score": 0.06019464190903192
+        },
+        {
+          "rank": 6,
+          "page_number": 3,
+          "score": 0.06010014528850145
+        },
+        {
+          "rank": 7,
+          "page_number": 11,
+          "score": 0.05948200175592625
+        },
+        {
+          "rank": 8,
+          "page_number": 8,
+          "score": 0.0593464914346727
+        },
+        {
+          "rank": 9,
+          "page_number": 13,
+          "score": 0.05831522677564176
+        },
+        {
+          "rank": 10,
+          "page_number": 5,
+          "score": 0.05763517528223411
+        }
+      ],
+      "reranked": true,
+      "rerank_order": [
+        {
+          "page_number": 12,
+          "retrieval_rank": 1,
+          "score": -5.421878814697266,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p12-b167"
+        },
+        {
+          "page_number": 10,
+          "retrieval_rank": 2,
+          "score": -5.521909713745117,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p10-b139"
+        },
+        {
+          "page_number": 6,
+          "retrieval_rank": 3,
+          "score": -7.338369846343994,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p6-b48"
+        },
+        {
+          "page_number": 5,
+          "retrieval_rank": 10,
+          "score": -8.030180931091309,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p5-b35"
+        },
+        {
+          "page_number": 11,
+          "retrieval_rank": 7,
+          "score": -8.477377891540527,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p11-b144"
+        },
+        {
+          "page_number": 13,
+          "retrieval_rank": 9,
+          "score": -8.972407341003418,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p13-b179"
+        },
+        {
+          "page_number": 3,
+          "retrieval_rank": 6,
+          "score": -9.41366958618164,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p3-b18"
+        },
+        {
+          "page_number": 7,
+          "retrieval_rank": 4,
+          "score": -9.49173355102539,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p7-t2-r10"
+        },
+        {
+          "page_number": 9,
+          "retrieval_rank": 5,
+          "score": -9.52713394165039,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p9-b87"
+        },
+        {
+          "page_number": 8,
+          "retrieval_rank": 8,
+          "score": -9.778347969055176,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p8-b58"
+        }
+      ],
+      "seed_page_ids": [
+        "03_NASA_Fastener_Procurement_Standard.pdf::p12",
+        "03_NASA_Fastener_Procurement_Standard.pdf::p10",
+        "03_NASA_Fastener_Procurement_Standard.pdf::p6"
+      ]
+    },
+    {
+      "field_family": "parts_quantities",
+      "query": "Which part numbers, models, equipment, and their quantities and units are listed?",
+      "method": "hybrid_rrf",
+      "pool": [
+        {
+          "rank": 1,
+          "page_number": 13,
+          "score": 0.06428490111891752
+        },
+        {
+          "rank": 2,
+          "page_number": 9,
+          "score": 0.06259936316685885
+        },
+        {
+          "rank": 3,
+          "page_number": 8,
+          "score": 0.06206402077700826
+        },
+        {
+          "rank": 4,
+          "page_number": 10,
+          "score": 0.06177195340501792
+        },
+        {
+          "rank": 5,
+          "page_number": 15,
+          "score": 0.06156066156066156
+        },
+        {
+          "rank": 6,
+          "page_number": 6,
+          "score": 0.060429644494613764
+        },
+        {
+          "rank": 7,
+          "page_number": 5,
+          "score": 0.05931459844503323
+        },
+        {
+          "rank": 8,
+          "page_number": 1,
+          "score": 0.05893312516263337
+        },
+        {
+          "rank": 9,
+          "page_number": 7,
+          "score": 0.05746488803367898
+        },
+        {
+          "rank": 10,
+          "page_number": 11,
+          "score": 0.0571486892368705
+        }
+      ],
+      "reranked": true,
+      "rerank_order": [
+        {
+          "page_number": 15,
+          "retrieval_rank": 5,
+          "score": -7.818574905395508,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p15-b222"
+        },
+        {
+          "page_number": 13,
+          "retrieval_rank": 1,
+          "score": -8.575431823730469,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p13-b178"
+        },
+        {
+          "page_number": 10,
+          "retrieval_rank": 4,
+          "score": -9.667055130004883,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p10-b135"
+        },
+        {
+          "page_number": 6,
+          "retrieval_rank": 6,
+          "score": -10.071922302246094,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p6-b41"
+        },
+        {
+          "page_number": 9,
+          "retrieval_rank": 2,
+          "score": -10.403347969055176,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p9-b93"
+        },
+        {
+          "page_number": 11,
+          "retrieval_rank": 10,
+          "score": -10.68790340423584,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p11-b151"
+        },
+        {
+          "page_number": 5,
+          "retrieval_rank": 7,
+          "score": -10.776355743408203,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p5-b34"
+        },
+        {
+          "page_number": 8,
+          "retrieval_rank": 3,
+          "score": -10.89423942565918,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p8-b59"
+        },
+        {
+          "page_number": 7,
+          "retrieval_rank": 9,
+          "score": -10.913009643554688,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p7-t2-r6"
+        },
+        {
+          "page_number": 1,
+          "retrieval_rank": 8,
+          "score": -10.960460662841797,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p1-b3"
+        }
+      ],
+      "seed_page_ids": [
+        "03_NASA_Fastener_Procurement_Standard.pdf::p15",
+        "03_NASA_Fastener_Procurement_Standard.pdf::p13",
+        "03_NASA_Fastener_Procurement_Standard.pdf::p10"
+      ]
+    },
+    {
+      "field_family": "tolerances",
+      "query": "What tolerances, acceptance criteria, inspection requirements, or standards apply?",
+      "method": "hybrid_rrf",
+      "pool": [
+        {
+          "rank": 1,
+          "page_number": 16,
+          "score": 0.06505334374186833
+        },
+        {
+          "rank": 2,
+          "page_number": 12,
+          "score": 0.06206402077700826
+        },
+        {
+          "rank": 3,
+          "page_number": 7,
+          "score": 0.06202836325787145
+        },
+        {
+          "rank": 4,
+          "page_number": 14,
+          "score": 0.06071228361880949
+        },
+        {
+          "rank": 5,
+          "page_number": 3,
+          "score": 0.06032095144998371
+        },
+        {
+          "rank": 6,
+          "page_number": 13,
+          "score": 0.05983287330129557
+        },
+        {
+          "rank": 7,
+          "page_number": 8,
+          "score": 0.05856324264865763
+        },
+        {
+          "rank": 8,
+          "page_number": 6,
+          "score": 0.05831926771537036
+        },
+        {
+          "rank": 9,
+          "page_number": 5,
+          "score": 0.058261909994383805
+        },
+        {
+          "rank": 10,
+          "page_number": 11,
+          "score": 0.05822096759662452
+        }
+      ],
+      "reranked": true,
+      "rerank_order": [
+        {
+          "page_number": 14,
+          "retrieval_rank": 4,
+          "score": -2.4947969913482666,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p14-b193"
+        },
+        {
+          "page_number": 16,
+          "retrieval_rank": 1,
+          "score": -2.9390459060668945,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p16-b232"
+        },
+        {
+          "page_number": 12,
+          "retrieval_rank": 2,
+          "score": -4.962316513061523,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p12-b166"
+        },
+        {
+          "page_number": 13,
+          "retrieval_rank": 6,
+          "score": -6.192755699157715,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p13-b188"
+        },
+        {
+          "page_number": 11,
+          "retrieval_rank": 10,
+          "score": -6.760354042053223,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p11-b151"
+        },
+        {
+          "page_number": 7,
+          "retrieval_rank": 3,
+          "score": -8.08724308013916,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p7-t2-r9"
+        },
+        {
+          "page_number": 5,
+          "retrieval_rank": 9,
+          "score": -8.373138427734375,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p5-b28"
+        },
+        {
+          "page_number": 8,
+          "retrieval_rank": 7,
+          "score": -8.39899730682373,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p8-b74"
+        },
+        {
+          "page_number": 3,
+          "retrieval_rank": 5,
+          "score": -10.508565902709961,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p3-b17"
+        },
+        {
+          "page_number": 6,
+          "retrieval_rank": 8,
+          "score": -10.912812232971191,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p6-b43"
+        }
+      ],
+      "seed_page_ids": [
+        "03_NASA_Fastener_Procurement_Standard.pdf::p14",
+        "03_NASA_Fastener_Procurement_Standard.pdf::p16",
+        "03_NASA_Fastener_Procurement_Standard.pdf::p12"
+      ]
+    },
+    {
+      "field_family": "deadlines",
+      "query": "What are the submission deadlines, delivery dates, and periods of performance?",
+      "method": "hybrid_rrf",
+      "pool": [
+        {
+          "rank": 1,
+          "page_number": 10,
+          "score": 0.06231418854369675
+        },
+        {
+          "rank": 2,
+          "page_number": 8,
+          "score": 0.0616647465437788
+        },
+        {
+          "rank": 3,
+          "page_number": 16,
+          "score": 0.061249661154784495
+        },
+        {
+          "rank": 4,
+          "page_number": 11,
+          "score": 0.061191397735829114
+        },
+        {
+          "rank": 5,
+          "page_number": 6,
+          "score": 0.061101419310374536
+        },
+        {
+          "rank": 6,
+          "page_number": 9,
+          "score": 0.05936400201106083
+        },
+        {
+          "rank": 7,
+          "page_number": 3,
+          "score": 0.05860613030395351
+        },
+        {
+          "rank": 8,
+          "page_number": 12,
+          "score": 0.05842800693409864
+        },
+        {
+          "rank": 9,
+          "page_number": 13,
+          "score": 0.05834486271986272
+        },
+        {
+          "rank": 10,
+          "page_number": 2,
+          "score": 0.058237259816207185
+        }
+      ],
+      "reranked": true,
+      "rerank_order": [
+        {
+          "page_number": 12,
+          "retrieval_rank": 8,
+          "score": -9.17933464050293,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p12-b168"
+        },
+        {
+          "page_number": 16,
+          "retrieval_rank": 3,
+          "score": -10.59487533569336,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p16-b232"
+        },
+        {
+          "page_number": 13,
+          "retrieval_rank": 9,
+          "score": -10.606550216674805,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p13-b190"
+        },
+        {
+          "page_number": 2,
+          "retrieval_rank": 10,
+          "score": -10.6817626953125,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p2-t0-r1"
+        },
+        {
+          "page_number": 11,
+          "retrieval_rank": 4,
+          "score": -10.849048614501953,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p11-b149"
+        },
+        {
+          "page_number": 6,
+          "retrieval_rank": 5,
+          "score": -10.93553638458252,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p6-b44"
+        },
+        {
+          "page_number": 8,
+          "retrieval_rank": 2,
+          "score": -10.964929580688477,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p8-b71"
+        },
+        {
+          "page_number": 9,
+          "retrieval_rank": 6,
+          "score": -11.007835388183594,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p9-b83"
+        },
+        {
+          "page_number": 10,
+          "retrieval_rank": 1,
+          "score": -11.072672843933105,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p10-b129"
+        },
+        {
+          "page_number": 3,
+          "retrieval_rank": 7,
+          "score": -11.145312309265137,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p3-b20"
+        }
+      ],
+      "seed_page_ids": [
+        "03_NASA_Fastener_Procurement_Standard.pdf::p12",
+        "03_NASA_Fastener_Procurement_Standard.pdf::p16",
+        "03_NASA_Fastener_Procurement_Standard.pdf::p13"
+      ]
+    },
+    {
+      "field_family": "prices",
+      "query": "Find the price and cost schedule line items with quantities, units, unit prices, and amounts.",
+      "method": "hybrid_rrf",
+      "pool": [
+        {
+          "rank": 1,
+          "page_number": 13,
+          "score": 0.06306484750331093
+        },
+        {
+          "rank": 2,
+          "page_number": 6,
+          "score": 0.06287985039738195
+        },
+        {
+          "rank": 3,
+          "page_number": 10,
+          "score": 0.0625136612021858
+        },
+        {
+          "rank": 4,
+          "page_number": 14,
+          "score": 0.05982142857142857
+        },
+        {
+          "rank": 5,
+          "page_number": 7,
+          "score": 0.059601791689972955
+        },
+        {
+          "rank": 6,
+          "page_number": 15,
+          "score": 0.05954601071271242
+        },
+        {
+          "rank": 7,
+          "page_number": 4,
+          "score": 0.0592141917815802
+        },
+        {
+          "rank": 8,
+          "page_number": 11,
+          "score": 0.05855027821939587
+        },
+        {
+          "rank": 9,
+          "page_number": 12,
+          "score": 0.05839990762591382
+        },
+        {
+          "rank": 10,
+          "page_number": 3,
+          "score": 0.05740247118021735
+        }
+      ],
+      "reranked": true,
+      "rerank_order": [
+        {
+          "page_number": 10,
+          "retrieval_rank": 3,
+          "score": -10.557863235473633,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p10-b135"
+        },
+        {
+          "page_number": 6,
+          "retrieval_rank": 2,
+          "score": -10.899585723876953,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p6-b41"
+        },
+        {
+          "page_number": 7,
+          "retrieval_rank": 5,
+          "score": -11.018325805664062,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p7-b52"
+        },
+        {
+          "page_number": 12,
+          "retrieval_rank": 9,
+          "score": -11.100401878356934,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p12-b164"
+        },
+        {
+          "page_number": 3,
+          "retrieval_rank": 10,
+          "score": -11.109993934631348,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p3-b14"
+        },
+        {
+          "page_number": 15,
+          "retrieval_rank": 6,
+          "score": -11.111319541931152,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p15-b215"
+        },
+        {
+          "page_number": 4,
+          "retrieval_rank": 7,
+          "score": -11.136003494262695,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p4-t1-r18"
+        },
+        {
+          "page_number": 11,
+          "retrieval_rank": 8,
+          "score": -11.20250129699707,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p11-b151"
+        },
+        {
+          "page_number": 13,
+          "retrieval_rank": 1,
+          "score": -11.30544376373291,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p13-b184"
+        },
+        {
+          "page_number": 14,
+          "retrieval_rank": 4,
+          "score": -11.319381713867188,
+          "evidence_unit": "03_NASA_Fastener_Procurement_Standard:p14-b198"
+        }
+      ],
+      "seed_page_ids": [
+        "03_NASA_Fastener_Procurement_Standard.pdf::p10",
+        "03_NASA_Fastener_Procurement_Standard.pdf::p6",
+        "03_NASA_Fastener_Procurement_Standard.pdf::p7"
+      ]
+    }
+  ],
+  "seed_pages": [
+    6,
+    7,
+    10,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "linked_table_expansion": [],
+  "pages_sent_to_llm": [
+    6,
+    7,
+    10,
+    12,
+    13,
+    14,
+    15,
+    16
+  ]
+}

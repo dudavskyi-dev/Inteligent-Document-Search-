@@ -1,0 +1,436 @@
+{
+  "schema_version": "1.0",
+  "source_document_id": "05_GSA_Mixed_Table_Fixture",
+  "decisions": [
+    {
+      "left_page": 1,
+      "right_page": 2,
+      "left_table_id": "p1-t0",
+      "right_table_id": "p2-t0",
+      "score": 0.916731,
+      "threshold": 0.72,
+      "predicted_merge": true,
+      "features": {
+        "left_bottom_score": 1.0,
+        "right_top_score": 1.0,
+        "horizontal_overlap": 1.0,
+        "column_count_similarity": 0.8,
+        "column_alignment": 0.7673050490937146,
+        "column_offset": 1,
+        "header_similarity": 0.0,
+        "left_has_trailing_content": false,
+        "right_has_leading_content": false
+      },
+      "reasons": [
+        "left_bottom=1.000",
+        "right_top=1.000",
+        "horizontal_overlap=1.000",
+        "column_alignment=0.767 offset=+1"
+      ]
+    },
+    {
+      "left_page": 2,
+      "right_page": 3,
+      "left_table_id": "p2-t0",
+      "right_table_id": "p3-t1",
+      "score": 0.0,
+      "threshold": 0.72,
+      "predicted_merge": false,
+      "features": {
+        "left_bottom_score": 0.0,
+        "right_top_score": 0.0,
+        "horizontal_overlap": 1.0,
+        "column_count_similarity": 0.6666666666666666,
+        "column_alignment": 0.532428866776549,
+        "column_offset": -1,
+        "header_similarity": 0.0,
+        "left_has_trailing_content": true,
+        "right_has_leading_content": true
+      },
+      "reasons": [
+        "left_bottom=0.000",
+        "right_top=0.000",
+        "horizontal_overlap=1.000",
+        "column_alignment=0.532 offset=-1",
+        "guard: meaningful content follows the left table",
+        "penalty: meaningful content precedes the right table",
+        "guard: table fragments do not meet both page-boundary thresholds"
+      ]
+    },
+    {
+      "left_page": 3,
+      "right_page": 4,
+      "left_table_id": "p3-t1",
+      "right_table_id": "p4-t2",
+      "score": 0.0,
+      "threshold": 0.72,
+      "predicted_merge": false,
+      "features": {
+        "left_bottom_score": 0.0,
+        "right_top_score": 0.46482942112367165,
+        "horizontal_overlap": 0.9580428135616422,
+        "column_count_similarity": 1.0,
+        "column_alignment": 0.5732679436665739,
+        "column_offset": 0,
+        "header_similarity": 0.05,
+        "left_has_trailing_content": true,
+        "right_has_leading_content": true
+      },
+      "reasons": [
+        "left_bottom=0.000",
+        "right_top=0.465",
+        "horizontal_overlap=0.958",
+        "column_alignment=0.573 offset=+0",
+        "guard: meaningful content follows the left table",
+        "penalty: meaningful content precedes the right table",
+        "guard: table fragments do not meet both page-boundary thresholds"
+      ]
+    },
+    {
+      "left_page": 4,
+      "right_page": 5,
+      "left_table_id": "p4-t2",
+      "right_table_id": "p5-t0",
+      "score": 0.848253,
+      "threshold": 0.72,
+      "predicted_merge": true,
+      "features": {
+        "left_bottom_score": 1.0,
+        "right_top_score": 1.0,
+        "horizontal_overlap": 1.0,
+        "column_count_similarity": 0.3333333333333333,
+        "column_alignment": 0.31585863365210615,
+        "column_offset": 2,
+        "header_similarity": 0.0,
+        "left_has_trailing_content": false,
+        "right_has_leading_content": false
+      },
+      "reasons": [
+        "left_bottom=1.000",
+        "right_top=1.000",
+        "horizontal_overlap=1.000",
+        "column_alignment=0.316 offset=+2"
+      ]
+    },
+    {
+      "left_page": 5,
+      "right_page": 6,
+      "left_table_id": "p5-t0",
+      "right_table_id": "p6-t3",
+      "score": 0.066882,
+      "threshold": 0.72,
+      "predicted_merge": false,
+      "features": {
+        "left_bottom_score": 0.0,
+        "right_top_score": 1.0,
+        "horizontal_overlap": 0.9992014593551667,
+        "column_count_similarity": 0.5,
+        "column_alignment": 0.4200151295304243,
+        "column_offset": -1,
+        "header_similarity": 0.0,
+        "left_has_trailing_content": true,
+        "right_has_leading_content": false
+      },
+      "reasons": [
+        "left_bottom=0.000",
+        "right_top=1.000",
+        "horizontal_overlap=0.999",
+        "column_alignment=0.420 offset=-1",
+        "guard: meaningful content follows the left table",
+        "guard: table fragments do not meet both page-boundary thresholds"
+      ]
+    },
+    {
+      "left_page": 6,
+      "right_page": 7,
+      "left_table_id": "p6-t3",
+      "right_table_id": "p7-t0",
+      "score": 0.908167,
+      "threshold": 0.72,
+      "predicted_merge": true,
+      "features": {
+        "left_bottom_score": 1.0,
+        "right_top_score": 1.0,
+        "horizontal_overlap": 1.0,
+        "column_count_similarity": 0.75,
+        "column_alignment": 0.7066734220267994,
+        "column_offset": 1,
+        "header_similarity": 0.0,
+        "left_has_trailing_content": false,
+        "right_has_leading_content": false
+      },
+      "reasons": [
+        "left_bottom=1.000",
+        "right_top=1.000",
+        "horizontal_overlap=1.000",
+        "column_alignment=0.707 offset=+1"
+      ]
+    }
+  ],
+  "logical_tables": [
+    {
+      "logical_table_id": "lt-001",
+      "fragment_ids": [
+        "p1-t0",
+        "p2-t0"
+      ],
+      "page_numbers": [
+        1,
+        2
+      ],
+      "source_cell_ids": [
+        "p1-t0-c0",
+        "p1-t0-c1",
+        "p1-t0-c2",
+        "p1-t0-c3",
+        "p1-t0-c4",
+        "p1-t0-c5",
+        "p1-t0-c6",
+        "p1-t0-c7",
+        "p1-t0-c8",
+        "p1-t0-c9",
+        "p1-t0-c10",
+        "p1-t0-c11",
+        "p1-t0-c12",
+        "p1-t0-c13",
+        "p1-t0-c14",
+        "p1-t0-c15",
+        "p1-t0-c16",
+        "p1-t0-c17",
+        "p1-t0-c18",
+        "p1-t0-c19",
+        "p1-t0-c20",
+        "p1-t0-c21",
+        "p1-t0-c22",
+        "p1-t0-c23",
+        "p1-t0-c24",
+        "p2-t0-c0",
+        "p2-t0-c1",
+        "p2-t0-c2",
+        "p2-t0-c3",
+        "p2-t0-c4",
+        "p2-t0-c5",
+        "p2-t0-c6",
+        "p2-t0-c7"
+      ],
+      "joins": [
+        {
+          "left_table_id": "p1-t0",
+          "right_table_id": "p2-t0",
+          "column_offset": 1,
+          "score": 0.916731
+        }
+      ]
+    },
+    {
+      "logical_table_id": "lt-002",
+      "fragment_ids": [
+        "p3-t1"
+      ],
+      "page_numbers": [
+        3
+      ],
+      "source_cell_ids": [
+        "p3-t1-c0",
+        "p3-t1-c1",
+        "p3-t1-c2",
+        "p3-t1-c3",
+        "p3-t1-c4",
+        "p3-t1-c5",
+        "p3-t1-c6",
+        "p3-t1-c7",
+        "p3-t1-c8",
+        "p3-t1-c9",
+        "p3-t1-c10",
+        "p3-t1-c11",
+        "p3-t1-c12",
+        "p3-t1-c13",
+        "p3-t1-c14",
+        "p3-t1-c15",
+        "p3-t1-c16",
+        "p3-t1-c17",
+        "p3-t1-c18",
+        "p3-t1-c19",
+        "p3-t1-c20",
+        "p3-t1-c21",
+        "p3-t1-c22",
+        "p3-t1-c23",
+        "p3-t1-c24",
+        "p3-t1-c25",
+        "p3-t1-c26",
+        "p3-t1-c27",
+        "p3-t1-c28",
+        "p3-t1-c29",
+        "p3-t1-c30",
+        "p3-t1-c31",
+        "p3-t1-c32",
+        "p3-t1-c33",
+        "p3-t1-c34",
+        "p3-t1-c35",
+        "p3-t1-c36",
+        "p3-t1-c37",
+        "p3-t1-c38",
+        "p3-t1-c39",
+        "p3-t1-c40",
+        "p3-t1-c41"
+      ],
+      "joins": []
+    },
+    {
+      "logical_table_id": "lt-003",
+      "fragment_ids": [
+        "p4-t2",
+        "p5-t0"
+      ],
+      "page_numbers": [
+        4,
+        5
+      ],
+      "source_cell_ids": [
+        "p4-t2-c0",
+        "p4-t2-c1",
+        "p4-t2-c2",
+        "p4-t2-c3",
+        "p4-t2-c4",
+        "p4-t2-c5",
+        "p4-t2-c6",
+        "p4-t2-c7",
+        "p4-t2-c8",
+        "p4-t2-c9",
+        "p4-t2-c10",
+        "p4-t2-c11",
+        "p4-t2-c12",
+        "p4-t2-c13",
+        "p4-t2-c14",
+        "p4-t2-c15",
+        "p4-t2-c16",
+        "p4-t2-c17",
+        "p4-t2-c18",
+        "p4-t2-c19",
+        "p4-t2-c20",
+        "p4-t2-c21",
+        "p5-t0-c0",
+        "p5-t0-c1",
+        "p5-t0-c2",
+        "p5-t0-c3",
+        "p5-t0-c4",
+        "p5-t0-c5",
+        "p5-t0-c6",
+        "p5-t0-c7",
+        "p5-t0-c8",
+        "p5-t0-c9",
+        "p5-t0-c10",
+        "p5-t0-c11",
+        "p5-t0-c12",
+        "p5-t0-c13"
+      ],
+      "joins": [
+        {
+          "left_table_id": "p4-t2",
+          "right_table_id": "p5-t0",
+          "column_offset": 2,
+          "score": 0.848253
+        }
+      ]
+    },
+    {
+      "logical_table_id": "lt-004",
+      "fragment_ids": [
+        "p6-t3",
+        "p7-t0"
+      ],
+      "page_numbers": [
+        6,
+        7
+      ],
+      "source_cell_ids": [
+        "p6-t3-c0",
+        "p6-t3-c1",
+        "p6-t3-c2",
+        "p6-t3-c3",
+        "p6-t3-c4",
+        "p6-t3-c5",
+        "p6-t3-c6",
+        "p6-t3-c7",
+        "p6-t3-c8",
+        "p6-t3-c9",
+        "p6-t3-c10",
+        "p6-t3-c11",
+        "p6-t3-c12",
+        "p6-t3-c13",
+        "p6-t3-c14",
+        "p6-t3-c15",
+        "p6-t3-c16",
+        "p6-t3-c17",
+        "p6-t3-c18",
+        "p6-t3-c19",
+        "p6-t3-c20",
+        "p6-t3-c21",
+        "p6-t3-c22",
+        "p6-t3-c23",
+        "p6-t3-c24",
+        "p6-t3-c25",
+        "p6-t3-c26",
+        "p6-t3-c27",
+        "p6-t3-c28",
+        "p6-t3-c29",
+        "p6-t3-c30",
+        "p6-t3-c31",
+        "p7-t0-c0",
+        "p7-t0-c1",
+        "p7-t0-c2",
+        "p7-t0-c3",
+        "p7-t0-c4",
+        "p7-t0-c5",
+        "p7-t0-c6",
+        "p7-t0-c7",
+        "p7-t0-c8",
+        "p7-t0-c9",
+        "p7-t0-c10",
+        "p7-t0-c11",
+        "p7-t0-c12",
+        "p7-t0-c13",
+        "p7-t0-c14",
+        "p7-t0-c15",
+        "p7-t0-c16",
+        "p7-t0-c17",
+        "p7-t0-c18",
+        "p7-t0-c19",
+        "p7-t0-c20",
+        "p7-t0-c21",
+        "p7-t0-c22",
+        "p7-t0-c23",
+        "p7-t0-c24",
+        "p7-t0-c25",
+        "p7-t0-c26",
+        "p7-t0-c27",
+        "p7-t0-c28",
+        "p7-t0-c29",
+        "p7-t0-c30",
+        "p7-t0-c31",
+        "p7-t0-c32",
+        "p7-t0-c33",
+        "p7-t0-c34",
+        "p7-t0-c35",
+        "p7-t0-c36",
+        "p7-t0-c37",
+        "p7-t0-c38",
+        "p7-t0-c39",
+        "p7-t0-c40",
+        "p7-t0-c41",
+        "p7-t0-c42",
+        "p7-t0-c43",
+        "p7-t0-c44",
+        "p7-t0-c45"
+      ],
+      "joins": [
+        {
+          "left_table_id": "p6-t3",
+          "right_table_id": "p7-t0",
+          "column_offset": 1,
+          "score": 0.908167
+        }
+      ]
+    }
+  ]
+}

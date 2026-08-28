@@ -1,0 +1,37 @@
+{
+  "repair_attempted": true,
+  "issue_count": 5,
+  "blocking_issue_count": 5,
+  "issues": [
+    {
+      "rule": "status_coherence",
+      "severity": "blocking",
+      "field_path": "/line_items/12/unit_price/amount",
+      "message": "status is 'supported' but amount is empty."
+    },
+    {
+      "rule": "status_coherence",
+      "severity": "blocking",
+      "field_path": "/line_items/15/unit_price/amount",
+      "message": "status is 'supported' but amount is empty."
+    },
+    {
+      "rule": "status_coherence",
+      "severity": "blocking",
+      "field_path": "/line_items/19/unit_price/amount",
+      "message": "status is 'supported' but amount is empty."
+    },
+    {
+      "rule": "status_coherence",
+      "severity": "blocking",
+      "field_path": "/line_items/21/unit_price/amount",
+      "message": "status is 'supported' but amount is empty."
+    },
+    {
+      "rule": "status_coherence",
+      "severity": "blocking",
+      "field_path": "/line_items/22/unit_price/amount",
+      "message": "status is 'supported' but amount is empty."
+    }
+  ]
+}

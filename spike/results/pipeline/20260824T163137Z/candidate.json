@@ -1,0 +1,60 @@
+{
+  "schema_version": "industrial-document-candidate/1.0",
+  "document_number": {
+    "status": "supported",
+    "raw": "36C24420Q0680",
+    "value": "36C24420Q0680",
+    "evidence_ids": [
+      "ev_p1_b0",
+      "ev_p2_b0",
+      "ev_p3_b9",
+      "ev_p4_b20",
+      "ev_p5_b0",
+      "ev_p6_b24",
+      "ev_p7_b0"
+    ],
+    "conflict_evidence_ids": []
+  },
+  "parties": [
+    {
+      "role": "buyer",
+      "name": {
+        "status": "supported",
+        "raw": "Department of Veterans Affairs",
+        "value": "Department of Veterans Affairs",
+        "evidence_ids": [
+          "ev_p6_t3_c2",
+          "ev_p7_t0_c2"
+        ],
+        "conflict_evidence_ids": []
+      }
+    },
+    {
+      "role": "supplier",
+      "name": {
+        "status": "supported",
+        "raw": "York International",
+        "value": "York International",
+        "evidence_ids": [
+          "ev_p2_b3"
+        ],
+        "conflict_evidence_ids": []
+      }
+    },
+    {
+      "role": "supplier",
+      "name": {
+        "status": "supported",
+        "raw": "Toshiba",
+        "value": "Toshiba",
+        "evidence_ids": [
+          "ev_p3_b10"
+        ],
+        "conflict_evidence_ids": []
+      }
+    }
+  ],
+  "deadlines": [],
+  "line_items": [],
+  "abstained_field_paths": []
+}

@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0",
+  "run_id": "20260824T161252Z",
+  "status": "dry_run",
+  "started_at_utc": "2026-08-24T16:12:52.245617+00:00",
+  "finished_at_utc": "2026-08-24T16:17:44.630230+00:00",
+  "input": {
+    "path": "D:\\pythonProjects\\PrimaTask9\\spike\\data\\inputs\\05_GSA_Mixed_Table_Fixture.pdf",
+    "sha256": "2668b6e5102717f0b02b5bbd46a87a4d4c2d465e03da74745d544f52251bbe60",
+    "pages": 7
+  },
+  "configuration": {
+    "model": null,
+    "top_k_per_field_family": 3,
+    "candidate_k": 10,
+    "max_llm_pages": 12,
+    "rendering_dpi": 180,
+    "reranker_enabled": true,
+    "dry_run": true
+  },
+  "stages": {
+    "route": 0.025,
+    "parse": 256.495,
+    "verify": 0.0,
+    "stitch": 0.009,
+    "index": 10.052,
+    "retrieve": 0.177,
+    "rerank": 14.458,
+    "expand": 0.0,
+    "build_request": 0.005
+  },
+  "page_routes": {
+    "1": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "2": {
+      "route": "paddle_ppstructurev3",
+      "reason": "no_text_layer"
+    },
+    "3": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "4": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "5": {
+      "route": "paddle_ppstructurev3",
+      "reason": "no_text_layer"
+    },
+    "6": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "7": {
+      "route": "paddle_ppstructurev3",
+      "reason": "no_text_layer"
+    }
+  },
+  "parse_cache": {
+    "status": "created",
+    "path": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\pipeline\\cache\\2668b6e5102717f0b02b5bbd46a87a4d4c2d465e03da74745d544f52251bbe60.canonical.json"
+  },
+  "logical_tables": {
+    "fragments": 7,
+    "logical_tables": 4,
+    "multi_page_logical_tables": 3,
+    "merged_boundaries": 3
+  },
+  "selected_pages": {
+    "seed_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "after_table_expansion": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "sent_to_llm": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "capped_by_max_llm_pages": false
+  },
+  "llm": {
+    "called": false,
+    "allowed_evidence_ids": 234,
+    "prompt_characters": 62762
+  },
+  "validation": null,
+  "artifacts": {
+    "summary": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\pipeline\\20260824T161252Z\\summary.json",
+    "canonical": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\pipeline\\20260824T161252Z\\canonical.json",
+    "logical_tables": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\pipeline\\20260824T161252Z\\logical_tables.json",
+    "retrieval": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\pipeline\\20260824T161252Z\\retrieval.json",
+    "llm_request": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\pipeline\\20260824T161252Z\\llm_request.json",
+    "candidate": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\pipeline\\20260824T161252Z\\candidate.json",
+    "validation": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\pipeline\\20260824T161252Z\\validation.json",
+    "log": "D:\\pythonProjects\\PrimaTask9\\spike\\logs\\pipeline\\20260824T161252Z.log",
+    "latest_pointer": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\pipeline\\latest.txt"
+  },
+  "notes": [
+    "This run proves the pipeline executes end to end. It is not an accuracy measurement; blueprint section 9 requires at least 50 labelled documents for that."
+  ],
+  "error": null
+}

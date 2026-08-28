@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.0",
+  "run_id": "20260824T170638Z",
+  "status": "failed",
+  "started_at_utc": "2026-08-24T17:06:38.518786+00:00",
+  "finished_at_utc": "2026-08-24T17:08:08.088480+00:00",
+  "input": {
+    "path": "D:\\pythonProjects\\PrimaTask9\\spike\\data\\inputs\\03_NASA_Fastener_Procurement_Standard.pdf",
+    "sha256": "16ca2509462c997669a580e3644620e23471ab2ec81f586bc40c7e53e9a5d9c0",
+    "pages": 16
+  },
+  "configuration": {
+    "model": "z-ai/glm-5.2:free",
+    "top_k_per_field_family": 3,
+    "candidate_k": 10,
+    "max_llm_pages": 12,
+    "rendering_dpi": 180,
+    "reranker_enabled": true,
+    "dry_run": false
+  },
+  "stages": {
+    "route": 0.058,
+    "parse": 0.016,
+    "verify": 0.0,
+    "stitch": 0.0,
+    "index": 8.973,
+    "retrieve": 0.08,
+    "rerank": 12.808,
+    "expand": 0.0,
+    "build_request": 0.006
+  },
+  "page_routes": {
+    "1": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "2": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "3": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "4": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "5": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "6": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "7": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "8": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "9": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "10": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "11": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "12": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "13": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "14": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "15": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "16": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    }
+  },
+  "parse_cache": {
+    "status": "reused",
+    "path": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\pipeline\\cache\\16ca2509462c997669a580e3644620e23471ab2ec81f586bc40c7e53e9a5d9c0.canonical.json"
+  },
+  "logical_tables": {
+    "fragments": 6,
+    "logical_tables": 6,
+    "multi_page_logical_tables": 0,
+    "merged_boundaries": 0
+  },
+  "selected_pages": {
+    "seed_pages": [
+      6,
+      7,
+      10,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "after_table_expansion": [
+      6,
+      7,
+      10,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "sent_to_llm": [
+      6,
+      7,
+      10,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "capped_by_max_llm_pages": false
+  },
+  "llm": null,
+  "validation": null,
+  "artifacts": {
+    "summary": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\pipeline\\20260824T170638Z\\summary.json",
+    "canonical": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\pipeline\\20260824T170638Z\\canonical.json",
+    "logical_tables": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\pipeline\\20260824T170638Z\\logical_tables.json",
+    "retrieval": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\pipeline\\20260824T170638Z\\retrieval.json",
+    "llm_request": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\pipeline\\20260824T170638Z\\llm_request.json",
+    "candidate": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\pipeline\\20260824T170638Z\\candidate.json",
+    "validation": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\pipeline\\20260824T170638Z\\validation.json",
+    "log": "D:\\pythonProjects\\PrimaTask9\\spike\\logs\\pipeline\\20260824T170638Z.log",
+    "latest_pointer": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\pipeline\\latest.txt"
+  },
+  "notes": [
+    "This run proves the pipeline executes end to end. It is not an accuracy measurement; blueprint section 9 requires at least 50 labelled documents."
+  ],
+  "error": "RateLimitError: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'z-ai/glm-5.2:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Decart', 'is_byok': False, 'provider_error_code': 'upstream_429', 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing', 'retry_after_seconds': 5, 'retry_after_seconds_raw': 5, 'headers': {'Retry-After': '5'}}}, 'user_id': 'user_3C72oX0AQ12ffTpgTfD3F8opjYQ'}"
+}

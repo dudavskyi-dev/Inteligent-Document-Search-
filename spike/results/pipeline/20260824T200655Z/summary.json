@@ -1,0 +1,400 @@
+{
+  "schema_version": "1.0",
+  "run_id": "20260824T200655Z",
+  "status": "success",
+  "started_at_utc": "2026-08-24T20:06:55.670549+00:00",
+  "finished_at_utc": "2026-08-24T20:09:10.080343+00:00",
+  "input": {
+    "path": "D:\\pythonProjects\\PrimaTask9\\spike\\data\\inputs\\01_GSA_VA_Chiller_Maintenance_Solicitation.pdf",
+    "sha256": "766e6f369abe50fcdb9541f18402a852685d08b8fbed3e6983908aff71fd90e2",
+    "pages": 60
+  },
+  "configuration": {
+    "model": "openrouter/free",
+    "top_k_per_field_family": 3,
+    "candidate_k": 10,
+    "max_llm_pages": 18,
+    "rendering_dpi": 180,
+    "reranker_enabled": true,
+    "dry_run": false
+  },
+  "stages": {
+    "route": 0.142,
+    "parse": 0.032,
+    "verify": 0.001,
+    "stitch": 0.002,
+    "index": 15.59,
+    "retrieve": 0.085,
+    "rerank": 10.675,
+    "expand": 0.0,
+    "build_request": 0.01,
+    "extract": 98.307,
+    "validate": 0.059
+  },
+  "page_routes": {
+    "1": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "2": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "3": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "4": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "5": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "6": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "7": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "8": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "9": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "10": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "11": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "12": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "13": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "14": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "15": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "16": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "17": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "18": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "19": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "20": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "21": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "22": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "23": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "24": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "25": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "26": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "27": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "28": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "29": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "30": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "31": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "32": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "33": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "34": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "35": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "36": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "37": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "38": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "39": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "40": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "41": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "42": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "43": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "44": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "45": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "46": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "47": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "48": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "49": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "50": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "51": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "52": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "53": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "54": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "55": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "56": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "57": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "58": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "59": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    },
+    "60": {
+      "route": "docling_native",
+      "reason": "usable_text_layer"
+    }
+  },
+  "parse_cache": {
+    "status": "reused",
+    "path": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\pipeline\\cache\\766e6f369abe50fcdb9541f18402a852685d08b8fbed3e6983908aff71fd90e2.canonical.json"
+  },
+  "logical_tables": {
+    "fragments": 17,
+    "logical_tables": 12,
+    "multi_page_logical_tables": 4,
+    "merged_boundaries": 5
+  },
+  "selected_pages": {
+    "seed_pages": [
+      1,
+      2,
+      9,
+      11,
+      14,
+      17,
+      19,
+      24,
+      25,
+      28,
+      30,
+      40,
+      43
+    ],
+    "after_table_expansion": [
+      1,
+      2,
+      9,
+      11,
+      13,
+      14,
+      17,
+      19,
+      20,
+      21,
+      24,
+      25,
+      28,
+      30,
+      40,
+      43
+    ],
+    "sent_to_llm": [
+      1,
+      2,
+      9,
+      11,
+      13,
+      14,
+      17,
+      19,
+      20,
+      21,
+      24,
+      25,
+      28,
+      30,
+      40,
+      43
+    ],
+    "dropped_by_max_llm_pages": [],
+    "capped_by_max_llm_pages": false
+  },
+  "llm": {
+    "called": true,
+    "model": "openrouter/free",
+    "response_format_mode": "json_schema",
+    "repair_attempted": false,
+    "usage": {
+      "completion_tokens": 12010,
+      "prompt_tokens": 54417,
+      "total_tokens": 66427,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": 0,
+        "reasoning_tokens": 6513,
+        "rejected_prediction_tokens": null,
+        "text_tokens": null,
+        "image_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": 0,
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "image_tokens": null,
+        "text_tokens": null,
+        "video_tokens": 0
+      },
+      "cost": 0,
+      "is_byok": false,
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      }
+    },
+    "allowed_evidence_ids": 589,
+    "prompt_characters": 171808
+  },
+  "validation": {
+    "issue_count": 0,
+    "blocking_issue_count": 0,
+    "schema_valid": true,
+    "line_items": 12,
+    "deadlines": 1,
+    "parties": 3
+  },
+  "artifacts": {
+    "summary": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\pipeline\\20260824T200655Z\\summary.json",
+    "canonical": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\pipeline\\20260824T200655Z\\canonical.json",
+    "logical_tables": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\pipeline\\20260824T200655Z\\logical_tables.json",
+    "retrieval": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\pipeline\\20260824T200655Z\\retrieval.json",
+    "llm_request": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\pipeline\\20260824T200655Z\\llm_request.json",
+    "candidate": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\pipeline\\20260824T200655Z\\candidate.json",
+    "validation": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\pipeline\\20260824T200655Z\\validation.json",
+    "log": "D:\\pythonProjects\\PrimaTask9\\spike\\logs\\pipeline\\20260824T200655Z.log",
+    "latest_pointer": "D:\\pythonProjects\\PrimaTask9\\spike\\results\\pipeline\\latest.txt"
+  },
+  "notes": [
+    "This run proves the pipeline executes end to end. It is not an accuracy measurement; blueprint section 9 requires at least 50 labelled documents."
+  ],
+  "error": null
+}
