@@ -3,6 +3,15 @@
 This repository is a build-ready architecture, supported by focused,
 user-run experiments. It is deliberately not a complete application.
 
+## Demo
+
+The local web app in [`workspace_local/`](workspace_local/) running one PDF end to end:
+upload, hybrid parsing, table stitching, per-field-family retrieval and reranking,
+context assembly, a single LLM call, and the validated result with a review-needed
+badge per field.
+
+https://github.com/user-attachments/assets/0f96ee77-5b90-4946-8b8c-004cfd434351
+
 ## Start Here
 Here was made two architecture blueprints to consider all the avaliable possibilities of realization of this problem including the cost and perfomance.
 1. Read the portable [`architecture_blueprint.md`](architecture_blueprint.md).
