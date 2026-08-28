@@ -6,7 +6,7 @@ __pycache__/
 *.py[cod]
 
 # Local benchmark inputs may be confidential or redistributable only by source.
-spike/data/inputs/*
+
 !spike/data/inputs/.gitkeep
 
 # Generated runtime artifacts. Saved spike/results are intentionally versionable evidence.
@@ -25,3 +25,7 @@ spike/.local_models/
 CLAUDE.md
 workspace_local/plans/2026-08-27-plan.md
 workspace_local/plans/2026-08-27-task3-ui-pipeline-docker.md
+spike/data/inputs/04_GSA_Table_Scan_Fixture.pdf
+spike/data/inputs/03_NASA_Fastener_Procurement_Standard.pdf
+spike/data/inputs/02_DOE_NNSA_RFP_Section_L.pdf
+spike/data/inputs/01_GSA_VA_Chiller_Maintenance_Solicitation.pdf
